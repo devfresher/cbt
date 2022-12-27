@@ -1,0 +1,6 @@
+{
+    "jwtPrivateKey": "cbt_jwtPrivateKey",
+    "dbConfig": {
+        "url": "mongodb://localhost/cbt_test"
+    }
+}
