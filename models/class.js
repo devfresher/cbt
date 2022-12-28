@@ -1,18 +1,27 @@
 import Joi from "joi";
 import { mongoose } from 'mongoose';
 
-const classSchema = new mongoose.Schema({
+export const classSchema = new mongoose.Schema({
     title: {
         type: String,
         required: true,
+    },
+    description: {
+        type: String,
+        maxLength: 255
     }
 })
+classSchema.statics.getById = function (id) {
+    return this.findById(id)
+}
 
 export const Class = mongoose.model('class', classSchema)
 
+
 export function validateClass(theClass) {
     const schema = Joi.object({
-        title: Joi.string().min(5).max(50).required()
+        title: Joi.string().min(5).max(50).required(),
+        description: Joi.string().max(255)
     })
 
     return schema.validate(theClass);

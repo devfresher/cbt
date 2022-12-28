@@ -1,11 +1,14 @@
 import coreJoi from "joi";
 import joiDate from "@joi/date";
+import objectId from 'joi-objectid';
 import config from 'config'
 import jwt from 'jsonwebtoken'
 import bcrypt from 'bcrypt'
 import { mongoose } from 'mongoose';
+import { classSchema } from "./class.js";
 
 const Joi = coreJoi.extend(joiDate);
+Joi.objectId = objectId(Joi);
 
 const userSchema = new mongoose.Schema({
     fullName: {
@@ -44,6 +47,12 @@ const userSchema = new mongoose.Schema({
     homeAddress: {
         type: String,
         maxLength: 255
+    },
+    class: {
+        type: classSchema
+    },
+    classSection: {
+        type: String
     },
     parent: String,
     guardian: {
@@ -103,10 +112,11 @@ export function validateUser(user) {
             religion: Joi.string().required().valid('Islam', 'Christianity', 'Others'),
             homeAddress: Joi.string().required(),
             parent: Joi.string().required(),
+            classId: Joi.objectId(),
+            classSection: Joi.string(),
             guardianName: Joi.string(),
             guardianAddress: Joi.string(),
-            guardianRelationship: Joi.string(),
-            
+            guardianRelationship: Joi.string(),    
         })
     } else {
         schema = Joi.object({

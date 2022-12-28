@@ -7,7 +7,7 @@ import { log } from './startup/logging.js';
 import { route } from './startup/routes.js';
 import dbConnect from './startup/db.js';
 
-log(); route(app); dbConnect()
+log(); route(app); dbConnect();
 
 import { host, port } from './startup/config.js';
 app.listen(port, host, () => {

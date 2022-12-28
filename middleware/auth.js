@@ -3,7 +3,7 @@ import jwt from 'jsonwebtoken'
 import config from 'config'
 import { User } from '../models/user.js'
 
-export const isLoggedIn =  async function (req, res, next) {
+export const requireLoggedInUser =  async function (req, res, next) {
     const token = req.header('x-auth-token')
     if( !token ) return res.status(401).send("Access denied. No auth token provided")
 
@@ -22,7 +22,8 @@ export const isLoggedIn =  async function (req, res, next) {
 
 export const requireRole  =  (roles) => {
     return (req, res, next) => {
-        isLoggedIn(req, res, function() {
+        requireLoggedInUser(req, res, function() {
+            roles = Array.isArray(roles) ? roles:[roles]
             if(!_.find(roles, (r) => r === req.user.role)) return res.status(403).send("Token valid, but forbidden to perform this action")
             next()
         })
