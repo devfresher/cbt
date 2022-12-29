@@ -166,7 +166,7 @@ export function validateUser(user) {
 }
 
 export function validateLogin(req, type='others') {
-    const loginData = (type === 'students') ? 
+    const loginData = (type === 'student') ? 
         { admissionNo: Joi.string().required() } : { email: Joi.string().required() }
 
     loginData.password = Joi.string().required()

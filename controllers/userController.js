@@ -1,10 +1,10 @@
 import _ from 'lodash'
-import User from '../models/user.js'
+import User, * as userModel from '../models/user.js'
 import Class from '../models/class.js';
 import { isValidObjectId } from 'mongoose';
 
 export const createUser = async (req, res) => {
-    let { error } = validateUser(req.body);
+    let { error } = userModel.validateUser(req.body);
     if (error) return res.status(400).json(error.details[0].message)
 
     let user = await User.findOne({ email: req.body.email })

@@ -3,7 +3,7 @@ import bcrypt from 'bcrypt'
 import User, * as userModel from '../models/user.js'
 
 export const login = async function (req, res) {
-    let { error } = validateLogin(req.body);
+    let { error } = userModel.validateLogin(req.body);
     if (error) return res.status(400).json(error.details[0].message)
 
     let user = await User.findOne({ email: req.body.email, role: ['Admin', 'Staff']})
@@ -17,7 +17,7 @@ export const login = async function (req, res) {
 }
 
 export const studentLogin = async function (req, res) {
-    let { error } = validateLogin(req.body, 'student');
+    let { error } = userModel.validateLogin(req.body, 'student');
     if (error) return res.status(400).json(error.details[0].message)
 
     let student = await User.findOne({ admissionNo: req.body.admissionNo, role: 'Student'})

@@ -1,10 +1,10 @@
 import _ from 'lodash'
-import Class from '../models/class.js'
+import Class, * as classModel from '../models/class.js'
 import { isValidObjectId } from 'mongoose'
-import Subject, { validateSubject } from '../models/subject.js'
+import Subject from '../models/subject.js'
 
 export const createSubject = async function (req, res) {
-    let { error } = validateSubject(req.body);
+    let { error } = classModel.validateSubject(req.body);
     if (error) return res.status(400).json(error.details[0].message)
 
     if (!isValidObjectId(req.params.classId)) return res.status(400).json("Invalid class ID")
