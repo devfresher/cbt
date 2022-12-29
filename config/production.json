@@ -1,5 +1,5 @@
 {
     "dbConfig": {
-        "url": ""
+        "url": "mongodb+srv://root:GOWcVNM5EZQ41LbZ@cluster0.dddtk87.mongodb.net/?retryWrites=true&w=majority"
     }
 }
