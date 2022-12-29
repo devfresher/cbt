@@ -65,6 +65,13 @@ export const fetchById = async function (req, res) {
     res.json(user)
 }
 
+export const fetchProfile = async function (req, res) {
+    const user = await User.findById(req.user._id)
+    if (!user) return res.status(404).json("User not found")
+
+    res.json(user)
+}
+
 export const updateUser = async (req, res) => {
     if(!isValidObjectId(req.params.userId)) return res.status(400).json("Invalid user id")
 

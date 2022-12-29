@@ -13,7 +13,8 @@
     "delay": "2"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start": "node app.js"
   },
   "dependencies": {
     "@joi/date": "^2.1.0",

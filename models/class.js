@@ -11,9 +11,6 @@ export const classSchema = new mongoose.Schema({
         maxLength: 255
     }
 })
-classSchema.statics.getById = function (id) {
-    return this.findById(id)
-}
 
 const Class = mongoose.model('class', classSchema)
 
