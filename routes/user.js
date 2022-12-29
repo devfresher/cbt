@@ -2,12 +2,16 @@ import express from "express"
 
 const router = express.Router()
 
-import { fetchByRole, updateUser } from '../controllers/userController.js'
+import { createUser, deleteUser, fetchAllByRole, fetchById, updateUser } from '../controllers/userController.js'
 import { requireRole } from "../middleware/auth.js"
 
-router.get("/students", [requireRole('Admin')], fetchByRole('Student'))
-router.get("/staffs", [requireRole('Admin')], fetchByRole('Staff'))
-router.get("/admins", [requireRole('Admin')], fetchByRole('Admin'))
+router.post("/", [requireRole('Admin')], createUser)
+router.get("/students", [requireRole('Admin')], fetchAllByRole('Student'))
+router.get("/staffs", [requireRole('Admin')], fetchAllByRole('Staff'))
+router.get("/admins", [requireRole('Admin')], fetchAllByRole('Admin'))
+
+router.get("/:userId", [requireRole('Admin', 'Staff')], fetchById)
 router.put("/:userId", [requireRole('Admin')], updateUser)
+router.delete("/:userId", [requireRole('Admin')], deleteUser)
 
 export default router

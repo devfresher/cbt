@@ -15,7 +15,7 @@ classSchema.statics.getById = function (id) {
     return this.findById(id)
 }
 
-export const Class = mongoose.model('class', classSchema)
+const Class = mongoose.model('class', classSchema)
 
 
 export function validateClass(theClass) {
@@ -26,3 +26,5 @@ export function validateClass(theClass) {
 
     return schema.validate(theClass);
 }
+
+export default Class

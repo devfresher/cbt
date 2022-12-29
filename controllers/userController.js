@@ -1,6 +1,6 @@
 import _ from 'lodash'
-import { User, validateUser, hashPassword } from '../models/user.js'
-import { Class } from '../models/class.js';
+import User from '../models/user.js'
+import Class from '../models/class.js';
 import { isValidObjectId } from 'mongoose';
 
 export const createUser = async (req, res) => {
@@ -8,7 +8,7 @@ export const createUser = async (req, res) => {
     if (error) return res.status(400).json(error.details[0].message)
 
     let user = await User.findOne({ email: req.body.email })
-    if (user) return res.status(400).send("Email already exit")
+    if (user) return res.status(400).json("Email already exit")
 
     let newUser = new User({
         fullName: req.body.fullName,
@@ -17,17 +17,17 @@ export const createUser = async (req, res) => {
         role: req.body.role,
     })
 
-    if(req.body.role === 'Staff') {
+    if(req.body.role === 'Staff' || req.body.role === 'Admin') {
         newUser.phoneNumber = req.body.phoneNumber
         newUser.regNumber = req.body.regNumber
         newUser.oracleNumber = req.body.oracleNumber
         newUser.state = req.body.state
         newUser.lga = req.body.lga
     } else if (req.body.role === 'Student') {
-        if (!isValidObjectId(req.body.classId)) return res.status(400).send("Invalid class id")
+        if (!isValidObjectId(req.body.classId)) return res.status(400).json("Invalid class id")
 
         const theClass = await Class.getById(req.body.classId)
-        if (!theClass) return res.status(400).send("Class does not exist") 
+        if (!theClass) return res.status(400).json("Class does not exist") 
 
         newUser.birthDate = req.body.birthDate
         newUser.admissionNo = req.body.admissionNo
@@ -44,36 +44,46 @@ export const createUser = async (req, res) => {
         }
     }
     await newUser.save()
-    res.send(_.omit(newUser.toObject(), ['password']))
+    res.status(204).json(_.omit(newUser.toObject(), ['password']))
 }
 
-export const fetchByRole = (role) => {
+export const fetchAllByRole = (role) => {
     return async function (req, res) {
-        const students = await User.find({role : role})
-        if (!students) return res.status(204).json()
+        const users = await User.find({role : role})
+        if (!users) return res.status(204).json()
 
-        res.json(students)
+        res.json(users)
     }
 }
 
-export const updateUser = async (req, res) => {
-    if(!isValidObjectId(req.params.userId)) return res.status(400).send("Invalid user id")
+export const fetchById = async function (req, res) {
+    if(!isValidObjectId(req.params.userId)) return res.status(400).json("Invalid user id")
 
     const user = await User.findById(req.params.userId)
-    if(!user) return res.status(404).send("User not found")
+    if (!user) return res.status(404).json("User not found")
 
-    let { error } = validateUser(req.body);
+    res.json(user)
+}
+
+export const updateUser = async (req, res) => {
+    if(!isValidObjectId(req.params.userId)) return res.status(400).json("Invalid user id")
+
+    const user = await User.findById(req.params.userId)
+    if(!user) return res.status(404).json("User not found")
+
+    req.body.role = user.role
+    let { error } = validateUpdateReq(req.body);
     if (error) return res.status(400).json(error.details[0].message)
-
     
     user.fullName = req.body.fullName
+
     if(user.role === 'Staff') {
         user.phoneNumber = req.body.phoneNumber
     } else if (user.role === 'Student') {
-        if (!isValidObjectId(req.body.classId)) return res.status(400).send("Invalid class id")
+        if (!isValidObjectId(req.body.classId)) return res.status(400).json("Invalid class id")
 
         const theClass = await Class.getById(req.body.classId)
-        if (!theClass) return res.status(400).send("Class does not exist") 
+        if (!theClass) return res.status(400).json("Class does not exist") 
 
         user.religion = req.body.religion
         user.homeAddress = req.body.homeAddress
@@ -86,6 +96,17 @@ export const updateUser = async (req, res) => {
             relationship: req.body.guardianRelationship
         }
     }
+
     await user.save()
-    res.send(_.omit(user.toObject(), ['password']))
+    res.json(_.omit(user.toObject(), ['password']))
+}
+
+export const deleteUser = async (req, res) => {
+    if(!isValidObjectId(req.params.userId)) return res.status(400).json("Invalid user id")
+
+    const user = await User.findById(req.params.userId)
+    if(!user) return res.status(404).json("User not found")
+    
+    await User.deleteOne({_id: req.params.userId})
+    res.status(204).json()
 }
