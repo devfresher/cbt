@@ -24,4 +24,13 @@ export function validateClass(theClass) {
     return schema.validate(theClass);
 }
 
+export function validateUpdate(req) {
+    const schema = Joi.object({
+        title: Joi.string().min(5).max(50),
+        description: Joi.string().max(255)
+    })
+
+    return schema.validate(req);
+}
+
 export default Class

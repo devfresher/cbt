@@ -60,8 +60,6 @@ export const fetchAllByRole = (role) => {
 }
 
 export const fetchById = async function (req, res) {
-    if(!isValidObjectId(req.params.userId)) return res.status(400).json("Invalid user id")
-
     const user = await User.findById(req.params.userId)
     if (!user) return res.status(404).json("User not found")
 
@@ -76,8 +74,6 @@ export const fetchProfile = async function (req, res) {
 }
 
 export const updateUser = async (req, res) => {
-    if(!isValidObjectId(req.params.userId)) return res.status(400).json("Invalid user id")
-
     const user = await User.findById(req.params.userId)
     if(!user) return res.status(404).json("User not found")
 
@@ -112,8 +108,6 @@ export const updateUser = async (req, res) => {
 }
 
 export const deleteUser = async (req, res) => {
-    if(!isValidObjectId(req.params.userId)) return res.status(400).json("Invalid user id")
-
     const user = await User.findById(req.params.userId)
     if(!user) return res.status(404).json("User not found")
     

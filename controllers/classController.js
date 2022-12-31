@@ -1,18 +1,15 @@
 import _ from 'lodash'
-import Class, { validateClass } from '../models/class.js'
+import Class, * as classModel from '../models/class.js'
 import User from '../models/user.js'
-import { isValidObjectId } from 'mongoose'
 
-export const fetchAll = async function (req, res) {
+export const fetchAll = async (req, res) => {
     const classes = await Class.find()
-    if (!classes) return res.status(204).json()
+    if (_.isEmpty(classes)) return res.status(204).json(classes)
 
     res.json(classes)
 }
 
-export const fetchStudentsByClass = async function (req, res) {
-    if(!isValidObjectId(req.params.classId)) return res.status(400).json("Invalid class id")
-
+export const fetchStudentsByClass = async (req, res) => {
     const theClass = await Class.findById(req.params.classId)
     if(!theClass) return res.status(404).json("Response not found")
 
@@ -22,8 +19,8 @@ export const fetchStudentsByClass = async function (req, res) {
     res.json(students)
 }
 
-export const createClass = async function (req, res) {
-    let { error } = validateClass(req.body);
+export const createClass = async (req, res) => {
+    let { error } = classModel.validateClass(req.body);
     if (error) return res.status(400).json(error.details[0].message)
 
     let theClass = await Class.findOne({ title: req.body.title })
@@ -36,4 +33,27 @@ export const createClass = async function (req, res) {
     await newClass.save()
 
     res.json(newClass)
+}
+
+export const updateClass = async (req, res) => {
+    let { error } = classModel.validateUpdate(req.body);
+    if (error) return res.status(400).json(error.details[0].message)
+
+    let theClass = await Class.findById(req.params.classId)
+    if (!theClass) return res.status(404).json("Class not found")
+
+    await Class.updateOne(
+        {_id: req.params.classId},
+        {$set: req.body}
+    )
+
+    theClass = await Class.findById(req.params.classId)
+    res.json(theClass)
+}
+
+export const deleteClass = async (req, res) => {
+    const theClass = await Class.findOneAndDelete(req.params.classId)
+    if (!theClass) return res.status(404).json("Class not found")
+
+    res.status(204).json(theClass)
 }
