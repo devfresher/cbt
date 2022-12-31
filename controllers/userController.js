@@ -4,7 +4,7 @@ import Class from '../models/class.js';
 import { isValidObjectId } from 'mongoose';
 
 export const createUser = async (req, res) => {
-    let { error } = userModel.validateUse(req.body);
+    let { error } = userModel.validateUser(req.body);
     if (error) return res.status(400).json(error.details[0].message)
 
     let user = await User.findOne({ email: req.body.email })
