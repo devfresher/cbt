@@ -4,7 +4,7 @@ import Class from '../models/class.js';
 import { isValidObjectId } from 'mongoose';
 
 export const createUser = async (req, res) => {
-    let { error } = userModel.validateUser(req.body);
+    let { error } = userModel.validateUse(req.body);
     if (error) return res.status(400).json(error.details[0].message)
 
     let user = await User.findOne({ email: req.body.email })
@@ -24,17 +24,20 @@ export const createUser = async (req, res) => {
         newUser.state = req.body.state
         newUser.lga = req.body.lga
     } else if (req.body.role === 'Student') {
-        if (!isValidObjectId(req.body.classId)) return res.status(400).json("Invalid class id")
+        let theClass
+        if (!_.isUndefined(req.body.classId)) {
+            if (!isValidObjectId(req.body.classId)) return res.status(400).json("Invalid class id")
 
-        const theClass = await Class.getById(req.body.classId)
-        if (!theClass) return res.status(400).json("Class does not exist") 
+            theClass = await Class.findById(req.body.classId)
+            if (!theClass) return res.status(400).json("Class does not exist") 
+        }
 
         newUser.birthDate = req.body.birthDate
         newUser.admissionNo = req.body.admissionNo
         newUser.religion = req.body.religion
         newUser.homeAddress = req.body.homeAddress
-        newUser.class = theClass
-        newUser.classSection = req.body.classSection
+        newUser.class = (!_.isUndefined(theClass) ? theClass : null)
+        newUser.classSection = (!_.isUndefined(theClass) ? req.body.classSection : null)
         newUser.parent = req.body.parentName
         newUser.guardian = {
             name: req.body.guardianName,
@@ -44,7 +47,7 @@ export const createUser = async (req, res) => {
         }
     }
     await newUser.save()
-    res.status(204).json(_.omit(newUser.toObject(), ['password']))
+    res.status(200).json(_.omit(newUser.toObject(), ['password']))
 }
 
 export const fetchAllByRole = (role) => {

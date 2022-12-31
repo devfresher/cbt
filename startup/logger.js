@@ -1,6 +1,6 @@
 import winston from 'winston'
 
-export const log = function() {
+const logger = function() {
     winston.add(
         new winston.transports.File({
             filename: './logs/uncaughtException.log'
@@ -14,3 +14,5 @@ export const log = function() {
         })
     )
 }
+
+export default logger;

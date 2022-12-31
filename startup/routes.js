@@ -9,7 +9,7 @@ import subjectRouter from '../routes/subject.js'
 import errorMiddleware from '../middleware/error.js'
 
 
-export const route = function (app) {
+const routeApp = function (app) {
     app.use(bodyParser.json())
     app.use(cors());
 
@@ -19,3 +19,5 @@ export const route = function (app) {
     app.use('/api/subject/', subjectRouter)
     app.use(errorMiddleware)
 }
+
+export default routeApp
