@@ -1,3 +1,6 @@
 {
-    "jwtPrivateKey": "cbt_jwtPrivateKey"
+    "jwtPrivateKey": "cbt_jwtPrivateKey",
+    "dbConfig": {
+        "url": "cbt_dbUrl"
+    }
 }
