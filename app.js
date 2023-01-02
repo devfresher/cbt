@@ -1,9 +1,9 @@
-import express from 'express';
-import winston from 'winston';
-import bootstrap from './bootstrap.js';
-import { host, port } from './startup/config.js';
+import express from 'express'
+import winston from 'winston'
+import bootstrap from './bootstrap.js'
+import { host, port } from './startup/config.js'
 
-const app = express();
+const app = express()
 
 bootstrap(app)
 

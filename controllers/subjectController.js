@@ -10,7 +10,7 @@ export const createSubject = async (req, res) => {
     if (!theClass) return res.status(404).json("Class not found")
 
     const subject = await Subject.findOne({title: req.body.title, "class._id": req.params.classId})
-    if (subject) return res.status(400).json(`${req.body.title}-${theClass.title} already exists`)
+    if (subject) return res.status(404).json(`Subject already exists`)
 
     const newSubject = new Subject ({
         title: req.body.title,
