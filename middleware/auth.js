@@ -15,8 +15,10 @@ export const requireLoggedInUser =  async function (req, res, next) {
 
         req.user = decodedToken
         next()
-    } catch (error) {
-        return res.status(400).json('Failed to authenticate token')
+    } catch (err) {
+        if (err.name === "TokenExpiredError") return res.status(400).json('Auth token expired')
+
+        res.status(400).json('Failed to authenticate token')
     }
 }
 
