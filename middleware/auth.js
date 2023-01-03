@@ -4,7 +4,9 @@ import config from 'config'
 import User, * as userModel from '../models/user.js'
 
 export const requireLoggedInUser =  async function (req, res, next) {
-    const token = req.header('x-auth-token')
+    const authHeader = req.headers['authorization']
+    const token = authHeader && authHeader.replace(/^Bearer\s+/, "")
+
     if( !token ) return res.status(401).json("Access denied. No auth token provided")
 
     try {

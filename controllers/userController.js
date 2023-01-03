@@ -42,7 +42,7 @@ export const createUser = async (req, res) => {
         newUser.guardian = {
             name: req.body.guardianName,
             phoneNumber: req.body.guardianPhone,
-            address: req.body.guardianPhone,
+            address: req.body.guardianAddress,
             relationship: req.body.guardianRelationship
         }
     }

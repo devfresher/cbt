@@ -67,7 +67,7 @@ const userSchema = new mongoose.Schema({
         }
     },
 
-    phoneNUmber: String,
+    phoneNumber: String,
     regNumber: {
         type: String,
         isUnique: true
@@ -105,9 +105,10 @@ export function validateUpdateReq(req) {
             homeAddress: Joi.string().required(),
             classId: Joi.objectId(),
             classSection: Joi.string(),
-            guardianName: Joi.string(),
-            guardianAddress: Joi.string(),
-            guardianRelationship: Joi.string()
+            guardianName: Joi.string().required(),
+            guardianPhone: Joi.string().required(),
+            guardianAddress: Joi.string().required(),
+            guardianRelationship: Joi.string().required(),
         })
     } else {
         schema = Joi.object({
