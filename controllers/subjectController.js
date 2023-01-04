@@ -61,7 +61,7 @@ export const fetchById = async (req, res) => {
 }
 
 export const deleteSubject = async (req, res) => {
-    const subject = await Class.findOneAndDelete(req.params.subjectId)
+    const subject = await Class.findByIdAndDelete(req.params.subjectId)
     if (!subject) return res.status(404).json("Subject not found")
 
     res.status(204).json(subject)
