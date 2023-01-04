@@ -1,3 +1,4 @@
+import _ from 'lodash'
 import { isValidObjectId } from "mongoose";
 
 export const validateRequest =  (validator) => {
@@ -13,9 +14,14 @@ export const validateRequest =  (validator) => {
     }
 }
 
-export const validateObjectId = (idName) => {
+export const validateObjectIds = (idNames) => {
     return (req, res, next) => {
-        if(!isValidObjectId(req.params[idName])) return res.status(400).json(`Invalid ${idName} passed`)
+        idNames = Array.isArray(idNames) ? idNames:[idNames]
+        _.find(idNames, 
+            (idName) => {
+                if(!isValidObjectId(req.params[idName])) return res.status(400).json(`Invalid ${idName} passed`)
+            }
+        )
 
         next()
     }
