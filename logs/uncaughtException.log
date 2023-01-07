@@ -1264,3 +1264,1263 @@
 {"level":"info","message":"Connected to DB"}
 {"level":"info","message":"Server started at http://0.0.0.0:8000"}
 {"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"error","message":"Configuration property \"jwtPrivateKey\" is not defined Configuration property \"jwtPrivateKey\" is not defined","stack":"Error: Configuration property \"jwtPrivateKey\" is not defined\n    at Config.get (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\config\\lib\\config.js:179:11)\n    at model.userSchema.methods.generateAuthToken (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/models/user.js:87:15)\n    at studentLogin (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/controllers/authController.js:29:27)"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"kind":"ObjectId","level":"error","message":"Cast to ObjectId failed for value \"63b47f0dbcfcaa3eee5cac1bs\" (type string) at path \"_id\" for model \"subject\" Cast to ObjectId failed for value \"63b47f0dbcfcaa3eee5cac1bs\" (type string) at path \"_id\" for model \"subject\"","path":"_id","reason":{},"stack":"CastError: Cast to ObjectId failed for value \"63b47f0dbcfcaa3eee5cac1bs\" (type string) at path \"_id\" for model \"subject\"\n    at model.Query.exec (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\mongoose\\lib\\query.js:4913:21)\n    at model.Query.Query.then (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\mongoose\\lib\\query.js:5012:15)\n    at runMicrotasks (<anonymous>)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)","stringValue":"\"63b47f0dbcfcaa3eee5cac1bs\"","value":"63b47f0dbcfcaa3eee5cac1bs","valueType":"string"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"code":"ERR_HTTP_HEADERS_SENT","level":"error","message":"Cannot set headers after they are sent to the client Cannot set headers after they are sent to the client","stack":"Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client\n    at new NodeError (node:internal/errors:372:5)\n    at ServerResponse.setHeader (node:_http_outgoing:576:11)\n    at ServerResponse.header (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\express\\lib\\response.js:794:10)\n    at ServerResponse.send (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\express\\lib\\response.js:174:12)\n    at ServerResponse.json (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\express\\lib\\response.js:278:15)\n    at createAssessment (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/controllers/assessmentController.js:10:39)\n    at newFn (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\express-async-errors\\index.js:16:20)\n    at Layer.handle [as handle_request] (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\express\\lib\\router\\route.js:144:13)\n    at file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/middleware/validate.js:26:9"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"code":"ERR_HTTP_HEADERS_SENT","level":"error","message":"Cannot set headers after they are sent to the client Cannot set headers after they are sent to the client","stack":"Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client\n    at new NodeError (node:internal/errors:372:5)\n    at ServerResponse.setHeader (node:_http_outgoing:576:11)\n    at ServerResponse.header (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\express\\lib\\response.js:794:10)\n    at ServerResponse.send (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\express\\lib\\response.js:174:12)\n    at ServerResponse.json (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\express\\lib\\response.js:278:15)\n    at createAssessment (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/controllers/assessmentController.js:9:39)\n    at newFn (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\express-async-errors\\index.js:16:20)\n    at Layer.handle [as handle_request] (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\express\\lib\\router\\route.js:144:13)\n    at file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/middleware/validate.js:26:9"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'code') Cannot read properties of undefined (reading 'code')","stack":"TypeError: Cannot read properties of undefined (reading 'code')\n    at startAssessment (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/controllers/assessmentController.js:97:39)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'code') Cannot read properties of undefined (reading 'code')","stack":"TypeError: Cannot read properties of undefined (reading 'code')\n    at startAssessment (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/controllers/assessmentController.js:98:39)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'code') Cannot read properties of undefined (reading 'code')","stack":"TypeError: Cannot read properties of undefined (reading 'code')\n    at startAssessment (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/controllers/assessmentController.js:99:39)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"body":"{\r\n  \"fullName\": \"AbduLlah Uthman\",\r\n  \"religion\": \"Islam\",\r\n  \"classId\": eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2FlNmQ4NGE5YzM1ZWQ5YzZhMTJjMGYiLCJyb2xlIjoiQWRtaW4iLCJpYXQiOjE2NzI0NzcyMzl9.TJzousY3ncX_j2K28V9AMYPcHtH7StxwTKzf3st-KYw,\r\n  \"homeAddress\": \"9, Ojasope unity estate, Ibadan\"\r\n}","expose":true,"level":"error","message":"Unexpected token e in JSON at position 74 Unexpected token e in JSON at position 74","stack":"SyntaxError: Unexpected token e in JSON at position 74\n    at JSON.parse (<anonymous>)\n    at parse (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\body-parser\\lib\\types\\json.js:89:19)\n    at C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\body-parser\\lib\\read.js:128:18\n    at AsyncResource.runInAsyncScope (node:async_hooks:202:9)\n    at invokeCallback (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\raw-body\\index.js:231:16)\n    at done (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\raw-body\\index.js:220:7)\n    at IncomingMessage.onEnd (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\raw-body\\index.js:280:7)\n    at IncomingMessage.emit (node:events:539:35)\n    at endReadableNT (node:internal/streams/readable:1345:12)\n    at processTicksAndRejections (node:internal/process/task_queues:83:21)","status":400,"statusCode":400,"type":"entity.parse.failed"}
+{"level":"error","message":"validateUpdateReq is not defined validateUpdateReq is not defined","stack":"ReferenceError: validateUpdateReq is not defined\n    at updateUser (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/controllers/userController.js:81:21)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"error","message":"validateUpdateReq is not defined validateUpdateReq is not defined","stack":"ReferenceError: validateUpdateReq is not defined\n    at updateUser (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/controllers/userController.js:81:21)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"body":"{\r\n  \"fullName\": \"AbduLlah Uthman\",\r\n  \"religion\": \"Islam\",\r\n  \"classId\": 63b47ebabcfcaa3eee5cac13,\r\n  \"homeAddress\": \"9, Ojasope unity estate, Ibadan\"\r\n}","expose":true,"level":"error","message":"Unexpected token b in JSON at position 76 Unexpected token b in JSON at position 76","stack":"SyntaxError: Unexpected token b in JSON at position 76\n    at JSON.parse (<anonymous>)\n    at parse (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\body-parser\\lib\\types\\json.js:89:19)\n    at C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\body-parser\\lib\\read.js:128:18\n    at AsyncResource.runInAsyncScope (node:async_hooks:202:9)\n    at invokeCallback (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\raw-body\\index.js:231:16)\n    at done (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\raw-body\\index.js:220:7)\n    at IncomingMessage.onEnd (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\raw-body\\index.js:280:7)\n    at IncomingMessage.emit (node:events:539:35)\n    at endReadableNT (node:internal/streams/readable:1345:12)\n    at processTicksAndRejections (node:internal/process/task_queues:83:21)","status":400,"statusCode":400,"type":"entity.parse.failed"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"error","message":"Class.getById is not a function Class.getById is not a function","stack":"TypeError: Class.getById is not a function\n    at updateUser (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/controllers/userController.js:91:38)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'code') Cannot read properties of undefined (reading 'code')","stack":"TypeError: Cannot read properties of undefined (reading 'code')\n    at startAssessment (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/controllers/assessmentController.js:104:39)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'code') Cannot read properties of undefined (reading 'code')","stack":"TypeError: Cannot read properties of undefined (reading 'code')\n    at startAssessment (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/controllers/assessmentController.js:105:39)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'code') Cannot read properties of undefined (reading 'code')","stack":"TypeError: Cannot read properties of undefined (reading 'code')\n    at startAssessment (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/controllers/assessmentController.js:105:39)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'code') Cannot read properties of undefined (reading 'code')","stack":"TypeError: Cannot read properties of undefined (reading 'code')\n    at startAssessment (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/controllers/assessmentController.js:106:39)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'code') Cannot read properties of undefined (reading 'code')","stack":"TypeError: Cannot read properties of undefined (reading 'code')\n    at startAssessment (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/controllers/assessmentController.js:106:39)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'code') Cannot read properties of undefined (reading 'code')","stack":"TypeError: Cannot read properties of undefined (reading 'code')\n    at startAssessment (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/controllers/assessmentController.js:106:39)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'code') Cannot read properties of undefined (reading 'code')","stack":"TypeError: Cannot read properties of undefined (reading 'code')\n    at startAssessment (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/controllers/assessmentController.js:106:39)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'code') Cannot read properties of undefined (reading 'code')","stack":"TypeError: Cannot read properties of undefined (reading 'code')\n    at startAssessment (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/controllers/assessmentController.js:106:39)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'code') Cannot read properties of undefined (reading 'code')","stack":"TypeError: Cannot read properties of undefined (reading 'code')\n    at startAssessment (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/controllers/assessmentController.js:106:39)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'code') Cannot read properties of undefined (reading 'code')","stack":"TypeError: Cannot read properties of undefined (reading 'code')\n    at startAssessment (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/controllers/assessmentController.js:106:39)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'code') Cannot read properties of undefined (reading 'code')","stack":"TypeError: Cannot read properties of undefined (reading 'code')\n    at startAssessment (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/controllers/assessmentController.js:106:39)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'code') Cannot read properties of undefined (reading 'code')","stack":"TypeError: Cannot read properties of undefined (reading 'code')\n    at startAssessment (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/controllers/assessmentController.js:106:39)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'code') Cannot read properties of undefined (reading 'code')","stack":"TypeError: Cannot read properties of undefined (reading 'code')\n    at startAssessment (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/controllers/assessmentController.js:106:39)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'code') Cannot read properties of undefined (reading 'code')","stack":"TypeError: Cannot read properties of undefined (reading 'code')\n    at startAssessment (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/controllers/assessmentController.js:106:39)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'code') Cannot read properties of undefined (reading 'code')","stack":"TypeError: Cannot read properties of undefined (reading 'code')\n    at startAssessment (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/controllers/assessmentController.js:106:39)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'code') Cannot read properties of undefined (reading 'code')","stack":"TypeError: Cannot read properties of undefined (reading 'code')\n    at startAssessment (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/controllers/assessmentController.js:106:39)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'code') Cannot read properties of undefined (reading 'code')","stack":"TypeError: Cannot read properties of undefined (reading 'code')\n    at startAssessment (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/controllers/assessmentController.js:106:39)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'code') Cannot read properties of undefined (reading 'code')","stack":"TypeError: Cannot read properties of undefined (reading 'code')\n    at startAssessment (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/controllers/assessmentController.js:106:39)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'code') Cannot read properties of undefined (reading 'code')","stack":"TypeError: Cannot read properties of undefined (reading 'code')\n    at startAssessment (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/controllers/assessmentController.js:106:39)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'code') Cannot read properties of undefined (reading 'code')","stack":"TypeError: Cannot read properties of undefined (reading 'code')\n    at startAssessment (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/controllers/assessmentController.js:106:39)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'code') Cannot read properties of undefined (reading 'code')","stack":"TypeError: Cannot read properties of undefined (reading 'code')\n    at startAssessment (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/controllers/assessmentController.js:106:39)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'code') Cannot read properties of undefined (reading 'code')","stack":"TypeError: Cannot read properties of undefined (reading 'code')\n    at startAssessment (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/controllers/assessmentController.js:106:39)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'code') Cannot read properties of undefined (reading 'code')","stack":"TypeError: Cannot read properties of undefined (reading 'code')\n    at startAssessment (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/controllers/assessmentController.js:106:39)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'code') Cannot read properties of undefined (reading 'code')","stack":"TypeError: Cannot read properties of undefined (reading 'code')\n    at startAssessment (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/controllers/assessmentController.js:106:39)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'code') Cannot read properties of undefined (reading 'code')","stack":"TypeError: Cannot read properties of undefined (reading 'code')\n    at startAssessment (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/controllers/assessmentController.js:106:39)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'code') Cannot read properties of undefined (reading 'code')","stack":"TypeError: Cannot read properties of undefined (reading 'code')\n    at startAssessment (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/controllers/assessmentController.js:106:39)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'code') Cannot read properties of undefined (reading 'code')","stack":"TypeError: Cannot read properties of undefined (reading 'code')\n    at startAssessment (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/controllers/assessmentController.js:106:39)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"error","message":"paginate is not defined paginate is not defined","stack":"ReferenceError: paginate is not defined\n    at fetchAllBySubject (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/controllers/questionController.js:48:5)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"error","message":"Assignment to constant variable. Assignment to constant variable.","stack":"TypeError: Assignment to constant variable.\n    at fetchAllBySubject (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/controllers/questionController.js:51:10)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'code') Cannot read properties of undefined (reading 'code')","stack":"TypeError: Cannot read properties of undefined (reading 'code')\n    at startAssessment (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/controllers/assessmentController.js:105:39)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'code') Cannot read properties of undefined (reading 'code')","stack":"TypeError: Cannot read properties of undefined (reading 'code')\n    at startAssessment (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/controllers/assessmentController.js:105:39)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'code') Cannot read properties of undefined (reading 'code')","stack":"TypeError: Cannot read properties of undefined (reading 'code')\n    at startAssessment (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/controllers/assessmentController.js:104:39)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"error","message":"Cannot access 'count' before initialization Cannot access 'count' before initialization","stack":"ReferenceError: Cannot access 'count' before initialization\n    at fetchAllBySubject (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/controllers/questionController.js:49:34)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"error","message":"page is not defined page is not defined","stack":"ReferenceError: page is not defined\n    at fetchAllBySubject (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/controllers/questionController.js:52:5)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"body":"{\r\n    \"question\": \"What is the full meaning of APA\",\r\n    \"optionA\": \"APA\",\r\n    \"optionB\": \"APAA\",\r\n    \"optionC\": \"APCA\",\r\n    \"optionD\": \"None of the above\",\r\n    \"answer\": \"APA\",\r\n    \"image\": \"https://0.0.0.0:8000/public\"\r\n    \"subjectId\": \"63b9b9d73e71304e77cf71df\"\r\n}","expose":true,"level":"error","message":"Unexpected string in JSON at position 233 Unexpected string in JSON at position 233","stack":"SyntaxError: Unexpected string in JSON at position 233\n    at JSON.parse (<anonymous>)\n    at parse (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\body-parser\\lib\\types\\json.js:89:19)\n    at C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\body-parser\\lib\\read.js:128:18\n    at AsyncResource.runInAsyncScope (node:async_hooks:202:9)\n    at invokeCallback (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\raw-body\\index.js:231:16)\n    at done (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\raw-body\\index.js:220:7)\n    at IncomingMessage.onEnd (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\raw-body\\index.js:280:7)\n    at IncomingMessage.emit (node:events:539:35)\n    at endReadableNT (node:internal/streams/readable:1345:12)\n    at processTicksAndRejections (node:internal/process/task_queues:83:21)","status":400,"statusCode":400,"type":"entity.parse.failed"}
+{"body":"{\r\n    \"question\": \"What is the full meaning of APA\",\r\n    \"optionA\": \"APA\",\r\n    \"optionB\": \"APAA\",\r\n    \"optionC\": \"APCA\",\r\n    \"optionD\": \"None of the above\",\r\n    \"answer\": \"APA\",\r\n    \"image\": \"https://0.0.0.0:8000/public\"\r\n    \"subjectId\": \"63b9b9d73e71304e77cf71df\"\r\n}","expose":true,"level":"error","message":"Unexpected string in JSON at position 233 Unexpected string in JSON at position 233","stack":"SyntaxError: Unexpected string in JSON at position 233\n    at JSON.parse (<anonymous>)\n    at parse (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\body-parser\\lib\\types\\json.js:89:19)\n    at C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\body-parser\\lib\\read.js:128:18\n    at AsyncResource.runInAsyncScope (node:async_hooks:202:9)\n    at invokeCallback (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\raw-body\\index.js:231:16)\n    at done (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\raw-body\\index.js:220:7)\n    at IncomingMessage.onEnd (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\raw-body\\index.js:280:7)\n    at IncomingMessage.emit (node:events:539:35)\n    at endReadableNT (node:internal/streams/readable:1345:12)\n    at processTicksAndRejections (node:internal/process/task_queues:83:21)","status":400,"statusCode":400,"type":"entity.parse.failed"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"body":"{\r\n    \"type\": \"Test\",\r\n    \"duration\": 200,\r\n    \"scheduledDate\": \"2023-01-10 09:00\",\r\n    \"instruction\": \"You should do this\"\r\n    \"subjectId\": \"63b93b882c3d04d5e78f5f83\"\r\n}","expose":true,"level":"error","message":"Unexpected string in JSON at position 133 Unexpected string in JSON at position 133","stack":"SyntaxError: Unexpected string in JSON at position 133\n    at JSON.parse (<anonymous>)\n    at parse (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\body-parser\\lib\\types\\json.js:89:19)\n    at C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\body-parser\\lib\\read.js:128:18\n    at AsyncResource.runInAsyncScope (node:async_hooks:202:9)\n    at invokeCallback (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\raw-body\\index.js:231:16)\n    at done (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\raw-body\\index.js:220:7)\n    at IncomingMessage.onEnd (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\raw-body\\index.js:280:7)\n    at IncomingMessage.emit (node:events:539:35)\n    at endReadableNT (node:internal/streams/readable:1345:12)\n    at processTicksAndRejections (node:internal/process/task_queues:83:21)","status":400,"statusCode":400,"type":"entity.parse.failed"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"body":"{\r\n    \"type\": \"Test\",\r\n    \"duration\": 200,\r\n    \"scheduledDate\": \"2023-01-10 09:00\",\r\n    \"instruction\": \"You should do this\"\r\n    \"subjectId\": \"63b93b882c3d04d5e78f5f83\"\r\n}","expose":true,"level":"error","message":"Unexpected string in JSON at position 133 Unexpected string in JSON at position 133","stack":"SyntaxError: Unexpected string in JSON at position 133\n    at JSON.parse (<anonymous>)\n    at parse (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\body-parser\\lib\\types\\json.js:89:19)\n    at C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\body-parser\\lib\\read.js:128:18\n    at AsyncResource.runInAsyncScope (node:async_hooks:202:9)\n    at invokeCallback (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\raw-body\\index.js:231:16)\n    at done (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\raw-body\\index.js:220:7)\n    at IncomingMessage.onEnd (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\raw-body\\index.js:280:7)\n    at IncomingMessage.emit (node:events:539:35)\n    at endReadableNT (node:internal/streams/readable:1345:12)\n    at processTicksAndRejections (node:internal/process/task_queues:83:21)","status":400,"statusCode":400,"type":"entity.parse.failed"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}

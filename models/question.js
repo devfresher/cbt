@@ -1,5 +1,8 @@
 import Joi from "joi";
-import { mongoose } from 'mongoose';
+import objectId from 'joi-objectid'
+import { mongoose, SchemaType, SchemaTypes } from 'mongoose';
+
+Joi.objectId = objectId(Joi)
 
 export const questionSchema = new mongoose.Schema({
     question: {
@@ -8,14 +11,19 @@ export const questionSchema = new mongoose.Schema({
         minLength: 3,
     },
     subjectId: {
-        type: String,
-        required: true
+        type: SchemaTypes.ObjectId,
+        required: true,
+        ref: "subject"
     },
     options: {
         type: {},
         required: true
     },
-    correctAns:{
+    correctAns: {
+        type: String,
+        required: true
+    },
+    imageUrl: {
         type: String,
         required: true
     }
@@ -31,6 +39,8 @@ export function validateQuestion(question) {
         optionC: Joi.string().required(),
         optionD: Joi.string().required(),
         answer: Joi.string().required(),
+        image: Joi.string().required(),
+        subjectId: Joi.objectId().required(),
     })
 
     return schema.validate(question);

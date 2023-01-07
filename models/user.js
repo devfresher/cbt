@@ -150,9 +150,10 @@ export function validateUser(user) {
             parent: Joi.string().required(),
             classId: Joi.objectId(),
             classSection: Joi.string(),
-            guardianName: Joi.string(),
-            guardianAddress: Joi.string(),
-            guardianRelationship: Joi.string(),    
+            guardianName: Joi.string().required(),
+            guardianPhone: Joi.string().required(),
+            guardianAddress: Joi.string().required(),
+            guardianRelationship: Joi.string().required(), 
         })
     } else {
         schema = Joi.object({

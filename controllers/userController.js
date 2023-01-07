@@ -78,7 +78,7 @@ export const updateUser = async (req, res) => {
     if(!user) return res.status(404).json("User not found")
 
     req.body.role = user.role
-    let { error } = validateUpdateReq(req.body);
+    let { error } = userModel.validateUpdateReq(req.body);
     if (error) return res.status(400).json(error.details[0].message)
     
     user.fullName = req.body.fullName
@@ -88,7 +88,7 @@ export const updateUser = async (req, res) => {
     } else if (user.role === 'Student') {
         if (!isValidObjectId(req.body.classId)) return res.status(400).json("Invalid class id")
 
-        const theClass = await Class.getById(req.body.classId)
+        const theClass = await Class.findById(req.body.classId)
         if (!theClass) return res.status(400).json("Class does not exist") 
 
         user.religion = req.body.religion

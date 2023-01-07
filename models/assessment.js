@@ -1,5 +1,9 @@
 import Joi from "joi";
-import { mongoose } from 'mongoose';
+import objectId from 'joi-objectid';
+
+import { mongoose, Schema } from 'mongoose';
+
+Joi.objectId = objectId(Joi);
 
 const assessmentTypeList = ['Exam', 'Test']
 export const assessmentSchema = new mongoose.Schema({
@@ -23,23 +27,38 @@ export const assessmentSchema = new mongoose.Schema({
     scheduledDate: {
         type: Date
     },
-    subjectId: {
-        type: String
+    instruction: {
+        type: String,
+        minLength: 5,
+        maxLength: 255,
+    },
+    subject: {
+        type: Schema.Types.ObjectId,
+        ref: "subject"
     }
 })
 
 const Assessment = mongoose.model('assessment', assessmentSchema)
 
 
-export function validateCreateReq(req) {
+export function validateReq(req) {
     const schema = Joi.object({
         type: Joi.string().required().valid(...assessmentTypeList),
         status: Joi.boolean().default(false),
         duration: Joi.number().required(),
-        scheduledDate: Joi.date().required()
+        scheduledDate: Joi.date().required(),
+        instruction: Joi.string(),
+        subjectId: Joi.objectId().required(),
     })
 
     return schema.validate(req);
 }
 
+export function validateStartAssessment(req) {
+    const schema = Joi.object({
+        assessmentType: Joi.string().required().valid(...assessmentTypeList),
+    })
+
+    return schema.validate(req);
+}
 export default Assessment
