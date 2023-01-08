@@ -22,7 +22,8 @@ export const createAssessment = async (req, res) => {
         scheduledDate: req.body.scheduledDate,
         duration: req.body.duration,
         instruction: req.body.instruction,
-        subject: req.body.subjectId
+        subject: req.body.subjectId,
+        noOfQuestion: req.body.noOfQuestion
     })
     await newAssessment.save()
 
@@ -47,6 +48,7 @@ export const updateAssessment = async (req, res) => {
     assessment.duration = req.body.duration
     assessment.subject = req.params.subjectId
     assessment.instruction = req.body.instruction
+    assessment.noOfQuestion = req.body.noOfQuestion
     await assessment.save()
     
     res.json(assessment)
@@ -88,21 +90,37 @@ export const startAssessment = async (req, res) => {
             }
         }
 
-        const user = await userService.getOneUser(req.user._id)
-        if(!user.class) throw {
-            status: "error",
-            error: {
-                code: 400,
-                message: "Student does not have a class"
-            }
-        }
-
-        const assessment = await assessmentService.getActiveAssessment(user.class._id, req.body.assessmentType);
+        const assessment = await assessmentService.startAssessment(req.user._id, req.body.assessmentType);
         return res.json({
             status: "success",
             data: assessment
         })
     } catch (error) {
+        console.log(error);
+        return res.status(error.error.code).json(error)
+    }
+
+}
+
+export const completeAssessment = async (req, res) => {
+    
+    try {
+        let { error } = assessmentModel.validateCompleteAssessment(req.body);
+        if (error) throw {
+            status: "error",
+            error: {
+                code: 400,
+                message: error.details[0].message
+            }
+        }
+
+        const assessmentTaken = await assessmentService.completeAssessment(req.user._id, req.body);
+        return res.json({
+            status: "success",
+            data: assessmentTaken
+        })
+    } catch (error) {
+        console.log(error);
         return res.status(error.error.code).json(error)
     }
 

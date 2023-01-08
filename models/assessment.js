@@ -35,6 +35,11 @@ export const assessmentSchema = new mongoose.Schema({
     subject: {
         type: Schema.Types.ObjectId,
         ref: "subject"
+    },
+    noOfQuestion: {
+        type: Number,
+        required: true,
+        default: 50
     }
 })
 
@@ -49,6 +54,7 @@ export function validateReq(req) {
         scheduledDate: Joi.date().required(),
         instruction: Joi.string(),
         subjectId: Joi.objectId().required(),
+        noOfQuestion: Joi.number()
     })
 
     return schema.validate(req);
@@ -57,6 +63,18 @@ export function validateReq(req) {
 export function validateStartAssessment(req) {
     const schema = Joi.object({
         assessmentType: Joi.string().required().valid(...assessmentTypeList),
+    })
+
+    return schema.validate(req);
+}
+
+export function validateCompleteAssessment(req) {
+    const schema = Joi.object({
+        assessmentId: Joi.objectId().required(),
+        totalQuestions: Joi.number().required(),
+        totalAttempted: Joi.number().required(),
+        totalCorrectAnswer: Joi.number().required(),
+        totalWrongAnswer: Joi.number().required()
     })
 
     return schema.validate(req);

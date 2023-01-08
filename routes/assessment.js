@@ -7,6 +7,7 @@ import { requireRole } from "../middleware/auth.js"
 import { validateObjectIds } from "../middleware/validate.js"
 
 router.post("/start", requireRole (['Student']), assessmentController.startAssessment)
+router.post("/complete", requireRole (['Student']), assessmentController.completeAssessment)
 
 // Assessment Implementation
 router.post("/", [requireRole (['Admin', 'Staff'])], assessmentController.createAssessment)
