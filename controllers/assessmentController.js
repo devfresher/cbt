@@ -54,6 +54,19 @@ export const updateAssessment = async (req, res) => {
     res.json(assessment)
 }
 
+export const fetchAllAssessment = async (req, res) => {
+    try {
+        const assessment = await assessmentService.findAll();
+        res.json({
+            status: "success",
+            data: assessment
+        })
+    } catch (error) {
+        return res.status(error.error.code).json(error)
+    }
+
+}
+
 export const fetchAllBySubject = async (req, res) => {
     const subject = await Subject.findById(req.params.subjectId)
     if(!subject) return res.status(404).json("Subject not found")

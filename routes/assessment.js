@@ -11,6 +11,7 @@ router.post("/complete", requireRole (['Student']), assessmentController.complet
 
 // Assessment Implementation
 router.post("/", [requireRole (['Admin', 'Staff'])], assessmentController.createAssessment)
+router.get("/", [requireRole (['Admin'])], assessmentController.fetchAllAssessment)
 router.get("/:subjectId", [requireRole (['Admin', 'Staff']), validateObjectIds('subjectId')], assessmentController.fetchAllBySubject)
 router.get("/:subjectId/:assessmentId", [requireRole (['Admin', 'Staff']), validateObjectIds(['subjectId', 'assessmentId'])], assessmentController.fetchById)
 

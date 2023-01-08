@@ -1,6 +1,6 @@
 import _ from "lodash";
 import winston from 'winston';
-import Assessment, { assessmentSchema } from "../models/assessment.js"
+import Assessment from "../models/assessment.js"
 import AssessmentTaken from "../models/assessmentTaken.js"
 
 import Question from "../models/question.js"
@@ -118,4 +118,17 @@ export const completeAssessment = async (studentId, req) => {
             }
         }
     } 
+}
+
+export const findAll = async () => {
+    const assessment = await Assessment.find()
+    if(!assessment) throw {
+        status: "success",
+        error: {
+            code: 204,
+            message: "No content"
+        }
+    }
+
+    return assessment
 }
