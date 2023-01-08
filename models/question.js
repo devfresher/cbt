@@ -25,7 +25,6 @@ export const questionSchema = new mongoose.Schema({
     },
     imageUrl: {
         type: String,
-        required: true
     }
 })
 const Question = mongoose.model('question', questionSchema)
@@ -39,7 +38,7 @@ export function validateQuestion(question) {
         optionC: Joi.string().required(),
         optionD: Joi.string().required(),
         answer: Joi.string().required(),
-        image: Joi.string().required(),
+        image: Joi.string(),
         subjectId: Joi.objectId().required(),
     })
 
