@@ -5,15 +5,13 @@ import * as assessmentService from '../services/assessment.service.js'
 import * as userService from '../services/user.service.js'
 
 export const createAssessment = async (req, res) => {
-    let { error } = assessmentModel.validateReq(req.body);
+    let { error } = assessmentModel.validateCreateReq(req.body);
     if (error) return res.status(400).json(error.details[0].message)
 
     const subject = await Subject.findById(req.body.subjectId)
     if (!subject) return res.status(404).json("Subject not found")
 
     const assessmentTitle = `${subject.title}-${subject.class.title}`
-    // const assessment = await Assessment.findOne({title: assessmentTitle, "subject._id": req.params.subjectId})
-    // if (assessment) return res.status(400).json(`${assessmentTitle} already exists`)
 
     const newAssessment = new Assessment ({
         title: assessmentTitle,
@@ -23,7 +21,8 @@ export const createAssessment = async (req, res) => {
         duration: req.body.duration,
         instruction: req.body.instruction,
         subject: req.body.subjectId,
-        noOfQuestion: req.body.noOfQuestion
+        noOfQuestion: req.body.noOfQuestion,
+        passMark: req.body.passMark
     })
     await newAssessment.save()
 
@@ -31,24 +30,29 @@ export const createAssessment = async (req, res) => {
 }
 
 export const updateAssessment = async (req, res) => {
-    let { error } = assessmentModel.validateReq(req.body);
+    let { error } = assessmentModel.validateUpdateReq(req.body);
     if (error) return res.status(400).json(error.details[0].message)
 
-    const subject = await Subject.findById(req.body.subjectId)
-    if (!subject) return res.status(404).json("Subject not found")
-
-    const assessmentTitle = `${subject.title}-${subject.class.title}`
     let assessment = await Assessment.findOne({_id: req.params.assessmentId})
     if (!assessment) return res.status(404).json(`Assessment does not exists`)
 
-    assessment.title = assessmentTitle
-    assessment.type = req.body.type
-    assessment.status = req.body.status
-    assessment.scheduledDate = req.body.scheduledDate
-    assessment.duration = req.body.duration
-    assessment.subject = req.params.subjectId
-    assessment.instruction = req.body.instruction
-    assessment.noOfQuestion = req.body.noOfQuestion
+    let assessmentTitle
+    if (req.body.subjectId) {
+        const subject = await Subject.findById(req.body.subjectId)
+        if (!subject) return res.status(404).json("Subject not found")
+
+        assessmentTitle = `${subject.title}-${subject.class.title}`
+    }
+
+    assessment.title = assessmentTitle || assessment.title
+    assessment.type = req.body.type || assessment.type
+    assessment.status = req.body.status || assessment.status
+    assessment.scheduledDate = req.body.scheduledDate || assessment.scheduledDate
+    assessment.duration = req.body.duration || assessment.duration
+    assessment.subject = req.body.subjectId || assessment.subject
+    assessment.instruction = req.body.instruction || assessment.instruction
+    assessment.noOfQuestion = req.body.noOfQuestion || assessment.noOfQuestion
+    assessment.noOfQuestion = req.body.passMark || assessment.passMark
     await assessment.save()
     
     res.json(assessment)

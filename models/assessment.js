@@ -40,13 +40,19 @@ export const assessmentSchema = new mongoose.Schema({
         type: Number,
         required: true,
         default: 50
+    },
+    passMark: {
+        type: Number,
+        default: function () {
+            return (this.noOfQuestion*0.4)
+        }
     }
 })
 
 const Assessment = mongoose.model('assessment', assessmentSchema)
 
 
-export function validateReq(req) {
+export function validateCreateReq(req) {
     const schema = Joi.object({
         type: Joi.string().required().valid(...assessmentTypeList),
         status: Joi.boolean().default(false),
@@ -54,7 +60,22 @@ export function validateReq(req) {
         scheduledDate: Joi.date().required(),
         instruction: Joi.string(),
         subjectId: Joi.objectId().required(),
-        noOfQuestion: Joi.number()
+        noOfQuestion: Joi.number(),
+        passMark: Joi.number()
+    })
+
+    return schema.validate(req);
+}
+export function validateUpdateReq(req) {
+    const schema = Joi.object({
+        type: Joi.string().valid(...assessmentTypeList),
+        status: Joi.boolean().default(false),
+        duration: Joi.number(),
+        scheduledDate: Joi.date(),
+        instruction: Joi.string(),
+        subjectId: Joi.objectId(),
+        noOfQuestion: Joi.number(),
+        passMark: Joi.number()
     })
 
     return schema.validate(req);
