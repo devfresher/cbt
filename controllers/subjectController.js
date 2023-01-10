@@ -3,14 +3,14 @@ import Class from '../models/class.js'
 import Subject, * as subjectModel from '../models/subject.js'
 
 export const createSubject = async (req, res) => {
-    let { error } = subjectModel.validateSubject(req.body);
+    let { error } = subjectModel.validateCreateReq(req.body);
     if (error) return res.status(400).json(error.details[0].message)
 
-    const theClass = await Class.findById(req.params.classId)
+    const theClass = await Class.findById(req.body.classId)
     if (!theClass) return res.status(404).json("Class not found")
 
-    const subject = await Subject.findOne({title: req.body.title, "class._id": req.params.classId})
-    if (subject) return res.status(404).json(`Subject already exists`)
+    const subject = await Subject.findOne({title: req.body.title, "class._id": req.body.classId})
+    if (subject) return res.status(400).json(`Subject already exists`)
 
     const newSubject = new Subject ({
         title: req.body.title,
@@ -23,22 +23,22 @@ export const createSubject = async (req, res) => {
 }
 
 export const updateSubject = async (req, res) => {
-    let { error } = subjectModel.validateSubject(req.body);
+    let { error } = subjectModel.validateUpdateReq(req.body);
     if (error) return res.status(400).json(error.details[0].message)
 
-    const theClass = await Class.findById(req.params.classId)
-    if (!theClass) return res.status(404).json("Class not found")
 
-    let subject = await Subject.findOne({_id: req.params.subjectId, "class._id": req.params.classId})
-    if (!subject) return res.status(400).json(`${req.body.title}-${theClass.title} does not exists`)
+    let subject = await Subject.findById(req.params.subjectId)
+    if (!subject) return res.status(404).json("Subject not found")
 
-    await Subject.updateOne(
-        {
-            _id: req.params.subjectId, 
-            "class._id": req.params.classId
-        },  {$set: req.body}
-    )
-    subject = await Subject.findById(req.params.subjectId)
+    if(req.body.classId){
+        const theClass = await Class.findById(req.body.classId)
+        if (!theClass) return res.status(404).json("Class not found")    
+        
+        subject.class._id = req.body.classId
+    }
+    
+    subject.title = req.body.title
+    subject.save()
 
     res.json(subject)
 }
