@@ -1,7 +1,8 @@
 import Joi from "joi";
 import objectId from 'joi-objectid';
 
-import { mongoose, Schema } from 'mongoose';
+import { mongoose, SchemaTypes } from 'mongoose';
+import paginate from "mongoose-paginate-v2";
 
 Joi.objectId = objectId(Joi);
 
@@ -33,7 +34,7 @@ export const assessmentSchema = new mongoose.Schema({
         maxLength: 255,
     },
     subject: {
-        type: Schema.Types.ObjectId,
+        type: SchemaTypes.ObjectId,
         ref: "subject"
     },
     noOfQuestion: {
@@ -49,6 +50,7 @@ export const assessmentSchema = new mongoose.Schema({
     }
 })
 
+assessmentSchema.plugin(paginate)
 const Assessment = mongoose.model('assessment', assessmentSchema)
 
 

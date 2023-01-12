@@ -1,144 +1,62 @@
 import _ from 'lodash'
-import Subject, * as subjectModel from '../models/subject.js'
-import Assessment, * as assessmentModel from '../models/assessment.js'
+import * as assessmentModel from '../models/assessment.js'
+
 import * as assessmentService from '../services/assessment.service.js'
-import * as userService from '../services/user.service.js'
+import * as subjectService from '../services/subject.service.js'
 
-export const createAssessment = async (req, res) => {
+export const createAssessment = async (req, res, next) => {
     let { error } = assessmentModel.validateCreateReq(req.body);
-    if (error) return res.status(400).json(error.details[0].message)
+    if (error) throw{ status: "error", code: 400, message: error.details[0].message }
 
-    const subject = await Subject.findById(req.body.subjectId)
-    if (!subject) return res.status(404).json("Subject not found")
-
-    const assessmentTitle = `${subject.title}-${subject.class.title}`
-
-    const newAssessment = new Assessment ({
-        title: assessmentTitle,
-        type: req.body.type,
-        status: req.body.status,
-        scheduledDate: req.body.scheduledDate,
-        duration: req.body.duration,
-        instruction: req.body.instruction,
-        subject: req.body.subjectId,
-        noOfQuestion: req.body.noOfQuestion,
-        passMark: req.body.passMark
-    })
-    await newAssessment.save()
-
-    res.json(newAssessment)
+    const newAssessment = await assessmentService.createAssessment(req.body)
+    next({status: "success", data: newAssessment})
 }
 
-export const updateAssessment = async (req, res) => {
+export const updateAssessment = async (req, res, next) => {
     let { error } = assessmentModel.validateUpdateReq(req.body);
-    if (error) return res.status(400).json(error.details[0].message)
+    if (error) throw{ status: "error", code: 400, message: error.details[0].message }
 
-    let assessment = await Assessment.findOne({_id: req.params.assessmentId})
-    if (!assessment) return res.status(404).json(`Assessment does not exists`)
+    const assessment = await assessmentService.getOneAssessment({_id: req.params.assessmentId})
+    const updatedAssessment = await assessmentService.updateAssessment(assessment, req.body)
 
-    let assessmentTitle
-    if (req.body.subjectId) {
-        const subject = await Subject.findById(req.body.subjectId)
-        if (!subject) return res.status(404).json("Subject not found")
+    next({status: "success", data: updatedAssessment})
+}
 
-        assessmentTitle = `${subject.title}-${subject.class.title}`
-    }
+export const fetchAllAssessment = async (req, res, next) => {
+    const assessment = await assessmentService.getMany({}, req.query);
+    next({ status: "success", data: assessment })
+}
 
-    assessment.title = assessmentTitle || assessment.title
-    assessment.type = req.body.type || assessment.type
-    assessment.status = req.body.status || assessment.status
-    assessment.scheduledDate = req.body.scheduledDate || assessment.scheduledDate
-    assessment.duration = req.body.duration || assessment.duration
-    assessment.subject = req.body.subjectId || assessment.subject
-    assessment.instruction = req.body.instruction || assessment.instruction
-    assessment.noOfQuestion = req.body.noOfQuestion || assessment.noOfQuestion
-    assessment.noOfQuestion = req.body.passMark || assessment.passMark
-    await assessment.save()
+export const fetchAllBySubject = async (req, res, next) => {
+    const assessments = await assessmentService.getAllBySubject(req.params.subjectId, req.query)
+    next({status: "success", data: assessments})
+}
+
+export const fetchById = async (req, res, next) => {
+    const subject = await subjectService.getOneSubject({_id: req.params.subjectId})
+    const assessment = await assessmentService.getOneAssessment({_id: req.params.assessmentId, subject: subject._id})
+
+    next({status: "success", data: assessment})
+}
+
+export const deleteAssessment = async (req, res, next) => {
+    const deleted = await assessmentService.deleteAssessment({_id: req.params.assessmentId})
+    next({status: "success", code: 204, data: deleted})
+}
+
+export const startAssessment = async (req, res, next) => {
+    let { error } = assessmentModel.validateStartAssessment(req.body);
+    if (error) throw { status: "error", code: 400, message: error.details[0].message }
+
+    const assessment = await assessmentService.startAssessment(req.user._id, req.body.assessmentType);
+    next({ status: "success", data: assessment})
+
+}
+
+export const completeAssessment = async (req, res, next) => {
+    let { error } = assessmentModel.validateCompleteAssessment(req.body);
+    if (error) throw { status: "error", code: 400, message: error.details[0].message }
     
-    res.json(assessment)
-}
-
-export const fetchAllAssessment = async (req, res) => {
-    try {
-        const assessment = await assessmentService.findAll();
-        res.json({
-            status: "success",
-            data: assessment
-        })
-    } catch (error) {
-        return res.status(error.error.code).json(error)
-    }
-
-}
-
-export const fetchAllBySubject = async (req, res) => {
-    const subject = await Subject.findById(req.params.subjectId)
-    if(!subject) return res.status(404).json("Subject not found")
-
-    const assessment = await Assessment.find({"subject": req.params.subjectId})
-    if (!assessment) return res.status(204).json()
-
-    res.json(assessment)
-}
-
-export const fetchById = async (req, res) => {
-    const assessment = await Assessment.findOne({"subject._id": req.params.subjectId, _id: req.params.assessmentId})
-    if(!assessment) return res.status(404).json("Assessment not found")
-
-    res.json(assessment)
-}
-
-export const deleteAssessment = async (req, res) => {
-    const assessment = await Assessment.findByIdAndDelete(req.params.assessmentId)
-    if (!assessment) return res.status(404).json("Assessment not found")
-
-    res.status(204).json(assessment)
-}
-
-export const startAssessment = async (req, res) => {
-    
-    try {
-        let { error } = assessmentModel.validateStartAssessment(req.body);
-        if (error) throw {
-            status: "error",
-            error: {
-                code: 400,
-                message: error.details[0].message
-            }
-        }
-
-        const assessment = await assessmentService.startAssessment(req.user._id, req.body.assessmentType);
-        return res.json({
-            status: "success",
-            data: assessment
-        })
-    } catch (error) {
-        console.log(error);
-        return res.status(error.error.code).json(error)
-    }
-
-}
-
-export const completeAssessment = async (req, res) => {
-    
-    try {
-        let { error } = assessmentModel.validateCompleteAssessment(req.body);
-        if (error) throw {
-            status: "error",
-            error: {
-                code: 400,
-                message: error.details[0].message
-            }
-        }
-
-        const assessmentTaken = await assessmentService.completeAssessment(req.user._id, req.body);
-        return res.json({
-            status: "success",
-            data: assessmentTaken
-        })
-    } catch (error) {
-        console.log(error);
-        return res.status(error.error.code).json(error)
-    }
-
+    const assessmentTaken = await assessmentService.completeAssessment(req.user._id, req.body);
+    next({ status: "success", data: assessmentTaken})
 }

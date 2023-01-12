@@ -1,68 +1,38 @@
 import _ from 'lodash'
-import Class from '../models/class.js'
-import Subject, * as subjectModel from '../models/subject.js'
+import * as subjectModel from '../models/subject.js'
 
-export const createSubject = async (req, res) => {
+import * as subjectService from '../services/subject.service.js'
+import * as classService from '../services/class.service.js'
+
+export const createSubject = async (req, res, next) => {
     let { error } = subjectModel.validateCreateReq(req.body);
-    if (error) return res.status(400).json(error.details[0].message)
+    if (error) throw { status: "error", code: 400, message: error.details[0].message }
 
-    const theClass = await Class.findById(req.body.classId)
-    if (!theClass) return res.status(404).json("Class not found")
-
-    const subject = await Subject.findOne({title: req.body.title, "class._id": req.body.classId})
-    if (subject) return res.status(400).json(`Subject already exists`)
-
-    const newSubject = new Subject ({
-        title: req.body.title,
-        "class._id": theClass._id,
-        "class.title": theClass.title
-    })
-    await newSubject.save()
-
-    res.json(newSubject)
+    const newSubject = await subjectService.createSubject(req.body)
+    next({ status: "success", data: newSubject })
 }
 
-export const updateSubject = async (req, res) => {
+export const updateSubject = async (req, res, next) => {
     let { error } = subjectModel.validateUpdateReq(req.body);
-    if (error) return res.status(400).json(error.details[0].message)
+    if (error) throw { status: "error", code: 400, message: error.details[0].message }
 
-
-    let subject = await Subject.findById(req.params.subjectId)
-    if (!subject) return res.status(404).json("Subject not found")
-
-    if(req.body.classId){
-        const theClass = await Class.findById(req.body.classId)
-        if (!theClass) return res.status(404).json("Class not found")    
-        
-        subject.class._id = req.body.classId
-    }
-    
-    subject.title = req.body.title
-    subject.save()
-
-    res.json(subject)
+    const updatedSubject = await subjectService.updateSubject(req.params.subjectId, req.body)
+    next({ status: "success", data: updatedSubject })
 }
 
-export const fetchAllByClass = async (req, res) => {
-    const theClass = await Class.findById(req.params.classId)
-    if(!theClass) return res.status(404).json("Class not found")
-
-    const subjects = await Subject.find({"class._id": req.params.classId})
-    if (!subjects) return res.status(204).json()
-
-    res.json(subjects)
+export const fetchAllByClass = async (req, res, next) => {
+    const subjects = await subjectService.getAllSubjectsByClass(req.params.classId, req.query)
+    next({status: "success", data: subjects})
 }
 
-export const fetchById = async (req, res) => {
-    const subject = await Subject.findOne({"class._id": req.params.classId, _id: req.params.subjectId})
-    if(!subject) return res.status(404).json("Subject not found")
+export const fetchById = async (req, res, next) => {
+    const theClass = await classService.getOneClass({_id: req.params.classId})
+    const subject = await subjectService.getOneSubject({_id: req.params.subjectId, "class_id": theClass._id})
 
-    res.json(subject)
+    next({status: "success", data: subject})
 }
 
-export const deleteSubject = async (req, res) => {
-    const subject = await Class.findByIdAndDelete(req.params.subjectId)
-    if (!subject) return res.status(404).json("Subject not found")
-
-    res.status(204).json(subject)
+export const deleteSubject = async (req, re, next) => {
+    const deleted = await subjectService.deleteSubject({_id: req.params.subjectId})
+    next({status: "success", code: 204, data: deleted})
 }

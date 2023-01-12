@@ -1,6 +1,7 @@
 import Joi from "joi";
 import objectId from 'joi-objectid'
 import { mongoose, SchemaType, SchemaTypes } from 'mongoose';
+import paginate from "mongoose-paginate-v2";
 
 Joi.objectId = objectId(Joi)
 
@@ -27,6 +28,8 @@ export const questionSchema = new mongoose.Schema({
         type: String,
     }
 })
+
+questionSchema.plugin(paginate)
 const Question = mongoose.model('question', questionSchema)
 
 

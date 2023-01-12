@@ -5,6 +5,9 @@ import config from 'config'
 import jwt from 'jsonwebtoken'
 import bcrypt from 'bcrypt'
 import { mongoose } from 'mongoose';
+import paginate from 'mongoose-paginate-v2';
+
+
 import { classSchema } from "./class.js";
 
 const Joi = coreJoi.extend(joiDate);
@@ -80,6 +83,7 @@ const userSchema = new mongoose.Schema({
     lga: String
 })
 
+userSchema.plugin(paginate)
 userSchema.methods.generateAuthToken = function () {
     return jwt.sign({
         _id: this._id,
