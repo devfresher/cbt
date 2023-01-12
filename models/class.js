@@ -1,5 +1,6 @@
 import Joi from "joi";
 import { mongoose } from 'mongoose';
+import paginate from "mongoose-paginate-v2";
 
 export const classSchema = new mongoose.Schema({
     title: {
@@ -12,8 +13,8 @@ export const classSchema = new mongoose.Schema({
     }
 })
 
+classSchema.plugin(paginate)
 const Class = mongoose.model('class', classSchema)
-
 
 export function validateClass(theClass) {
     const schema = Joi.object({

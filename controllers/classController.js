@@ -1,59 +1,38 @@
 import _ from 'lodash'
-import Class, * as classModel from '../models/class.js'
-import User from '../models/user.js'
+import * as classModel from '../models/class.js'
 
-export const fetchAll = async (req, res) => {
-    const classes = await Class.find()
-    if (_.isEmpty(classes)) return res.status(204).json(classes)
+import * as classService from '../services/class.service.js'
+import * as userService from '../services/user.service.js'
 
-    res.json(classes)
+export const fetchAll = async (req, res, next) => {
+    const classes = await classService.getMany({}, req.query)
+    next({status: "success", data: classes})
 }
 
-export const fetchStudentsByClass = async (req, res) => {
-    const theClass = await Class.findById(req.params.classId)
-    if(!theClass) return res.status(404).json("Response not found")
-
-    const students = await User.find({"class._id": req.params.classId})
-    if (!students) return res.status(204).json()
-
-    res.json(students)
+export const fetchStudentsByClass = async (req, res, next) => {
+    const students = await userService.getAllStudentsByClass(req.params.classId, req.query)
+    next({status: "success", data: students})
 }
 
-export const createClass = async (req, res) => {
+export const createClass = async (req, res, next) => {
     let { error } = classModel.validateClass(req.body);
-    if (error) return res.status(400).json(error.details[0].message)
+    if (error) throw{ status: "error", code: 400, message: error.details[0].message}
 
-    let theClass = await Class.findOne({ title: req.body.title })
-    if (theClass) return res.status(400).json(`${req.body.title} already exist`)
-
-    const newClass = new Class ({
-        title: req.body.title,
-        description: req.body.description
-    })
-    await newClass.save()
-
-    res.json(newClass)
+    const newClass = await classService.createClass(req.body)
+    next({status: "success", data: newClass})
 }
 
-export const updateClass = async (req, res) => {
+export const updateClass = async (req, res, next) => {
     let { error } = classModel.validateUpdate(req.body);
-    if (error) return res.status(400).json(error.details[0].message)
+    if (error) throw{ status: "error", code: 400, message: error.details[0].message}
 
-    let theClass = await Class.findById(req.params.classId)
-    if (!theClass) return res.status(404).json("Class not found")
+    const theClass = await classService.getOneClass({_id: req.params.classId})
 
-    await Class.updateOne(
-        {_id: req.params.classId},
-        {$set: req.body}
-    )
-
-    theClass = await Class.findById(req.params.classId)
-    res.json(theClass)
+    const updatedData = await classService.updateClass(theClass, req.body)
+    next({status: "success", data: updatedData})
 }
 
-export const deleteClass = async (req, res) => {
-    const theClass = await Class.findOneAndDelete(req.params.classId)
-    if (!theClass) return res.status(404).json("Class not found")
-
-    res.status(204).json(theClass)
+export const deleteClass = async (req, res, next) => {
+    const deleted = await classService.deleteClass({_id: req.params.classId})
+    next({status: "success", code: 204, data: deleted})
 }

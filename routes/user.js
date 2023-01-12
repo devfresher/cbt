@@ -8,10 +8,9 @@ import { validateObjectIds, validateRequest } from "../middleware/validate.js"
 
 router.post("/student", requireRole(['Admin', 'Staff']), userController.createUser)
 router.post("/staff", requireRole('Admin'), userController.createUser)
+router.post("/admin", requireRole('Admin'), userController.createUser)
 
-router.get("/students", requireRole('Admin'), userController.fetchAllByRole('Student'))
-router.get("/staffs", requireRole('Admin'), userController.fetchAllByRole('Staff'))
-router.get("/admins", requireRole('Admin'), userController.fetchAllByRole('Admin'))
+router.get("/", requireRole('Admin'), userController.fetchAllByRole)
 
 router.get("/profile/me", requireLoggedInUser, userController.fetchProfile)
 router.get("/:userId", [requireRole(['Admin', 'Staff']), validateObjectIds('userId')], userController.fetchById)
