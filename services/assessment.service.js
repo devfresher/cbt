@@ -62,12 +62,7 @@ export const startAssessment = async (studentId, assessmentType) => {
 
     // Check if assessment has been taken by student
     const assessmentTaken = await AssessmentTaken.findOne({ assessment: assessment._id, student: studentId})
-    if(assessmentTaken.completedAt) {
-        throw { status: "error", code: 400, message: "Assessment already completed by student"}
-    } else if (assessmentTaken.startedAt) {
-        // if started return assessment data
-        return {assessment, questions, startedAt: assessmentTaken.startedAt}
-    } else {
+    if(!assessmentTaken) {
         // new student, start fresh
         const newAssessmentTaken = new AssessmentTaken({
             assessment: assessment._id,
@@ -78,7 +73,12 @@ export const startAssessment = async (studentId, assessmentType) => {
 
         await newAssessmentTaken.save()
         return {assessment, questions, startedAt: Date.now()}
+
+    }  else if (assessmentTaken.completedAt) {
+        throw {status: "error", code: 400, message: "Assessment already completed"}
     } 
+
+    return {assessment, questions, startedAt: assessmentTaken.startedAt}
 }
 
 export const completeAssessment = async (studentId, req) => {

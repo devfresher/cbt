@@ -6,6 +6,8 @@ import jwt from 'jsonwebtoken'
 import bcrypt from 'bcrypt'
 import { mongoose } from 'mongoose';
 import paginate from 'mongoose-paginate-v2';
+import uniqueValidator from 'mongoose-unique-validator';
+
 
 
 import { classSchema } from "./class.js";
@@ -25,7 +27,7 @@ const userSchema = new mongoose.Schema({
     email: {
         type: String,
         required: true,
-        isUnique: true
+        unique: true
     },
     password: {
         type: String,
@@ -44,7 +46,6 @@ const userSchema = new mongoose.Schema({
     },
     admissionNo: {
         type: String,
-        isUnique: true
     },
     religion: {
         type: String,
@@ -60,7 +61,6 @@ const userSchema = new mongoose.Schema({
     classSection: {
         type: String
     },
-    parent: String,
     guardian: {
         type: {
             name: String,
@@ -73,53 +73,51 @@ const userSchema = new mongoose.Schema({
     phoneNumber: String,
     regNumber: {
         type: String,
-        isUnique: true
     },
     oracleNumber: {
         type: String,
-        isUnique: true
     },
     state: String,
     lga: String
 })
 
 userSchema.plugin(paginate)
+userSchema.plugin(uniqueValidator, { message: '{PATH} already exist.' })
 userSchema.methods.generateAuthToken = function () {
     return jwt.sign({
         _id: this._id,
         role: this.role
-    }, config.get("jwtPrivateKey"), {expiresIn: '24h'})
+    }, config.get("jwtPrivateKey"), { expiresIn: '24h' })
 }
-
 const User = mongoose.model('user', userSchema)
 
 export function validateUpdateReq(req) {
     let schema;
     if (req.role === 'Staff' || req.role === 'Admin') {
         schema = Joi.object({
-            fullName: Joi.string().min(5).max(50).required(),
-            phoneNumber: Joi.string().min(11).max(13).required(),
-            role: Joi.string().required().valid(...roleList),
+            fullName: Joi.string().min(5).max(50),
+            phoneNumber: Joi.string().min(11).max(13),
+            role: Joi.string().valid(...roleList),
         })
-    } else if(req.role === 'Student') {
+    } else if (req.role === 'Student') {
         schema = Joi.object({
-            fullName: Joi.string().min(5).max(50).required(),
-            role: Joi.string().required().valid(...roleList),
-            religion: Joi.string().required().valid(...religionList),
-            homeAddress: Joi.string().required(),
+            fullName: Joi.string().min(5).max(50),
+            role: Joi.string().valid(...roleList),
+            religion: Joi.string().valid(...religionList),
+            homeAddress: Joi.string(),
             classId: Joi.objectId(),
             classSection: Joi.string(),
-            guardianName: Joi.string().required(),
-            guardianPhone: Joi.string().required(),
-            guardianAddress: Joi.string().required(),
-            guardianRelationship: Joi.string().required(),
+            guardianName: Joi.string(),
+            guardianPhone: Joi.string(),
+            guardianAddress: Joi.string(),
+            guardianRelationship: Joi.string(),
         })
     } else {
         schema = Joi.object({
-            fullName: Joi.string().min(5).max(50).required(),
-            email: Joi.string().required().email().min(6).max(255),
-            password: Joi.string().min(6).required(),
-            role: Joi.string().required().valid(...roleList)
+            fullName: Joi.string().min(5).max(50),
+            email: Joi.string().email().min(6).max(255),
+            password: Joi.string().min(6),
+            role: Joi.string().valid(...roleList)
         })
     }
 
@@ -140,7 +138,7 @@ export function validateUser(user) {
             state: Joi.string().required(),
             lga: Joi.string().required(),
         })
-    } else if(user.role === 'Student') {
+    } else if (user.role === 'Student') {
         schema = Joi.object({
             fullName: Joi.string().min(5).max(50).required(),
             email: Joi.string().required().email().min(6).max(255),
@@ -151,13 +149,12 @@ export function validateUser(user) {
             admissionNo: Joi.string().required(),
             religion: Joi.string().required().valid(...religionList),
             homeAddress: Joi.string().required(),
-            parent: Joi.string().required(),
             classId: Joi.objectId(),
             classSection: Joi.string(),
             guardianName: Joi.string().required(),
             guardianPhone: Joi.string().required(),
             guardianAddress: Joi.string().required(),
-            guardianRelationship: Joi.string().required(), 
+            guardianRelationship: Joi.string().required(),
         })
     } else {
         schema = Joi.object({
@@ -171,8 +168,8 @@ export function validateUser(user) {
     return schema.validate(user);
 }
 
-export function validateLogin(req, type='others') {
-    const loginData = (type === 'student') ? 
+export function validateLogin(req, type = 'others') {
+    const loginData = (type === 'student') ?
         { admissionNo: Joi.string().required() } : { email: Joi.string().required() }
 
     loginData.password = Joi.string().required()
@@ -181,7 +178,7 @@ export function validateLogin(req, type='others') {
     return schema.validate(req);
 }
 
-export async function hashPassword (password) {
+export async function hashPassword(password) {
     const salt = await bcrypt.genSalt(10)
     return await bcrypt.hash(password, salt)
 }

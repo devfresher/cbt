@@ -18,10 +18,11 @@ const myCustomLabels = {
 };
 
 export const getOneUser = async (filterQuery) => {
+    filterQuery.select = '-password'
     const user = await User.findOne(filterQuery)    
 
     if (!user) throw {status: "error", code: 404, message: `${_.capitalize(filterQuery.role) || 'User'} not found`}
-    return _.omit(user.toObject(), ['password'])
+    return user
 }
 
 export const getAllStudentsByClass = async (classId, pageFilter) => {
@@ -51,12 +52,24 @@ export const createUser = async (data) => {
     })
 
     if(data.role === 'Staff' || data.role === 'Admin') {
+        const phoneExists = await User.countDocuments({ phoneNumber: data.phoneNumber })
+        if (phoneExists > 0) throw {status: "error", code: 400, message: "Phone number already exit"}
+    
+        const regNumberExists = await User.countDocuments({ regNumber: data.regNumber })
+        if (regNumberExists > 0) throw {status: "error", code: 400, message: "Registration number already exit"}
+    
+        const oracleNumberExists = await User.countDocuments({ oracleNumber: data.oracleNumber })
+        if (oracleNumberExists > 0) throw {status: "error", code: 400, message: "Oracle number already exit"}
+
         newUser.phoneNumber = data.phoneNumber
         newUser.regNumber = data.regNumber
         newUser.oracleNumber = data.oracleNumber
         newUser.state = data.state
         newUser.lga = data.lga
     } else if (data.role === 'Student') {
+        const admissionNoExists = await User.countDocuments({ admissionNo: data.admissionNo })
+        if (admissionNoExists > 0) throw {status: "error", code: 400, message: "Admission number already exit"}
+
         let theClass
         if (!_.isUndefined(data.classId)) theClass = await classService.getOneClass({_id: data.classId})
 
@@ -66,7 +79,6 @@ export const createUser = async (data) => {
         newUser.homeAddress = data.homeAddress
         newUser.class = theClass ? theClass : null
         newUser.classSection = theClass ? data.classSection : null
-        newUser.parent = data.parentName
         newUser.guardian = {
             name: data.guardianName,
             phoneNumber: data.guardianPhone,
@@ -74,8 +86,15 @@ export const createUser = async (data) => {
             relationship: data.guardianRelationship
         }
     }
-    await newUser.save()
-    return _.omit(newUser.toObject(), ['password'])
+    try {
+        await newUser.save()
+        return newUser
+    } catch (error) {
+        if(error.errors) {
+            const firstProperty = Object.keys(error.errors)[0]
+            throw {status: "error", code: 400, message: error.errors[firstProperty].properties.message}
+        }
+    }
 }
 
 export const updateUser = async (user, data) => {

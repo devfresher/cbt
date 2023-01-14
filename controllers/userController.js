@@ -33,7 +33,7 @@ export const updateUser = async (req, res, next) => {
     if (error) throw {status: "error", code: 400, message: error.details[0].message}
 
     const updatedUser = await userService.updateUser(user, req.body)
-    next({status: "success", data: updatedUser})
+    next({status: "success", data: _.omit(updatedUser, ['password'])})
 }
 
 export const deleteUser = async (req, res, next) => {
