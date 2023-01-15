@@ -1,4 +1,6 @@
+import { match } from "assert";
 import _ from "lodash";
+import Assessment from "../models/assessment.js";
 import Class from "../models/class.js";
 import Subject from "../models/subject.js";
 import User from "../models/user.js";
@@ -9,7 +11,24 @@ export const adminDashboard = async () => {
     const subjectCount = await Subject.countDocuments()
     const classCount = await Class.countDocuments()
 
-    const allClass = await Class.aggregate([
+    let results
+    // const classes = await Class.aggregate([
+    //     // {$group : { _id : '$students.class._id', totalStudents : { $count : {} } }},
+    //     {
+    //         $lookup: {
+    //             from: User.collection.name,
+    //             localField: "_id",
+    //             foreignField: "class._id",
+    //             as: "students"
+    //         }
+            
+    //     },
+    //     // {$unwind: "$students"}
+    //     // { $match: {"role": "Student"}}
+    // ])
+    const classes = await User.aggregate([
+        { $match: {"role": "Student"}},
+        {$group : { _id : '$class._id'}},
         {
             $lookup: {
                 from: User.collection.name,
@@ -17,29 +36,47 @@ export const adminDashboard = async () => {
                 foreignField: "class._id",
                 as: "students"
             }
+            
         },
-        // { $unwind: "$students" },
-        { 
-            $match: { "students.role": "Student" }
-        },
-        { 
-            $group: { "_id": "$class._id", studentCount: {$sum:1} }
+    ])
+    const upcomingEvents = await Assessment.aggregate([
+        {
+            $match: {
+                scheduledDate: { "$gte": new Date}
+            }
         }
     ])
-    // let newClass = []
 
-    // newClass = _.map(allClass, (theClass) => {
-    //     theClass.studentCount = await User.countDocuments({role: "Student", "class_id": theClass._id})
-    //     theClass.subjectCount = await Subject.countDocuments({"class_id": theClass._id})
-    //     return theClass
-    // })
+    return {studentCount, subjectCount, classCount, upcomingEvents, results, classes}
+}
 
-    // allClass.forEach((theClass, index) => {
-    //     let studentCount = User.countDocuments({role: "Student", "class_id": theClass._id})
-    //     let subjectCount = Subject.countDocuments({"class_id": theClass._id})
-    //     newClass[index].studentCount = studentCount
-    //     newClass[index].subjectCount = subjectCount
-    // });
+export const staffDashboard = async (staffId) => {
+    const studentCount = await User.countDocuments({role: "Student"})
+    const subjectCount = await Subject.countDocuments({teacher: staffId})
+    const classCount = await Class.countDocuments()
 
-    console.log(allClass);
+    let results
+
+    const classes = await User.aggregate([
+        { $match: {"role": "Student"}},
+        {$group : { _id : '$class._id'}},
+        {
+            $lookup: {
+                from: User.collection.name,
+                localField: "_id",
+                foreignField: "class._id",
+                as: "students"
+            }
+            
+        },
+    ])
+    const upcomingEvents = await Assessment.aggregate([
+        {
+            $match: {
+                scheduledDate: { "$gte": new Date}
+            }
+        }
+    ])
+
+    return {studentCount, subjectCount, classCount, upcomingEvents, results, classes}
 }
