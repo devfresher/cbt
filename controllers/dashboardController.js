@@ -9,7 +9,7 @@ export const getDashboard = async (req, res, next) => {
             break;
 
         case "Staff":
-            response = await dashboardService.staffDashboard()
+            response = await dashboardService.staffDashboard(req.user._id)
             break;
     
         default:
