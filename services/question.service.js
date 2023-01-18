@@ -28,7 +28,7 @@ export const createQuestion = async (req) => {
     if (req.file) image = await uploadToCloudinary(req.file)
 
     const subject = await subjectService.getOneSubject({_id: req.body.subjectId})
-    if (subject.teacher !== req.user._id) throw {status: "error", code: 403, message: "Unauthorized"}
+    if (req.user.role === 'staff' && subject.teacher !== req.user._id) throw {status: "error", code: 403, message: "Unauthorized"}
 
     const newQuestion = new Question ({
         question: req.body.question,
@@ -45,7 +45,7 @@ export const updateQuestion = async (question, req) => {
     let subject
     if (req.body.subjectId) {
         subject = await subjectService.getOneSubject({_id: req.body.subjectId})
-        if (subject.teacher !== req.user._id) throw {status: "error", code: 403, message: "Unauthorized"}
+        if (req.user.role === 'staff' && subject.teacher !== req.user._id) throw {status: "error", code: 403, message: "Unauthorized"}
     }
 
     let image

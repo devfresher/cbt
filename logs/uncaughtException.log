@@ -4487,3 +4487,15 @@
 {"level":"info","message":"Server started at http://0.0.0.0:8000"}
 {"level":"info","message":"Connected to DB"}
 {"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"body":"{\r\n\r\n    \"status\": true,\r\n\r\n}","expose":true,"level":"error","message":"Unexpected token } in JSON at position 28 Unexpected token } in JSON at position 28","stack":"SyntaxError: Unexpected token } in JSON at position 28\n    at JSON.parse (<anonymous>)\n    at parse (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\body-parser\\lib\\types\\json.js:89:19)\n    at C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\body-parser\\lib\\read.js:128:18\n    at AsyncResource.runInAsyncScope (node:async_hooks:202:9)\n    at invokeCallback (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\raw-body\\index.js:231:16)\n    at done (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\raw-body\\index.js:220:7)\n    at IncomingMessage.onEnd (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\raw-body\\index.js:280:7)\n    at IncomingMessage.emit (node:events:539:35)\n    at endReadableNT (node:internal/streams/readable:1345:12)\n    at processTicksAndRejections (node:internal/process/task_queues:83:21)","status":400,"statusCode":400,"type":"entity.parse.failed"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'class') Cannot read properties of undefined (reading 'class')","stack":"TypeError: Cannot read properties of undefined (reading 'class')\n    at Module.updateAssessment (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/services/assessment.service.js:154:49)\n    at updateAssessment (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/controllers/assessmentController.js:20:55)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
