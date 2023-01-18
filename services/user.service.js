@@ -2,6 +2,7 @@ import _ from "lodash"
 import User, * as userModel from "../models/user.js"
 
 import * as classService from "../services/class.service.js"
+import { deleteFromCloudinary, uploadToCloudinary } from "../startup/cloudinaryConfig.js";
 
 const myCustomLabels = {
     totalDocs: 'totalItems',
@@ -40,7 +41,7 @@ export const getMany = async (filterQuery, pageFilter) => {
     return await User.paginate(filterQuery, pageFilter)
 }
 
-export const createUser = async (data) => {
+export const createUser = async (data, file) => {
     const user = await User.findOne({ email: data.email })
     if (user) throw {status: "error", code: 400, message: "Email already exit"}
 
@@ -86,19 +87,22 @@ export const createUser = async (data) => {
             relationship: data.guardianRelationship
         }
     }
-    try {
-        await newUser.save()
-        return newUser
-    } catch (error) {
-        if(error.errors) {
-            const firstProperty = Object.keys(error.errors)[0]
-            throw {status: "error", code: 400, message: error.errors[firstProperty].properties.message}
-        }
-    }
+
+    let profileImage
+    if (file) profileImage = await uploadToCloudinary(file)
+    newUser.profileImage = profileImage ? { url: profileImage.secure_url, imageId: profileImage.public_id } : undefined
+
+    await newUser.save()
+    return newUser
 }
 
-export const updateUser = async (user, data) => {
+export const updateUser = async (user, data, file) => {
+    let image
+    if (file) image = user.profileImage ? 
+        await uploadToCloudinary(file, user.profileImage.imageId) : await uploadToCloudinary(file)
+
     user.fullName = data.fullName || user.fullName
+    user.profileImage = image ? {url: image.secure_url, imageId: image.public_id} : (user.profileImage || undefined)
 
     if(user.role === 'Staff') {
         user.phoneNumber = data.phoneNumber || user.phoneNumber
@@ -124,6 +128,7 @@ export const updateUser = async (user, data) => {
 
 export const deleteUser = async (filterQuery) => {
     const user = await getOneUser(filterQuery)
+    if (user.profileImage) await deleteFromCloudinary(user.profileImage.imageId)
 
     await User.deleteOne(filterQuery)
     return user

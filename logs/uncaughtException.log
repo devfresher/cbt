@@ -3289,3 +3289,1057 @@
 {"level":"info","message":"Server started at http://0.0.0.0:8000"}
 {"level":"info","message":"Connected to DB"}
 {"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"code":28818,"codeName":"Location28818","level":"error","message":"path option to $unwind stage should be prefixed with a '$': students path option to $unwind stage should be prefixed with a '$': students","ok":0,"stack":"MongoServerError: path option to $unwind stage should be prefixed with a '$': students\n    at Connection.onMessage (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\mongodb\\lib\\cmap\\connection.js:230:30)\n    at MessageStream.<anonymous> (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\mongodb\\lib\\cmap\\connection.js:61:60)\n    at MessageStream.emit (node:events:527:28)\n    at processIncomingData (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\mongodb\\lib\\cmap\\message_stream.js:125:16)\n    at MessageStream._write (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\mongodb\\lib\\cmap\\message_stream.js:33:9)\n    at writeOrBuffer (node:internal/streams/writable:389:12)\n    at _write (node:internal/streams/writable:330:10)\n    at MessageStream.Writable.write (node:internal/streams/writable:334:10)\n    at Socket.ondata (node:internal/streams/readable:754:22)\n    at Socket.emit (node:events:527:28)"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"error","message":"req is not defined req is not defined","stack":"ReferenceError: req is not defined\n    at Module.createQuestion (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/services/question.service.js:28:49)\n    at create (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/controllers/questionController.js:12:47)\n    at C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\express-async-errors\\index.js:17:20\n    at Layer.handle [as handle_request] (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\express\\lib\\router\\route.js:144:13)\n    at done (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\multer\\lib\\make-middleware.js:45:7)\n    at indicateDone (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\multer\\lib\\make-middleware.js:49:68)\n    at Multipart.<anonymous> (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\multer\\lib\\make-middleware.js:166:7)\n    at Multipart.emit (node:events:527:28)\n    at emitCloseNT (node:internal/streams/destroy:138:10)"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"error"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"error"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"error"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'split') Cannot read properties of undefined (reading 'split')","stack":"TypeError: Cannot read properties of undefined (reading 'split')\n    at Module.createQuestion (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/services/question.service.js:29:48)\n    at create (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/controllers/questionController.js:12:47)\n    at C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\express-async-errors\\index.js:17:20\n    at Layer.handle [as handle_request] (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\express\\lib\\router\\route.js:144:13)\n    at done (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\multer\\lib\\make-middleware.js:45:7)\n    at indicateDone (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\multer\\lib\\make-middleware.js:49:68)\n    at Multipart.<anonymous> (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\multer\\lib\\make-middleware.js:166:7)\n    at Multipart.emit (node:events:527:28)\n    at emitCloseNT (node:internal/streams/destroy:138:10)"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"error"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"error"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"error"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"error"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"code":"LIMIT_FILE_SIZE","field":"image","level":"error","message":"File too large File too large","name":"MulterError","stack":"MulterError: File too large\n    at abortWithCode (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\multer\\lib\\make-middleware.js:71:22)\n    at FileStream.<anonymous> (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\multer\\lib\\make-middleware.js:134:11)\n    at FileStream.emit (node:events:527:28)\n    at SBMH.ssCb [as _cb] (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\busboy\\lib\\types\\multipart.js:479:32)\n    at feed (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\streamsearch\\lib\\sbmh.js:248:10)\n    at SBMH.push (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\streamsearch\\lib\\sbmh.js:104:16)\n    at Multipart._write (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\busboy\\lib\\types\\multipart.js:567:19)\n    at writeOrBuffer (node:internal/streams/writable:389:12)\n    at _write (node:internal/streams/writable:330:10)\n    at Multipart.Writable.write (node:internal/streams/writable:334:10)","storageErrors":[]}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"code":"LIMIT_FILE_SIZE","field":"image","level":"error","message":"File too large File too large","name":"MulterError","stack":"MulterError: File too large\n    at abortWithCode (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\multer\\lib\\make-middleware.js:71:22)\n    at FileStream.<anonymous> (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\multer\\lib\\make-middleware.js:134:11)\n    at FileStream.emit (node:events:527:28)\n    at SBMH.ssCb [as _cb] (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\busboy\\lib\\types\\multipart.js:479:32)\n    at feed (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\streamsearch\\lib\\sbmh.js:248:10)\n    at SBMH.push (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\streamsearch\\lib\\sbmh.js:104:16)\n    at Multipart._write (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\busboy\\lib\\types\\multipart.js:567:19)\n    at writeOrBuffer (node:internal/streams/writable:389:12)\n    at _write (node:internal/streams/writable:330:10)\n    at Multipart.Writable.write (node:internal/streams/writable:334:10)","storageErrors":[]}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"code":"LIMIT_FILE_SIZE","field":"image","level":"error","message":"File too large File too large","name":"MulterError","stack":"MulterError: File too large\n    at abortWithCode (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\multer\\lib\\make-middleware.js:71:22)\n    at FileStream.<anonymous> (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\multer\\lib\\make-middleware.js:134:11)\n    at FileStream.emit (node:events:527:28)\n    at SBMH.ssCb [as _cb] (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\busboy\\lib\\types\\multipart.js:479:32)\n    at feed (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\streamsearch\\lib\\sbmh.js:248:10)\n    at SBMH.push (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\streamsearch\\lib\\sbmh.js:104:16)\n    at Multipart._write (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\busboy\\lib\\types\\multipart.js:567:19)\n    at writeOrBuffer (node:internal/streams/writable:389:12)\n    at _write (node:internal/streams/writable:330:10)\n    at Multipart.Writable.write (node:internal/streams/writable:334:10)","storageErrors":[]}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"code":"LIMIT_FILE_SIZE","field":"image","level":"error","message":"File too large File too large","name":"MulterError","stack":"MulterError: File too large\n    at abortWithCode (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\multer\\lib\\make-middleware.js:71:22)\n    at FileStream.<anonymous> (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\multer\\lib\\make-middleware.js:134:11)\n    at FileStream.emit (node:events:527:28)\n    at SBMH.ssCb [as _cb] (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\busboy\\lib\\types\\multipart.js:479:32)\n    at feed (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\streamsearch\\lib\\sbmh.js:248:10)\n    at SBMH.push (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\streamsearch\\lib\\sbmh.js:104:16)\n    at Multipart._write (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\busboy\\lib\\types\\multipart.js:567:19)\n    at writeOrBuffer (node:internal/streams/writable:389:12)\n    at _write (node:internal/streams/writable:330:10)\n    at Multipart.Writable.write (node:internal/streams/writable:334:10)","storageErrors":[]}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"code":"LIMIT_FILE_SIZE","field":"image","level":"error","message":"File too large File too large","name":"MulterError","stack":"MulterError: File too large\n    at abortWithCode (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\multer\\lib\\make-middleware.js:71:22)\n    at FileStream.<anonymous> (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\multer\\lib\\make-middleware.js:134:11)\n    at FileStream.emit (node:events:527:28)\n    at SBMH.ssCb [as _cb] (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\busboy\\lib\\types\\multipart.js:479:32)\n    at feed (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\streamsearch\\lib\\sbmh.js:248:10)\n    at SBMH.push (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\streamsearch\\lib\\sbmh.js:104:16)\n    at Multipart._write (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\busboy\\lib\\types\\multipart.js:567:19)\n    at writeOrBuffer (node:internal/streams/writable:389:12)\n    at _write (node:internal/streams/writable:330:10)\n    at Multipart.Writable.write (node:internal/streams/writable:334:10)","storageErrors":[]}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"code":"LIMIT_FILE_SIZE","field":"image","level":"error","message":"File too large File too large","name":"MulterError","stack":"MulterError: File too large\n    at abortWithCode (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\multer\\lib\\make-middleware.js:71:22)\n    at FileStream.<anonymous> (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\multer\\lib\\make-middleware.js:134:11)\n    at FileStream.emit (node:events:527:28)\n    at SBMH.ssCb [as _cb] (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\busboy\\lib\\types\\multipart.js:479:32)\n    at feed (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\streamsearch\\lib\\sbmh.js:248:10)\n    at SBMH.push (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\streamsearch\\lib\\sbmh.js:104:16)\n    at Multipart._write (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\busboy\\lib\\types\\multipart.js:567:19)\n    at writeOrBuffer (node:internal/streams/writable:389:12)\n    at _write (node:internal/streams/writable:330:10)\n    at Multipart.Writable.write (node:internal/streams/writable:334:10)","storageErrors":[]}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"code":"LIMIT_FILE_SIZE","field":"image","level":"error","message":"File too large File too large","name":"MulterError","stack":"MulterError: File too large\n    at abortWithCode (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\multer\\lib\\make-middleware.js:71:22)\n    at FileStream.<anonymous> (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\multer\\lib\\make-middleware.js:134:11)\n    at FileStream.emit (node:events:527:28)\n    at SBMH.ssCb [as _cb] (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\busboy\\lib\\types\\multipart.js:479:32)\n    at feed (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\streamsearch\\lib\\sbmh.js:248:10)\n    at SBMH.push (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\streamsearch\\lib\\sbmh.js:104:16)\n    at Multipart._write (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\busboy\\lib\\types\\multipart.js:567:19)\n    at writeOrBuffer (node:internal/streams/writable:389:12)\n    at _write (node:internal/streams/writable:330:10)\n    at Multipart.Writable.write (node:internal/streams/writable:334:10)","storageErrors":[]}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"code":"LIMIT_FILE_SIZE","field":"image","level":"error","message":"File too large File too large","name":"MulterError","stack":"MulterError: File too large\n    at abortWithCode (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\multer\\lib\\make-middleware.js:71:22)\n    at FileStream.<anonymous> (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\multer\\lib\\make-middleware.js:134:11)\n    at FileStream.emit (node:events:527:28)\n    at SBMH.ssCb [as _cb] (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\busboy\\lib\\types\\multipart.js:479:32)\n    at feed (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\streamsearch\\lib\\sbmh.js:248:10)\n    at SBMH.push (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\streamsearch\\lib\\sbmh.js:104:16)\n    at Multipart._write (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\busboy\\lib\\types\\multipart.js:567:19)\n    at writeOrBuffer (node:internal/streams/writable:389:12)\n    at _write (node:internal/streams/writable:330:10)\n    at Multipart.Writable.write (node:internal/streams/writable:334:10)","storageErrors":[]}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"code":"LIMIT_PART_COUNT","level":"error","message":"Too many parts Too many parts","name":"MulterError","stack":"MulterError: Too many parts\n    at abortWithCode (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\multer\\lib\\make-middleware.js:71:22)\n    at Multipart.<anonymous> (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\multer\\lib\\make-middleware.js:161:43)\n    at Multipart.emit (node:events:527:28)\n    at SBMH.ssCb [as _cb] (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\busboy\\lib\\types\\multipart.js:549:16)\n    at feed (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\streamsearch\\lib\\sbmh.js:219:14)\n    at SBMH.push (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\streamsearch\\lib\\sbmh.js:104:16)\n    at Multipart._write (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\busboy\\lib\\types\\multipart.js:567:19)\n    at writeOrBuffer (node:internal/streams/writable:389:12)\n    at _write (node:internal/streams/writable:330:10)\n    at Multipart.Writable.write (node:internal/streams/writable:334:10)","storageErrors":[]}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"code":"LIMIT_FIELD_COUNT","level":"error","message":"Too many fields Too many fields","name":"MulterError","stack":"MulterError: Too many fields\n    at abortWithCode (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\multer\\lib\\make-middleware.js:71:22)\n    at Multipart.<anonymous> (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\multer\\lib\\make-middleware.js:163:44)\n    at Multipart.emit (node:events:527:28)\n    at HeaderParser.cb (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\busboy\\lib\\types\\multipart.js:372:18)\n    at HeaderParser.push (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\busboy\\lib\\types\\multipart.js:162:20)\n    at SBMH.ssCb [as _cb] (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\busboy\\lib\\types\\multipart.js:394:37)\n    at feed (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\streamsearch\\lib\\sbmh.js:219:14)\n    at SBMH.push (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\streamsearch\\lib\\sbmh.js:104:16)\n    at Multipart._write (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\busboy\\lib\\types\\multipart.js:567:19)\n    at writeOrBuffer (node:internal/streams/writable:389:12)","storageErrors":[]}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"error"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"code":"ENOENT","errno":-4058,"level":"error","message":"ENOENT: no such file or directory, open 'C:\\Users\\user\\Documents\\Node-Express Projects\\uploads\\the millers1.png' ENOENT: no such file or directory, open 'C:\\Users\\user\\Documents\\Node-Express Projects\\uploads\\the millers1.png'","path":"C:\\Users\\user\\Documents\\Node-Express Projects\\uploads\\the millers1.png","stack":"Error: ENOENT: no such file or directory, open 'C:\\Users\\user\\Documents\\Node-Express Projects\\uploads\\the millers1.png'","storageErrors":[],"syscall":"open"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"error"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"error"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"error"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"error"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"error"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'url') Cannot read properties of undefined (reading 'url')","stack":"TypeError: Cannot read properties of undefined (reading 'url')\n    at Module.createQuestion (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/services/question.service.js:40:26)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)\n    at async create (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/controllers/questionController.js:12:25)"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"error","message":"filePathOnCloudinary is not defined filePathOnCloudinary is not defined","stack":"ReferenceError: filePathOnCloudinary is not defined\n    at uploadToCloudinary (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/startup/cloudinaryConfig.js:14:45)\n    at Module.createQuestion (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/services/question.service.js:30:24)\n    at create (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/controllers/questionController.js:12:47)\n    at C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\express-async-errors\\index.js:17:20\n    at Layer.handle [as handle_request] (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\express\\lib\\router\\route.js:144:13)\n    at done (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\multer\\lib\\make-middleware.js:45:7)\n    at indicateDone (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\multer\\lib\\make-middleware.js:49:68)\n    at C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\multer\\lib\\make-middleware.js:155:11\n    at WriteStream.<anonymous> (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\multer\\storage\\disk.js:43:9)"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"error"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"error"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"error"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"error","message":"Must supply api_key Must supply api_key"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"error","message":"[object Object] [object Object]"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"error","message":"[object Object] [object Object]"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"error","message":"[object Object] [object Object]"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"error","message":"[object Object] [object Object]"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"error","message":"[object Object] [object Object]"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"error","message":"[object Object] [object Object]"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"error","message":"{\"message\":\"public_id (cbt/questions/..\\\\uploads\\\\the millers1.png) is invalid\",\"name\":\"Error\",\"http_code\":400} {\"message\":\"public_id (cbt/questions/..\\\\uploads\\\\the millers1.png) is invalid\",\"name\":\"Error\",\"http_code\":400}"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"error","message":"localFilePath is not defined localFilePath is not defined","stack":"ReferenceError: localFilePath is not defined\n    at uploadToCloudinary (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/startup/cloudinaryConfig.js:15:66)\n    at Module.createQuestion (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/services/question.service.js:28:32)\n    at create (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/controllers/questionController.js:12:47)\n    at C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\express-async-errors\\index.js:17:20\n    at Layer.handle [as handle_request] (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\express\\lib\\router\\route.js:144:13)\n    at done (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\multer\\lib\\make-middleware.js:45:7)\n    at indicateDone (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\multer\\lib\\make-middleware.js:49:68)\n    at C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\multer\\lib\\make-middleware.js:155:11\n    at WriteStream.<anonymous> (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\multer\\storage\\disk.js:43:9)"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"error","message":"localFilePath is not defined localFilePath is not defined","stack":"ReferenceError: localFilePath is not defined\n    at uploadToCloudinary (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/startup/cloudinaryConfig.js:15:66)\n    at Module.createQuestion (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/services/question.service.js:28:32)\n    at create (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/controllers/questionController.js:12:47)\n    at C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\express-async-errors\\index.js:17:20\n    at Layer.handle [as handle_request] (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\express\\lib\\router\\route.js:144:13)\n    at done (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\multer\\lib\\make-middleware.js:45:7)\n    at indicateDone (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\multer\\lib\\make-middleware.js:49:68)\n    at C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\multer\\lib\\make-middleware.js:155:11\n    at WriteStream.<anonymous> (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\multer\\storage\\disk.js:43:9)"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"_message":"question validation failed","errors":{"imageUrl":{"kind":"string","message":"Cast to string failed for value \"{\n  asset_id: '03f462d8200ec40cf12035e47a0a8d57',\n  public_id: 'the_millers1.png',\n  version: 1673984804,\n  version_id: '80dbf7c198b7a024efefa7c31e6c8fbc',\n  signature: '4daf3b4be0560520febfadfc4835a9c50c0e2cdf',\n  width: 900,\n  height: 600,\n  format: 'png',\n  resource_type: 'image',\n  created_at: '2023-01-17T19:46:44Z',\n  tags: [],\n  bytes: 56048,\n  type: 'upload',\n  etag: 'cbfe3cd4c2d6fe3634373326d89969ea',\n  placeholder: false,\n  url: 'http://res.cloudinary.com/ds1ryba2h/image/upload/v1673984804/the_millers1.png.png',\n  secure_url: 'https://res.cloudinary.com/ds1ryba2h/image/upload/v1673984804/the_millers1.png.png',\n  folder: '',\n  original_filename: 'the millers1',\n  api_key: '611758137672553'\n}\" (type Object) at path \"imageUrl\"","name":"CastError","path":"imageUrl","reason":null,"stringValue":"\"{\n  asset_id: '03f462d8200ec40cf12035e47a0a8d57',\n  public_id: 'the_millers1.png',\n  version: 1673984804,\n  version_id: '80dbf7c198b7a024efefa7c31e6c8fbc',\n  signature: '4daf3b4be0560520febfadfc4835a9c50c0e2cdf',\n  width: 900,\n  height: 600,\n  format: 'png',\n  resource_type: 'image',\n  created_at: '2023-01-17T19:46:44Z',\n  tags: [],\n  bytes: 56048,\n  type: 'upload',\n  etag: 'cbfe3cd4c2d6fe3634373326d89969ea',\n  placeholder: false,\n  url: 'http://res.cloudinary.com/ds1ryba2h/image/upload/v1673984804/the_millers1.png.png',\n  secure_url: 'https://res.cloudinary.com/ds1ryba2h/image/upload/v1673984804/the_millers1.png.png',\n  folder: '',\n  original_filename: 'the millers1',\n  api_key: '611758137672553'\n}\"","value":{"api_key":"611758137672553","asset_id":"03f462d8200ec40cf12035e47a0a8d57","bytes":56048,"created_at":"2023-01-17T19:46:44Z","etag":"cbfe3cd4c2d6fe3634373326d89969ea","folder":"","format":"png","height":600,"original_filename":"the millers1","placeholder":false,"public_id":"the_millers1.png","resource_type":"image","secure_url":"https://res.cloudinary.com/ds1ryba2h/image/upload/v1673984804/the_millers1.png.png","signature":"4daf3b4be0560520febfadfc4835a9c50c0e2cdf","tags":[],"type":"upload","url":"http://res.cloudinary.com/ds1ryba2h/image/upload/v1673984804/the_millers1.png.png","version":1673984804,"version_id":"80dbf7c198b7a024efefa7c31e6c8fbc","width":900},"valueType":"Object"}},"level":"error","message":"question validation failed: imageUrl: Cast to string failed for value \"{\n  asset_id: '03f462d8200ec40cf12035e47a0a8d57',\n  public_id: 'the_millers1.png',\n  version: 1673984804,\n  version_id: '80dbf7c198b7a024efefa7c31e6c8fbc',\n  signature: '4daf3b4be0560520febfadfc4835a9c50c0e2cdf',\n  width: 900,\n  height: 600,\n  format: 'png',\n  resource_type: 'image',\n  created_at: '2023-01-17T19:46:44Z',\n  tags: [],\n  bytes: 56048,\n  type: 'upload',\n  etag: 'cbfe3cd4c2d6fe3634373326d89969ea',\n  placeholder: false,\n  url: 'http://res.cloudinary.com/ds1ryba2h/image/upload/v1673984804/the_millers1.png.png',\n  secure_url: 'https://res.cloudinary.com/ds1ryba2h/image/upload/v1673984804/the_millers1.png.png',\n  folder: '',\n  original_filename: 'the millers1',\n  api_key: '611758137672553'\n}\" (type Object) at path \"imageUrl\" question validation failed: imageUrl: Cast to string failed for value \"{\n  asset_id: '03f462d8200ec40cf12035e47a0a8d57',\n  public_id: 'the_millers1.png',\n  version: 1673984804,\n  version_id: '80dbf7c198b7a024efefa7c31e6c8fbc',\n  signature: '4daf3b4be0560520febfadfc4835a9c50c0e2cdf',\n  width: 900,\n  height: 600,\n  format: 'png',\n  resource_type: 'image',\n  created_at: '2023-01-17T19:46:44Z',\n  tags: [],\n  bytes: 56048,\n  type: 'upload',\n  etag: 'cbfe3cd4c2d6fe3634373326d89969ea',\n  placeholder: false,\n  url: 'http://res.cloudinary.com/ds1ryba2h/image/upload/v1673984804/the_millers1.png.png',\n  secure_url: 'https://res.cloudinary.com/ds1ryba2h/image/upload/v1673984804/the_millers1.png.png',\n  folder: '',\n  original_filename: 'the millers1',\n  api_key: '611758137672553'\n}\" (type Object) at path \"imageUrl\"","stack":"ValidationError: question validation failed: imageUrl: Cast to string failed for value \"{\n  asset_id: '03f462d8200ec40cf12035e47a0a8d57',\n  public_id: 'the_millers1.png',\n  version: 1673984804,\n  version_id: '80dbf7c198b7a024efefa7c31e6c8fbc',\n  signature: '4daf3b4be0560520febfadfc4835a9c50c0e2cdf',\n  width: 900,\n  height: 600,\n  format: 'png',\n  resource_type: 'image',\n  created_at: '2023-01-17T19:46:44Z',\n  tags: [],\n  bytes: 56048,\n  type: 'upload',\n  etag: 'cbfe3cd4c2d6fe3634373326d89969ea',\n  placeholder: false,\n  url: 'http://res.cloudinary.com/ds1ryba2h/image/upload/v1673984804/the_millers1.png.png',\n  secure_url: 'https://res.cloudinary.com/ds1ryba2h/image/upload/v1673984804/the_millers1.png.png',\n  folder: '',\n  original_filename: 'the millers1',\n  api_key: '611758137672553'\n}\" (type Object) at path \"imageUrl\"\n    at model.Document.invalidate (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\mongoose\\lib\\document.js:3123:32)\n    at model.$set (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\mongoose\\lib\\document.js:1463:12)\n    at model.$set (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\mongoose\\lib\\document.js:1146:16)\n    at model.Document (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\mongoose\\lib\\document.js:166:12)\n    at model.Model (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\mongoose\\lib\\model.js:122:12)\n    at new model (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\mongoose\\lib\\model.js:5092:15)\n    at Module.createQuestion (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/services/question.service.js:32:25)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)\n    at async create (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/controllers/questionController.js:12:25)"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'url') Cannot read properties of undefined (reading 'url')","stack":"TypeError: Cannot read properties of undefined (reading 'url')\n    at Module.createQuestion (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/services/question.service.js:37:25)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)\n    at async create (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/controllers/questionController.js:12:25)"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'url') Cannot read properties of undefined (reading 'url')","stack":"TypeError: Cannot read properties of undefined (reading 'url')\n    at Module.createQuestion (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/services/question.service.js:37:25)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)\n    at async create (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/controllers/questionController.js:12:25)"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"error","message":"questionModel.validateQuestion is not a function questionModel.validateQuestion is not a function","stack":"TypeError: questionModel.validateQuestion is not a function\n    at updateQuestion (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/controllers/questionController.js:17:35)\n    at C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\express-async-errors\\index.js:17:20\n    at Layer.handle [as handle_request] (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\express\\lib\\router\\route.js:144:13)\n    at done (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\multer\\lib\\make-middleware.js:45:7)\n    at indicateDone (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\multer\\lib\\make-middleware.js:49:68)\n    at Multipart.<anonymous> (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\multer\\lib\\make-middleware.js:166:7)\n    at Multipart.emit (node:events:527:28)\n    at emitCloseNT (node:internal/streams/destroy:138:10)\n    at processTicksAndRejections (node:internal/process/task_queues:82:21)"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"error","message":"file is not defined file is not defined","stack":"ReferenceError: file is not defined\n    at Module.updateQuestion (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/services/question.service.js:49:5)\n    at updateQuestion (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/controllers/questionController.js:21:51)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"error","message":"[object Object] [object Object]","stack":"Error: [object Object]\n    at fileFilter (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/startup/multerUploads.js:22:16)\n    at wrappedFileFilter (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\multer\\index.js:44:7)\n    at Multipart.<anonymous> (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\multer\\lib\\make-middleware.js:107:7)\n    at Multipart.emit (node:events:527:28)\n    at HeaderParser.cb (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\busboy\\lib\\types\\multipart.js:358:14)\n    at HeaderParser.push (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\busboy\\lib\\types\\multipart.js:162:20)\n    at SBMH.ssCb [as _cb] (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\busboy\\lib\\types\\multipart.js:394:37)\n    at feed (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\streamsearch\\lib\\sbmh.js:219:14)\n    at SBMH.push (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\streamsearch\\lib\\sbmh.js:104:16)\n    at Multipart._write (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\busboy\\lib\\types\\multipart.js:567:19)","storageErrors":[]}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"error","message":"[object Object] [object Object]","stack":"Error: [object Object]\n    at fileFilter (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/startup/multerUploads.js:22:16)\n    at wrappedFileFilter (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\multer\\index.js:44:7)\n    at Multipart.<anonymous> (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\multer\\lib\\make-middleware.js:107:7)\n    at Multipart.emit (node:events:527:28)\n    at HeaderParser.cb (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\busboy\\lib\\types\\multipart.js:358:14)\n    at HeaderParser.push (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\busboy\\lib\\types\\multipart.js:162:20)\n    at SBMH.ssCb [as _cb] (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\busboy\\lib\\types\\multipart.js:394:37)\n    at feed (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\streamsearch\\lib\\sbmh.js:200:10)\n    at SBMH.push (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\streamsearch\\lib\\sbmh.js:104:16)\n    at Multipart._write (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\busboy\\lib\\types\\multipart.js:567:19)","storageErrors":[]}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"error","message":"[object Object] [object Object]","stack":"Error: [object Object]\n    at fileFilter (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/startup/multerUploads.js:22:16)\n    at wrappedFileFilter (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\multer\\index.js:44:7)\n    at Multipart.<anonymous> (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\multer\\lib\\make-middleware.js:107:7)\n    at Multipart.emit (node:events:527:28)\n    at HeaderParser.cb (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\busboy\\lib\\types\\multipart.js:358:14)\n    at HeaderParser.push (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\busboy\\lib\\types\\multipart.js:162:20)\n    at SBMH.ssCb [as _cb] (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\busboy\\lib\\types\\multipart.js:394:37)\n    at feed (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\streamsearch\\lib\\sbmh.js:219:14)\n    at SBMH.push (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\streamsearch\\lib\\sbmh.js:104:16)\n    at Multipart._write (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\busboy\\lib\\types\\multipart.js:567:19)","storageErrors":[]}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"error","message":"Unsupported file formats Unsupported file formats","stack":"Error: Unsupported file formats\n    at fileFilter (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/startup/multerUploads.js:22:16)\n    at wrappedFileFilter (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\multer\\index.js:44:7)\n    at Multipart.<anonymous> (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\multer\\lib\\make-middleware.js:107:7)\n    at Multipart.emit (node:events:527:28)\n    at HeaderParser.cb (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\busboy\\lib\\types\\multipart.js:358:14)\n    at HeaderParser.push (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\busboy\\lib\\types\\multipart.js:162:20)\n    at SBMH.ssCb [as _cb] (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\busboy\\lib\\types\\multipart.js:394:37)\n    at feed (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\streamsearch\\lib\\sbmh.js:219:14)\n    at SBMH.push (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\streamsearch\\lib\\sbmh.js:104:16)\n    at Multipart._write (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\busboy\\lib\\types\\multipart.js:567:19)","storageErrors":[]}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"code":"LIMIT_FILE_COUNT","level":"error","message":"Too many files Too many files","name":"MulterError","stack":"MulterError: Too many files\n    at abortWithCode (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\multer\\lib\\make-middleware.js:71:22)\n    at Multipart.<anonymous> (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\multer\\lib\\make-middleware.js:162:43)\n    at Multipart.emit (node:events:527:28)\n    at HeaderParser.cb (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\busboy\\lib\\types\\multipart.js:343:18)\n    at HeaderParser.push (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\busboy\\lib\\types\\multipart.js:162:20)\n    at SBMH.ssCb [as _cb] (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\busboy\\lib\\types\\multipart.js:394:37)\n    at feed (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\streamsearch\\lib\\sbmh.js:248:10)\n    at SBMH.push (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\streamsearch\\lib\\sbmh.js:104:16)\n    at Multipart._write (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\busboy\\lib\\types\\multipart.js:567:19)\n    at writeOrBuffer (node:internal/streams/writable:389:12)","storageErrors":[]}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"error","message":"uploadToCloudinary is not defined uploadToCloudinary is not defined","stack":"ReferenceError: uploadToCloudinary is not defined\n    at Module.createUser (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/services/user.service.js:48:15)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)\n    at async createUser (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/controllers/userController.js:12:21)"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"error","message":"file is not defined file is not defined","stack":"ReferenceError: file is not defined\n    at Module.updateUser (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/services/user.service.js:101:5)\n    at updateUser (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/controllers/userController.js:38:43)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"error","message":"deleteFromCloudinary is not defined deleteFromCloudinary is not defined","stack":"ReferenceError: deleteFromCloudinary is not defined\n    at Module.deleteUser (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/services/user.service.js:131:28)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)\n    at async deleteUser (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/controllers/userController.js:61:21)"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}

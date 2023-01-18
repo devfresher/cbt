@@ -19,7 +19,6 @@ export const requireLoggedInUser =  async function (req, res, next) {
         next()
     } catch (err) {
         if (err.name === "TokenExpiredError") return res.status(400).json({status: "error", error: {code: 400, message: "Auth token expired"}})
-
         res.status(401).json({status: "error", error: {code: 401, message: "Failed to authenticate token"}})
     }
 }
@@ -28,7 +27,7 @@ export const requireRole  =  (roles) => {
     return (req, res, next) => {
         requireLoggedInUser(req, res, function() {
             roles = Array.isArray(roles) ? roles:[roles]
-            if(!_.find(roles, (r) => r === req.user.role)) throw {status: "error", code: 403, message: "Token valid, but forbidden to take this action"}
+            if(!_.find(roles, (r) => r === req.user.role)) res.status(403).json({status: "error", error: {code: 403, message: "Token valid, but forbidden to take this action"}})
             next()
         })
     }

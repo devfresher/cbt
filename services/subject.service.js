@@ -48,15 +48,16 @@ export const createSubject = async (data) => {
 export const updateSubject = async (subjectId, updateData) => {
     const subject = await getOneSubject({_id: subjectId})
 
-    if(updateData.classId) 
-        subject.class = await classService.getOneClass({_id: updateData.classId})
+    let theClass
+    if(updateData.classId) theClass = await classService.getOneClass({_id: updateData.classId})
 
-    if(updateData.teacherId) {
-        const teacher = await userService.getOneUser({_id: updateData.teacherId, role: 'Staff'})
-        subject.teacher = teacher._id
-    }
+    let teacher
+    if(updateData.teacherId) teacher = await userService.getOneUser({_id: updateData.teacherId, role: 'Staff'})
 
     subject.title = updateData.title || subject.title
+    subject.teacher = teacher ? teacher._id : subject.teacher
+    subject.class = theClass || subject.class
+
     subject.save()
 
     return subject

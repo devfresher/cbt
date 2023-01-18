@@ -1,5 +1,6 @@
 import Question from "../models/question.js"
 import * as subjectService from "./subject.service.js"
+import { deleteFromCloudinary, uploadToCloudinary } from "../startup/cloudinaryConfig.js"
 
 const myCustomLabels = {
     totalDocs: 'totalItems',
@@ -22,7 +23,10 @@ export const getOneQuestion = async (filterQuery) => {
     return question
 }
 
-export const createQuestion = async (data) => {
+export const createQuestion = async (data, file) => {
+    let image
+    if (file) image = await uploadToCloudinary(file)
+
     const subject = await subjectService.getOneSubject({_id: data.subjectId})
 
     const newQuestion = new Question ({
@@ -30,21 +34,26 @@ export const createQuestion = async (data) => {
         subjectId: subject._id,
         options: {a: data.optionA, b: data.optionB, c: data.optionC, d: data.optionD},
         correctAns: data.answer,
-        imageUrl: data.image
+        image: image ? {url: image.secure_url, imageId: image.public_id} : undefined,
     })
     await newQuestion.save()
     return newQuestion
 }
 
-export const updateQuestion = async (question, data) => {
+export const updateQuestion = async (question, data, file) => {
     let subject
     if (data.subjectId) subject = await subjectService.getOneSubject({_id: data.subjectId})
+
+    let image
+    if (file) {
+        if (question.image) image = await uploadToCloudinary(file, question.imageId)
+    }
 
     question.question = data.question || question.question
     question.options = {a: data.optionA, b: data.optionB, c: data.optionC, d: data.optionD} || question.options,
     question.correctAns = data.answer || question.correctAns
-    question.imageUrl = data.image || question.imageUrl
-    question.subjectId = data.subjectId || question.subjectId
+    question.image = image ? {url: image.secure_url, imageId: image.public_id} : (question.image || undefined)
+    question.subjectId = subject._id || question.subjectId 
 
     await question.save()
     return question
@@ -59,8 +68,14 @@ export const getAllBySubject = async (subjectId, pageFilter) => {
     return Question.paginate(findFilter, pageFilter)
 }
 
+export const getMany = async (filterQuery, pageFilter) => {
+    pageFilter.customLabels = myCustomLabels
+    return await Question.paginate(filterQuery, pageFilter)
+}
+
 export const deleteQuestion = async (filterQuery) => {
     const question = await getOneQuestion(filterQuery)
+    if (question.image) await deleteFromCloudinary(question.image.imageId)
 
     await Question.deleteOne(filterQuery)
     return question

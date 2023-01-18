@@ -9,8 +9,6 @@ import assessmentRouter from '../routes/assessment.js'
 import questionRouter from '../routes/question.js'
 import resultRouter from '../routes/result.js'
 import dashboardRouter from '../routes/dashboard.js'
-
-
 import responseMiddleWare from '../middleware/response.js'
 
 
@@ -26,7 +24,6 @@ const routeApp = function (app) {
     app.use('/api/question/', questionRouter)
     app.use('/api/result/', resultRouter)
     app.use('/api/dashboard/', dashboardRouter)
-
     app.use(responseMiddleWare)
 }
 

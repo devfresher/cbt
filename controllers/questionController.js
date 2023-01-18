@@ -1,30 +1,35 @@
 import _ from 'lodash'
-import Subject from '../models/subject.js'
-import Question, * as questionModel from '../models/question.js'
+import * as questionModel from '../models/question.js'
 import * as subjectService from '../services/subject.service.js'
 
 import * as questionService from '../services/question.service.js'
 
+
 export const create = async (req, res, next) => {
-    let { error } = questionModel.validateQuestion(req.body);
+    let { error } = questionModel.validateCreateReq(req.body);
     if (error) throw{ status: "error", code: 400, message: error.details[0].message}
 
-    const newQuestion = await questionService.createQuestion(req.body)
+    const newQuestion = await questionService.createQuestion(req.body, req.file)
     next({status: "success", data: newQuestion})
 }
 
 export const updateQuestion = async (req, res, next) => {
-    let { error } = questionModel.validateQuestion(req.body);
+    let { error } = questionModel.validateUpdateReq(req.body);
     if (error) throw{ status: "error", code: 400, message: error.details[0].message}
 
     const question = await questionService.getOneQuestion({_id: req.params.questionId})
-    const updatedQuestion = await questionService.updateQuestion(question, req.body)
+    const updatedQuestion = await questionService.updateQuestion(question, req.body, req.file)
 
     next({status: "success", data: updatedQuestion})
 }
 
 export const fetchAllBySubject = async (req, res, next) => {
     const questions = await questionService.getAllBySubject(req.params.subjectId, req.query)
+    next({status: "success", data: questions})
+}
+
+export const fetchAll = async (req, res, next) => {
+    const questions = await questionService.getMany({}, req.query)
     next({status: "success", data: questions})
 }
 

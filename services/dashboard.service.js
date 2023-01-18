@@ -36,17 +36,9 @@ export const staffDashboard = async (staffId) => {
 
     const classes = await User.aggregate([
         { $match: {"role": "Student"}},
-        { $group : { _id : '$class._id'} },
-        {
-            $lookup: {
-                from: User.collection.name,
-                localField: "_id",
-                foreignField: "class._id",
-                as: "students"
-            }
-            
-        },
+        { $group : { _id : '$class._id', totalStudent: {$sum:1}} },
     ])
+
     const upcomingEvents = await Assessment.aggregate([
         { $match: { scheduledDate: { "$gte": new Date} } },
         {
@@ -56,9 +48,9 @@ export const staffDashboard = async (staffId) => {
                 foreignField: "_id",
                 as: "subject"
             }
-            
         },
-        // { $match: { "subject.teacher": staffId } }
+        { $unwind: "$subject" },
+        { $match: { "subject.teacher": staffId } }
     ])
 
     return {studentCount, subjectCount, classCount, upcomingEvents, results, classes}

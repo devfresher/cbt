@@ -24,16 +24,19 @@ export const questionSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    imageUrl: {
-        type: String,
-    }
+    image: {
+        type: {
+            url: String,
+            imageId: String
+        }
+    },
 })
 
 questionSchema.plugin(paginate)
 const Question = mongoose.model('question', questionSchema)
 
 
-export function validateQuestion(question) {
+export function validateCreateReq(req) {
     const schema = Joi.object({
         question: Joi.string().min(5).required(),
         optionA: Joi.string().required(),
@@ -41,11 +44,24 @@ export function validateQuestion(question) {
         optionC: Joi.string().required(),
         optionD: Joi.string().required(),
         answer: Joi.string().required(),
-        image: Joi.string(),
         subjectId: Joi.objectId().required(),
     })
 
-    return schema.validate(question);
+    return schema.validate(req);
+}
+
+export function validateUpdateReq(req) {
+    const schema = Joi.object({
+        question: Joi.string().min(5),
+        optionA: Joi.string(),
+        optionB: Joi.string(),
+        optionC: Joi.string(),
+        optionD: Joi.string(),
+        answer: Joi.string(),
+        subjectId: Joi.objectId(),
+    })
+
+    return schema.validate(req);
 }
 
 export default Question

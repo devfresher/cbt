@@ -1,4 +1,5 @@
 import Class from "../models/class.js"
+import * as userService from "../services/user.service.js"
 
 const myCustomLabels = {
     totalDocs: 'totalItems',
@@ -27,13 +28,27 @@ export const getMany = async (filterQuery, pageFilter) => {
     return await Class.paginate(filterQuery, pageFilter)
 }
 
+const isClassTeacher = async (teacherId) =>{
+    const assignedClass = await Class.findOne({teacher: teacherId})
+    if (assignedClass) throw { status: "error", code: 400, message: "Teacher already assigned to a class" }
+
+    return
+}
+
 export const createClass = async (data) => {
     let theClass = await Class.findOne({ title: data.title })
     if (theClass) throw {status: "error", code: 400, message: `${data.title} already exist`}
 
+    let teacher
+    if (data.teacher) {
+        teacher = await userService.getOneUser({_id: data.teacher, role: "Staff"})
+        await isClassTeacher(data.teacher)
+    }
+
     const newClass = new Class ({
         title: data.title,
-        description: data.description
+        description: data.description,
+        teacher: teacher ? teacher._id:null
     })
 
     await newClass.save()
@@ -41,8 +56,15 @@ export const createClass = async (data) => {
 }
 
 export const updateClass = async (theClass, data) => {
+    let teacher
+    if (data.teacher) {
+        teacher = await userService.getOneUser({_id: data.teacher, role: "Staff"})
+        await isClassTeacher(data.teacher)
+    }
+
     theClass.title = data.title || theClass.title
     theClass.description = data.description || theClass.description
+    theClass.teacher = teacher ? teacher._id : theClass.teacher
 
     await theClass.save()
     return theClass

@@ -1,7 +1,9 @@
 import Joi from "joi";
-import { mongoose } from 'mongoose';
+import joiObjectid from "joi-objectid";
+import { mongoose, SchemaTypes } from 'mongoose';
 import paginate from "mongoose-paginate-v2";
 
+Joi.objectId = joiObjectid(Joi)
 export const classSchema = new mongoose.Schema({
     title: {
         type: String,
@@ -10,6 +12,9 @@ export const classSchema = new mongoose.Schema({
     description: {
         type: String,
         maxLength: 255
+    },
+    teacher: {
+        type: SchemaTypes.ObjectId
     }
 })
 
@@ -19,6 +24,7 @@ const Class = mongoose.model('class', classSchema)
 export function validateClass(theClass) {
     const schema = Joi.object({
         title: Joi.string().min(5).max(50).required(),
+        teacher: Joi.objectId(),
         description: Joi.string().max(255)
     })
 
@@ -28,6 +34,7 @@ export function validateClass(theClass) {
 export function validateUpdate(req) {
     const schema = Joi.object({
         title: Joi.string().min(5).max(50),
+        teacher: Joi.objectId(),
         description: Joi.string().max(255)
     })
 

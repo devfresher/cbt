@@ -78,7 +78,13 @@ const userSchema = new mongoose.Schema({
         type: String,
     },
     state: String,
-    lga: String
+    lga: String,
+    profileImage: {
+        type: {
+            url: String,
+            imageId: String
+        }
+    }
 })
 
 userSchema.plugin(paginate)
