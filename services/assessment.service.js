@@ -122,49 +122,50 @@ export const getAllBySubject = async (subjectId, pageFilter) => {
     return Assessment.paginate(findFilter, pageFilter)
 }
 
-export const createAssessment = async (data) => {
-    const subject = await subjectService.getOneSubject({_id: data.subjectId})
+export const createAssessment = async (req) => {
+    const subject = await subjectService.getOneSubject({_id: req.body.subjectId})
     if (req.user.role === 'staff' && subject.class.teacher !== req.user._id) throw {status: "error", code: 403, message: "Unauthorized"}
 
     const assessmentTitle = `${subject.title}-${subject.class.title}`
     const newAssessment = new Assessment ({
         title: assessmentTitle,
-        type: data.type,
-        status: data.status,
-        scheduledDate: data.scheduledDate,
-        duration: data.duration,
-        instruction: data.instruction,
-        subject: data.subjectId,
-        noOfQuestion: data.noOfQuestion,
-        passMark: data.passMark
+        type: req.body.type,
+        status: req.body.status,
+        scheduledDate: req.body.scheduledDate,
+        duration: req.body.duration,
+        instruction: req.body.instruction,
+        subject: req.body.subjectId,
+        noOfQuestion: req.body.noOfQuestion,
+        passMark: req.body.passMark
     })
     await newAssessment.save()
     return newAssessment
 }
 
-export const updateAssessment = async (assessment, data) => {
+export const updateAssessment = async (assessment, req) => {
     let assessmentTitle, subject
-    if (data.subjectId) {
-        subject = await subjectService.getOneSubject({_id: data.subjectId})
+    if (req.body.subjectId) {
+        subject = await subjectService.getOneSubject({_id: req.body.subjectId})
         assessmentTitle = `${subject.title}-${subject.class.title}`
         if (req.user.role === 'staff' && subject.class.teacher !== req.user._id) throw {status: "error", code: 403, message: "Unauthorized"}
+    } else {
+        subject = await subjectService.getOneSubject({_id: assessment.subject})
     }
 
-    if (data.status) {
-        const active = activeAssessment(subject.class._id, (data.type || assessment.type))
+    if (req.body.status) {
+        const active = await activeAssessment(subject.class._id, (req.body.type || assessment.type))
         if (active) throw { status: "error", code: 400, message: `An assessment in ${subject.class.title} is currently active` }
     }
 
-
     assessment.title = assessmentTitle || assessment.title
-    assessment.type = data.type || assessment.type
-    assessment.status = data.status || assessment.status
-    assessment.scheduledDate = data.scheduledDate || assessment.scheduledDate
-    assessment.duration = data.duration || assessment.duration
-    assessment.subject = data.subjectId || assessment.subject
-    assessment.instruction = data.instruction || assessment.instruction
-    assessment.noOfQuestion = data.noOfQuestion || assessment.noOfQuestion
-    assessment.passMark = data.passMark || assessment.noOfQuestion*0.4
+    assessment.type = req.body.type || assessment.type
+    assessment.status = !_.isUndefined(req.body.status) ? req.body.status : assessment.status
+    assessment.scheduledDate = req.body.scheduledDate || assessment.scheduledDate
+    assessment.duration = req.body.duration || assessment.duration
+    assessment.subject = req.body.subjectId || assessment.subject
+    assessment.instruction = req.body.instruction || assessment.instruction
+    assessment.noOfQuestion = req.body.noOfQuestion || assessment.noOfQuestion
+    assessment.passMark = req.body.passMark || assessment.noOfQuestion*0.4
     await assessment.save()
 
     return assessment

@@ -8,7 +8,7 @@ export const createAssessment = async (req, res, next) => {
     let { error } = assessmentModel.validateCreateReq(req.body);
     if (error) throw{ status: "error", code: 400, message: error.details[0].message }
 
-    const newAssessment = await assessmentService.createAssessment(req.body)
+    const newAssessment = await assessmentService.createAssessment(req)
     next({status: "success", data: newAssessment})
 }
 
@@ -17,7 +17,7 @@ export const updateAssessment = async (req, res, next) => {
     if (error) throw{ status: "error", code: 400, message: error.details[0].message }
 
     const assessment = await assessmentService.getOneAssessment({_id: req.params.assessmentId})
-    const updatedAssessment = await assessmentService.updateAssessment(assessment, req.body)
+    const updatedAssessment = await assessmentService.updateAssessment(assessment, req)
 
     next({status: "success", data: updatedAssessment})
 }

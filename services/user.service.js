@@ -78,6 +78,7 @@ export const createUser = async (data, file) => {
         newUser.admissionNo = data.admissionNo
         newUser.religion = data.religion
         newUser.homeAddress = data.homeAddress
+        newUser.gender = data.gender
         newUser.class = theClass ? theClass : null
         newUser.classSection = theClass ? data.classSection : null
         newUser.guardian = {
