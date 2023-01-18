@@ -9,7 +9,7 @@ export const create = async (req, res, next) => {
     let { error } = questionModel.validateCreateReq(req.body);
     if (error) throw{ status: "error", code: 400, message: error.details[0].message}
 
-    const newQuestion = await questionService.createQuestion(req.body, req.file)
+    const newQuestion = await questionService.createQuestion(req)
     next({status: "success", data: newQuestion})
 }
 
@@ -18,7 +18,7 @@ export const updateQuestion = async (req, res, next) => {
     if (error) throw{ status: "error", code: 400, message: error.details[0].message}
 
     const question = await questionService.getOneQuestion({_id: req.params.questionId})
-    const updatedQuestion = await questionService.updateQuestion(question, req.body, req.file)
+    const updatedQuestion = await questionService.updateQuestion(question, req)
 
     next({status: "success", data: updatedQuestion})
 }

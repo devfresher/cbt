@@ -22,7 +22,7 @@ const myCustomLabels = {
 };
 
 const activeAssessment = async (classId, assessmentType) => {
-    let assessment = await Assessment.aggregate([
+    const assessments = await Assessment.aggregate([
         {$lookup: {
             from: Subject.collection.name,
             localField: "subject",
@@ -36,9 +36,7 @@ const activeAssessment = async (classId, assessmentType) => {
             }
         }
     ])
-    assessment = assessment[0]
-    if (!assessment) throw { status: "error", code: 400, message: `No active assessment (${assessmentType}) available` }
-
+    const assessment = assessments[0]
     return assessment
 }
 
@@ -48,6 +46,8 @@ export const startAssessment = async (studentId, assessmentType) => {
 
     // Get active assessment for the class
     let assessment = await activeAssessment(student.class._id, assessmentType)
+    if (!assessment) throw { status: "error", code: 400, message: `No active assessment (${assessmentType}) available` }
+
 
     // get the random Questions
     const questions = await Question.aggregate( [
@@ -124,6 +124,7 @@ export const getAllBySubject = async (subjectId, pageFilter) => {
 
 export const createAssessment = async (data) => {
     const subject = await subjectService.getOneSubject({_id: data.subjectId})
+    if (subject.class.teacher !== req.user._id) throw {status: "error", code: 403, message: "Unauthorized"}
 
     const assessmentTitle = `${subject.title}-${subject.class.title}`
     const newAssessment = new Assessment ({
@@ -142,11 +143,18 @@ export const createAssessment = async (data) => {
 }
 
 export const updateAssessment = async (assessment, data) => {
-    let assessmentTitle
+    let assessmentTitle, subject
     if (data.subjectId) {
-        const subject = await subjectService.getOneSubject({_id: data.subjectId})
+        subject = await subjectService.getOneSubject({_id: data.subjectId})
         assessmentTitle = `${subject.title}-${subject.class.title}`
+        if (subject.class.teacher !== req.user._id) throw {status: "error", code: 403, message: "Unauthorized"}
     }
+
+    if (data.status) {
+        const active = activeAssessment(subject.class._id, (data.type || assessment.type))
+        if (active) throw { status: "error", code: 400, message: `An assessment in ${subject.class.title} is currently active` }
+    }
+
 
     assessment.title = assessmentTitle || assessment.title
     assessment.type = data.type || assessment.type

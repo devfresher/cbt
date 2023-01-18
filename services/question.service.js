@@ -23,35 +23,39 @@ export const getOneQuestion = async (filterQuery) => {
     return question
 }
 
-export const createQuestion = async (data, file) => {
+export const createQuestion = async (req) => {
     let image
-    if (file) image = await uploadToCloudinary(file)
+    if (req.file) image = await uploadToCloudinary(req.file)
 
-    const subject = await subjectService.getOneSubject({_id: data.subjectId})
+    const subject = await subjectService.getOneSubject({_id: req.body.subjectId})
+    if (subject.teacher !== req.user._id) throw {status: "error", code: 403, message: "Unauthorized"}
 
     const newQuestion = new Question ({
-        question: data.question,
+        question: req.body.question,
         subjectId: subject._id,
-        options: {a: data.optionA, b: data.optionB, c: data.optionC, d: data.optionD},
-        correctAns: data.answer,
+        options: {a: req.body.optionA, b: req.body.optionB, c: req.body.optionC, d: req.body.optionD},
+        correctAns: req.body.answer,
         image: image ? {url: image.secure_url, imageId: image.public_id} : undefined,
     })
     await newQuestion.save()
     return newQuestion
 }
 
-export const updateQuestion = async (question, data, file) => {
+export const updateQuestion = async (question, req) => {
     let subject
-    if (data.subjectId) subject = await subjectService.getOneSubject({_id: data.subjectId})
-
-    let image
-    if (file) {
-        if (question.image) image = await uploadToCloudinary(file, question.imageId)
+    if (req.body.subjectId) {
+        subject = await subjectService.getOneSubject({_id: req.body.subjectId})
+        if (subject.teacher !== req.user._id) throw {status: "error", code: 403, message: "Unauthorized"}
     }
 
-    question.question = data.question || question.question
-    question.options = {a: data.optionA, b: data.optionB, c: data.optionC, d: data.optionD} || question.options,
-    question.correctAns = data.answer || question.correctAns
+    let image
+    if (req.file) {
+        if (question.image) image = await uploadToCloudinary(req.file, question.imageId)
+    }
+
+    question.question = req.body.question || question.question
+    question.options = {a: req.body.optionA, b: req.body.optionB, c: req.body.optionC, d: req.body.optionD} || question.options,
+    question.correctAns = req.body.answer || question.correctAns
     question.image = image ? {url: image.secure_url, imageId: image.public_id} : (question.image || undefined)
     question.subjectId = subject._id || question.subjectId 
 

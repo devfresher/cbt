@@ -4343,3 +4343,147 @@
 {"level":"error","message":"deleteFromCloudinary is not defined deleteFromCloudinary is not defined","stack":"ReferenceError: deleteFromCloudinary is not defined\n    at Module.deleteUser (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/services/user.service.js:131:28)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)\n    at async deleteUser (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/controllers/userController.js:61:21)"}
 {"level":"info","message":"Connected to DB"}
 {"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
