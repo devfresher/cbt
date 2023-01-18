@@ -124,7 +124,7 @@ export const getAllBySubject = async (subjectId, pageFilter) => {
 
 export const createAssessment = async (data) => {
     const subject = await subjectService.getOneSubject({_id: data.subjectId})
-    if (subject.class.teacher !== req.user._id) throw {status: "error", code: 403, message: "Unauthorized"}
+    if (req.user.role === 'staff' && subject.class.teacher !== req.user._id) throw {status: "error", code: 403, message: "Unauthorized"}
 
     const assessmentTitle = `${subject.title}-${subject.class.title}`
     const newAssessment = new Assessment ({
@@ -147,7 +147,7 @@ export const updateAssessment = async (assessment, data) => {
     if (data.subjectId) {
         subject = await subjectService.getOneSubject({_id: data.subjectId})
         assessmentTitle = `${subject.title}-${subject.class.title}`
-        if (subject.class.teacher !== req.user._id) throw {status: "error", code: 403, message: "Unauthorized"}
+        if (req.user.role === 'staff' && subject.class.teacher !== req.user._id) throw {status: "error", code: 403, message: "Unauthorized"}
     }
 
     if (data.status) {
