@@ -5185,3 +5185,23 @@
 {"level":"info","message":"Server started at http://0.0.0.0:8000"}
 {"level":"info","message":"Connected to DB"}
 {"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"error","message":"{\"message\":\"Stale request - reported time is 2023-01-20 09:36:57 +0000 which is more than 1 hour ago\",\"name\":\"Error\",\"http_code\":400} {\"message\":\"Stale request - reported time is 2023-01-20 09:36:57 +0000 which is more than 1 hour ago\",\"name\":\"Error\",\"http_code\":400}"}
+{"level":"error","message":"{\"message\":\"Stale request - reported time is 2023-01-20 09:39:02 +0000 which is more than 1 hour ago\",\"name\":\"Error\",\"http_code\":400} {\"message\":\"Stale request - reported time is 2023-01-20 09:39:02 +0000 which is more than 1 hour ago\",\"name\":\"Error\",\"http_code\":400}"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"error","message":"{\"message\":\"Stale request - reported time is 2023-01-20 09:39:34 +0000 which is more than 1 hour ago\",\"name\":\"Error\",\"http_code\":400} {\"message\":\"Stale request - reported time is 2023-01-20 09:39:34 +0000 which is more than 1 hour ago\",\"name\":\"Error\",\"http_code\":400}"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}

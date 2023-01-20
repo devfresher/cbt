@@ -1,8 +1,6 @@
 import _ from "lodash";
 import mongoose from "mongoose";
-import Assessment from "../models/assessment.js";
 import AssessmentTaken from "../models/assessmentTaken.js";
-import Subject from "../models/subject.js";
 
 export const fetchResult = async (user) => {
     let result
@@ -97,7 +95,6 @@ export const fetchResult = async (user) => {
             break;
 
         case 'student':
-            console.log(user._id);
             result = await AssessmentTaken.aggregate([
                 { $match: { completedAt: { $ne: null } } },
                 { $match: { 'student': mongoose.Types.ObjectId(user._id)} },
@@ -132,7 +129,5 @@ export const fetchResult = async (user) => {
             result = await AssessmentTaken.find({student: user._id})
             break;
     }
-
-    console.log(result);
     return result
 }
