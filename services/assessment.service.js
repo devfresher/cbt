@@ -86,7 +86,10 @@ export const completeAssessment = async (studentId, req) => {
     const student = await userService.getOneUser({ _id: studentId })
 
     // Check if assessment has been taken by student
-    const assessmentTaken = await AssessmentTaken.findOne({ assessment: req.assessmentId, student: student._id})
+    const assessmentTaken = await AssessmentTaken.findOne({ 
+        assessment: req.assessmentId, 
+        student: student._id
+    }).populate('assessment')
 
     if(!assessmentTaken) throw { status: "error", code: 400, message: "No assessment to complete" }
     else if (assessmentTaken.completedAt) throw { status: "error", code: 400,  message: "Assessment already completed"}
@@ -94,6 +97,8 @@ export const completeAssessment = async (studentId, req) => {
     // if started, update for completion
     assessmentTaken.totalAttemptedQuestion = req.totalAttempted
     assessmentTaken.totalCorrectAnswer = req.totalCorrectAnswer
+    assessmentTaken.score = (req.totalCorrectAnswer/assessmentTaken.totalQuestionSupplied)*100
+    assessmentTaken.grade = assessmentTaken.score >= assessmentTaken.assessment.passMark ? "Pass":"Fail" 
     assessmentTaken.totalWrongAnswer = req.totalWrongAnswer
     assessmentTaken.completedAt = Date.now()
     await assessmentTaken.save()

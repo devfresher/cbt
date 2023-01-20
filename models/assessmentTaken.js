@@ -36,6 +36,9 @@ export const assessmentTakenSchema = new mongoose.Schema({
     grade: {
         type: String
     },
+    score: {
+        type: Number
+    },
     startedAt: {
         type: Date,
         required: true,
