@@ -21,7 +21,14 @@ export const updateSubject = async (req, res, next) => {
 }
 
 export const fetchAllByClass = async (req, res, next) => {
-    const subjects = await subjectService.getAllSubjectsByClass(req.params.classId, req.query)
+    const theClass = await classService.getOneClass({_id: req.params.classId})
+
+    const subjects = await subjectService.getMany({"class._id": theClass._id}, req.query)
+    next({status: "success", data: subjects})
+}
+
+export const fetchAllByStaff = async (req, res, next) => {
+    const subjects = await subjectService.getMany({teacher: req.user._id}, req.query)
     next({status: "success", data: subjects})
 }
 

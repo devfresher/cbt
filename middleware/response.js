@@ -21,7 +21,7 @@ export default function (data, req, res, next) {
     
         default:
             winston.error(data.message, data);
-            res.status(500).json({
+            return res.status(500).json({
                 status: "error",
                 error: {
                     code: 500,

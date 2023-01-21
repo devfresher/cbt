@@ -2,7 +2,7 @@ import _ from "lodash";
 import mongoose from "mongoose";
 import AssessmentTaken from "../models/assessmentTaken.js";
 
-export const fetchResult = async (user) => {
+export const fetchResult = async (user, limit) => {
     let result
     switch (_.toLower(user.role)) {
         
@@ -46,6 +46,7 @@ export const fetchResult = async (user) => {
                 }},
                 { $unwind: "$assessment"},
                 { $unwind: "$class"},
+                limit ? { $limit: 5 } : ""
             ])
                   
             break;
@@ -91,6 +92,7 @@ export const fetchResult = async (user) => {
                 }},
                 { $unwind: "$assessment"},
                 { $unwind: "$class"},
+                { $limit: 5 }
             ])
             break;
 
@@ -122,6 +124,7 @@ export const fetchResult = async (user) => {
                 { $unwind: "$assessment"},
                 { $unwind: "$class"},
                 { $unwind: "$subject"},
+                { $limit: 5 }
             ])
             break;
     

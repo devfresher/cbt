@@ -1,6 +1,7 @@
 import Question from "../models/question.js"
 import * as subjectService from "./subject.service.js"
 import { deleteFromCloudinary, uploadToCloudinary } from "../startup/cloudinaryConfig.js"
+import _ from "lodash";
 
 const myCustomLabels = {
     totalDocs: 'totalItems',
@@ -28,7 +29,8 @@ export const createQuestion = async (req) => {
     if (req.file) image = await uploadToCloudinary(req.file)
 
     const subject = await subjectService.getOneSubject({_id: req.body.subjectId})
-    if (req.user.role === 'staff' && subject.teacher !== req.user._id) throw {status: "error", code: 403, message: "Unauthorized"}
+    if (_.toLower(req.user.role) == 'staff' && subject.teacher !== req.user._id) 
+        throw {status: "error", code: 403, message: "Unauthorized."}
 
     const newQuestion = new Question ({
         question: req.body.question,
