@@ -3,11 +3,11 @@ import mongoose from "mongoose";
 import AssessmentTaken from "../models/assessmentTaken.js";
 
 export const fetchResult = async (user, limit) => {
-    let result
+    let pipeline
     switch (_.toLower(user.role)) {
         
         case 'admin':
-            result = await AssessmentTaken.aggregate([
+            pipeline = [
                 { $match: { completedAt: { $ne: null } } },
                 { $lookup: {
                     from: 'users',
@@ -46,13 +46,11 @@ export const fetchResult = async (user, limit) => {
                 }},
                 { $unwind: "$assessment"},
                 { $unwind: "$class"},
-                limit ? { $limit: 5 } : ""
-            ])
-                  
+            ]     
             break;
 
         case 'staff':
-            result = await AssessmentTaken.aggregate([
+            pipeline = [
                 { $match: { completedAt: { $ne: null } } },
                 { $lookup: {
                     from: 'users',
@@ -91,13 +89,12 @@ export const fetchResult = async (user, limit) => {
                     students: 1
                 }},
                 { $unwind: "$assessment"},
-                { $unwind: "$class"},
-                { $limit: 5 }
-            ])
+                { $unwind: "$class"}
+            ]
             break;
 
         case 'student':
-            result = await AssessmentTaken.aggregate([
+            pipeline = [
                 { $match: { completedAt: { $ne: null } } },
                 { $match: { 'student': mongoose.Types.ObjectId(user._id)} },
                 { $lookup: {
@@ -125,12 +122,15 @@ export const fetchResult = async (user, limit) => {
                 { $unwind: "$class"},
                 { $unwind: "$subject"},
                 { $limit: 5 }
-            ])
+            ]
             break;
     
         default:
-            result = await AssessmentTaken.find({student: user._id})
+            pipeline = []
             break;
     }
+
+    if (limit) pipeline.push({$limit: limit})
+    const result = await AssessmentTaken.aggregate(pipeline)
     return result
 }

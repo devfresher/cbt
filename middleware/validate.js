@@ -1,5 +1,6 @@
 import _ from 'lodash'
 import { isValidObjectId } from "mongoose";
+import * as subjectService from "../services/subject.service.js"
 
 export const validateRequest =  (validator) => {
     return (req, res, next) => {

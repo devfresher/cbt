@@ -37,18 +37,27 @@ export const assessmentSchema = new mongoose.Schema({
         type: SchemaTypes.ObjectId,
         ref: "subject"
     },
-    noOfQuestion: {
-        type: Number,
-        required: true,
-        default: 50
-    },
+    questions: [
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "question"
+        }
+    ],
     passMark: {
         type: Number,
         default: function () {
-            return (this.noOfQuestion*0.4)
+            return (this.questions.length*0.4)
         }
     }
 })
+
+// assessmentSchema.path('questions').validate(async function(value) {
+//     if (!value) return true;
+//     const ids = value.map(id => mongoose.Types.ObjectId(id));
+//     console.log(ids);
+//     const count = await mongoose.model('question').countDocuments({ _id: { $in: ids } });
+//     return count === ids.length;
+// }, 'Invalid questions. Some question ids does not exist');
 
 assessmentSchema.plugin(paginate)
 const Assessment = mongoose.model('assessment', assessmentSchema)
@@ -62,7 +71,8 @@ export function validateCreateReq(req) {
         scheduledDate: Joi.date().required(),
         instruction: Joi.string(),
         subjectId: Joi.objectId().required(),
-        noOfQuestion: Joi.number(),
+        // noOfQuestion: Joi.number(),
+        questions: Joi.array(),
         passMark: Joi.number()
     })
 
@@ -76,7 +86,8 @@ export function validateUpdateReq(req) {
         scheduledDate: Joi.date(),
         instruction: Joi.string(),
         subjectId: Joi.objectId(),
-        noOfQuestion: Joi.number(),
+        // noOfQuestion: Joi.number(),
+        questions: Joi.array(),
         passMark: Joi.number()
     })
 
@@ -94,7 +105,6 @@ export function validateStartAssessment(req) {
 export function validateCompleteAssessment(req) {
     const schema = Joi.object({
         assessmentId: Joi.objectId().required(),
-        totalQuestions: Joi.number().required(),
         totalAttempted: Joi.number().required(),
         totalCorrectAnswer: Joi.number().required(),
         totalWrongAnswer: Joi.number().required()
