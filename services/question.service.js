@@ -60,17 +60,8 @@ export const updateQuestion = async (question, req) => {
     return question
 }
 
-export const getAllBySubject = async (subjectId, pageFilter) => {
-    const subject = await subjectService.getOneSubject({_id: subjectId})
-    const findFilter = {"subject": subject._id}
-    
-    pageFilter.customLabels = myCustomLabels
-
-    return Question.paginate(findFilter, pageFilter)
-}
-
 export const getMany = async (filterQuery, pageFilter) => {
-    if(pageFilter) return await Question.find(filterQuery)
+    if(_.isEmpty(pageFilter)) return await Question.find(filterQuery)
 
     pageFilter.customLabels = myCustomLabels
     return await Question.paginate(filterQuery, pageFilter)
