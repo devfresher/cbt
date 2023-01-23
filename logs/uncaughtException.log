@@ -5205,3 +5205,84 @@
 {"level":"error","message":"{\"message\":\"Stale request - reported time is 2023-01-20 09:39:34 +0000 which is more than 1 hour ago\",\"name\":\"Error\",\"http_code\":400} {\"message\":\"Stale request - reported time is 2023-01-20 09:39:34 +0000 which is more than 1 hour ago\",\"name\":\"Error\",\"http_code\":400}"}
 {"level":"info","message":"Connected to DB"}
 {"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"error","message":"result.paginate is not a function result.paginate is not a function","stack":"TypeError: result.paginate is not a function\n    at Module.fetchResult (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/services/result.service.js:132:19)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)\n    at async fetchAllResults (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/controllers/resultController.js:5:20)"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"error","message":"AssessmentTaken.aggregate(...).paginate is not a function AssessmentTaken.aggregate(...).paginate is not a function","stack":"TypeError: AssessmentTaken.aggregate(...).paginate is not a function\n    at Module.fetchResult (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/services/result.service.js:49:16)\n    at fetchAllResults (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/controllers/resultController.js:5:40)\n    at C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\express-async-errors\\index.js:17:20\n    at Layer.handle [as handle_request] (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\express\\lib\\router\\route.js:144:13)\n    at file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/middleware/auth.js:31:13\n    at requireLoggedInUser (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/middleware/auth.js:19:9)\n    at file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/middleware/auth.js:28:9\n    at C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\express-async-errors\\index.js:17:20\n    at Layer.handle [as handle_request] (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\express\\lib\\router\\layer.js:95:5)"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"error","message":"AssessmentTaken.aggregatePaginate is not a function AssessmentTaken.aggregatePaginate is not a function","stack":"TypeError: AssessmentTaken.aggregatePaginate is not a function\n    at Module.fetchResult (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/services/result.service.js:146:36)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)\n    at async fetchAllResults (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/controllers/resultController.js:5:20)"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"code":5107200,"codeName":"Location5107200","level":"error","message":"invalid argument to $skip stage: Expected an integer, but found NaN in: $skip: nan.0 invalid argument to $skip stage: Expected an integer, but found NaN in: $skip: nan.0","ok":0,"stack":"MongoServerError: invalid argument to $skip stage: Expected an integer, but found NaN in: $skip: nan.0\n    at Connection.onMessage (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\mongodb\\lib\\cmap\\connection.js:230:30)\n    at MessageStream.<anonymous> (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\mongodb\\lib\\cmap\\connection.js:61:60)\n    at MessageStream.emit (node:events:527:28)\n    at processIncomingData (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\mongodb\\lib\\cmap\\message_stream.js:125:16)\n    at MessageStream._write (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\mongodb\\lib\\cmap\\message_stream.js:33:9)\n    at writeOrBuffer (node:internal/streams/writable:389:12)\n    at _write (node:internal/streams/writable:330:10)\n    at MessageStream.Writable.write (node:internal/streams/writable:334:10)\n    at Socket.ondata (node:internal/streams/readable:754:22)\n    at Socket.emit (node:events:527:28)"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"code":5107200,"codeName":"Location5107200","level":"error","message":"invalid argument to $skip stage: Expected an integer, but found NaN in: $skip: nan.0 invalid argument to $skip stage: Expected an integer, but found NaN in: $skip: nan.0","ok":0,"stack":"MongoServerError: invalid argument to $skip stage: Expected an integer, but found NaN in: $skip: nan.0\n    at Connection.onMessage (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\mongodb\\lib\\cmap\\connection.js:230:30)\n    at MessageStream.<anonymous> (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\mongodb\\lib\\cmap\\connection.js:61:60)\n    at MessageStream.emit (node:events:527:28)\n    at processIncomingData (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\mongodb\\lib\\cmap\\message_stream.js:125:16)\n    at MessageStream._write (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\mongodb\\lib\\cmap\\message_stream.js:33:9)\n    at writeOrBuffer (node:internal/streams/writable:389:12)\n    at _write (node:internal/streams/writable:330:10)\n    at MessageStream.Writable.write (node:internal/streams/writable:334:10)\n    at Socket.ondata (node:internal/streams/readable:754:22)\n    at Socket.emit (node:events:527:28)"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"error","message":"AssessmentTaken.aggregate(...).paginate is not a function AssessmentTaken.aggregate(...).paginate is not a function","stack":"TypeError: AssessmentTaken.aggregate(...).paginate is not a function\n    at Module.fetchResult (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/services/result.service.js:49:16)\n    at fetchAllResults (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/controllers/resultController.js:5:40)\n    at C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\express-async-errors\\index.js:17:20\n    at Layer.handle [as handle_request] (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\express\\lib\\router\\route.js:144:13)\n    at file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/middleware/auth.js:31:13\n    at requireLoggedInUser (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/middleware/auth.js:19:9)\n    at file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/middleware/auth.js:28:9\n    at C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\express-async-errors\\index.js:17:20\n    at Layer.handle [as handle_request] (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\express\\lib\\router\\layer.js:95:5)"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"error","message":"resultAggregate.exec is not a function resultAggregate.exec is not a function","stack":"TypeError: resultAggregate.exec is not a function\n    at Module.fetchResult (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/services/result.service.js:146:40)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)\n    at async fetchAllResults (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/controllers/resultController.js:5:20)"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}

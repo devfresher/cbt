@@ -2,6 +2,7 @@ import Joi from "joi";
 import objectId from 'joi-objectid';
 
 import { mongoose, SchemaTypes } from 'mongoose';
+import aggregatePaginate from 'mongoose-aggregate-paginate-v2'
 
 Joi.objectId = objectId(Joi);
 
@@ -49,6 +50,7 @@ export const assessmentTakenSchema = new mongoose.Schema({
     }
 })
 
+assessmentTakenSchema.plugin(aggregatePaginate)
 const AssessmentTaken = mongoose.model('assessment_taken', assessmentTakenSchema)
 
 export function validateStartAssessment(req) {

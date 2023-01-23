@@ -2,12 +2,12 @@ import _ from "lodash";
 import mongoose from "mongoose";
 import AssessmentTaken from "../models/assessmentTaken.js";
 
-export const fetchResult = async (user) => {
-    let result
+export const fetchResult = async (user, query) => {
+    let resultAggregate
     switch (_.toLower(user.role)) {
         
         case 'admin':
-            result = await AssessmentTaken.aggregate([
+            resultAggregate = await AssessmentTaken.aggregate([
                 { $match: { completedAt: { $ne: null } } },
                 { $lookup: {
                     from: 'users',
@@ -51,7 +51,7 @@ export const fetchResult = async (user) => {
             break;
 
         case 'staff':
-            result = await AssessmentTaken.aggregate([
+            resultAggregate = await AssessmentTaken.aggregate([
                 { $match: { completedAt: { $ne: null } } },
                 { $lookup: {
                     from: 'users',
@@ -95,7 +95,7 @@ export const fetchResult = async (user) => {
             break;
 
         case 'student':
-            result = await AssessmentTaken.aggregate([
+            resultAggregate = await AssessmentTaken.aggregate([
                 { $match: { completedAt: { $ne: null } } },
                 { $match: { 'student': mongoose.Types.ObjectId(user._id)} },
                 { $lookup: {
@@ -126,8 +126,24 @@ export const fetchResult = async (user) => {
             break;
     
         default:
-            result = await AssessmentTaken.find({student: user._id})
+            resultAggregate = await AssessmentTaken.find({student: user._id})
             break;
     }
-    return result
+
+    const myCustomLabels = {
+        totalDocs: 'totalItems',
+        docs: 'items',
+        limit: 'perPage',
+        page: 'currentPage',
+        hasNextPage: false,
+        hasPrevPage: false,
+        nextPage: false,
+        prevPage: false,
+        totalPages: 'pageCount',
+        pagingCounter: false,
+        meta: 'paging',
+    };
+    query.customLabels = myCustomLabels
+    const result = AssessmentTaken.aggregatePaginate(resultAggregate, query)
+    return result 
 }
