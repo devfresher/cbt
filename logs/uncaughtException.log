@@ -6599,3 +6599,212 @@
 {"level":"info","message":"Connected to DB"}
 {"level":"info","message":"Server started at http://0.0.0.0:8000"}
 {"level":"error","message":"_ is not defined _ is not defined","stack":"ReferenceError: _ is not defined\n    at Module.getMany (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/services/class.service.js:26:5)\n    at fetchAll (file:///C:/Users/user/Documents/Node-Express%20Projects/cbt/controllers/classController.js:8:40)\n    at C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\express-async-errors\\index.js:17:20\n    at Layer.handle [as handle_request] (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\express\\lib\\router\\route.js:144:13)\n    at Route.dispatch (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\express\\lib\\router\\route.js:114:3)\n    at C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\express-async-errors\\index.js:17:20\n    at Layer.handle [as handle_request] (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\express\\lib\\router\\index.js:284:15\n    at Function.process_params (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\express\\lib\\router\\index.js:346:12)"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"code":5107201,"codeName":"Location5107201","level":"error","message":"invalid argument to $limit stage: Expected a number in: $limit: {} invalid argument to $limit stage: Expected a number in: $limit: {}","ok":0,"stack":"MongoServerError: invalid argument to $limit stage: Expected a number in: $limit: {}\n    at Connection.onMessage (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\mongodb\\lib\\cmap\\connection.js:230:30)\n    at MessageStream.<anonymous> (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\mongodb\\lib\\cmap\\connection.js:61:60)\n    at MessageStream.emit (node:events:527:28)\n    at processIncomingData (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\mongodb\\lib\\cmap\\message_stream.js:125:16)\n    at MessageStream._write (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\mongodb\\lib\\cmap\\message_stream.js:33:9)\n    at writeOrBuffer (node:internal/streams/writable:389:12)\n    at _write (node:internal/streams/writable:330:10)\n    at MessageStream.Writable.write (node:internal/streams/writable:334:10)\n    at Socket.ondata (node:internal/streams/readable:754:22)\n    at Socket.emit (node:events:527:28)"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"code":14,"codeName":"TypeMismatch","level":"error","message":"$count takes no arguments, i.e. $count:{} $count takes no arguments, i.e. $count:{}","ok":0,"stack":"MongoServerError: $count takes no arguments, i.e. $count:{}\n    at Connection.onMessage (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\mongodb\\lib\\cmap\\connection.js:230:30)\n    at MessageStream.<anonymous> (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\mongodb\\lib\\cmap\\connection.js:61:60)\n    at MessageStream.emit (node:events:527:28)\n    at processIncomingData (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\mongodb\\lib\\cmap\\message_stream.js:125:16)\n    at MessageStream._write (C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\mongodb\\lib\\cmap\\message_stream.js:33:9)\n    at writeOrBuffer (node:internal/streams/writable:389:12)\n    at _write (node:internal/streams/writable:330:10)\n    at MessageStream.Writable.write (node:internal/streams/writable:334:10)\n    at Socket.ondata (node:internal/streams/readable:754:22)\n    at Socket.emit (node:events:527:28)"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"error","message":"Aggregate has empty pipeline Aggregate has empty pipeline","stack":"Error: Aggregate has empty pipeline\n    at C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\mongoose\\lib\\aggregate.js:1041:19\n    at C:\\Users\\user\\Documents\\Node-Express Projects\\cbt\\node_modules\\kareem\\index.js:51:7\n    at processTicksAndRejections (node:internal/process/task_queues:78:11)"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}
+{"level":"info","message":"Connected to DB"}
+{"level":"info","message":"Server started at http://0.0.0.0:8000"}

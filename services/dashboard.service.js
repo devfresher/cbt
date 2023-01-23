@@ -1,4 +1,5 @@
 import _ from "lodash";
+import { Types } from "mongoose";
 import Assessment from "../models/assessment.js";
 import Class from "../models/class.js";
 import Subject from "../models/subject.js";
@@ -8,7 +9,7 @@ import * as resultService from "../services/result.service.js"
 
 export const getDashboard = async (user) => {
     let studentCount, subjectCount, classCount, classes, upcomingEvents
-    const results = resultService.fetchResult(user, 5)
+    const results = await resultService.fetchResult(user, 5)
 
     switch (_.toLower(user.role)) {
         case "admin":
@@ -16,18 +17,19 @@ export const getDashboard = async (user) => {
             subjectCount = await Subject.countDocuments()
             classCount = await Class.countDocuments()
             
-            classes = await User.aggregate([
-                { $match: {"role": "Student"}},
-                { $group : { _id : '$class._id', totalStudent: {$sum:1}} },
+            classes = await Subject.aggregate([
                 { $lookup: {
-                    from: "classes",
-                    localField: "_id",
-                    foreignField: "_id",
-                    as: "classInfo"
+                    from: "users",
+                    localField: "class._id",
+                    foreignField: "class._id",
+                    as: "students"
                 }},
-                { $unwind: "$classInfo" },
+                { $unwind: "$students"},
+                { $group : { _id : '$class', totalStudent: {$count: {}}} },
                 { $project: {
-                    _id: 0
+                    _id: 0,
+                    "classInfo": "$_id",
+                    "totalStudent": 1
                 }}
             ])
 
@@ -50,19 +52,20 @@ export const getDashboard = async (user) => {
             subjectCount = await Subject.countDocuments({teacher: user._id})
             classCount = await Class.countDocuments({teacher: user._id})
 
-            classes = await User.aggregate([
-                { $match: {"role": "Student"}},
-                { $group : { _id : '$class._id', totalStudent: {$sum:1}} },
+            classes = await Subject.aggregate([
+                { $match: {"teacher": Types.ObjectId(user._id)}},
                 { $lookup: {
-                    from: "classes",
-                    localField: "_id",
-                    foreignField: "_id",
-                    as: "classInfo"
+                    from: "users",
+                    localField: "class._id",
+                    foreignField: "class._id",
+                    as: "students"
                 }},
-                { $unwind: "$classInfo" },
-                { $match: {"classInfo.teacher": user._id}},
+                { $unwind: "$students"},
+                { $group : { _id : '$class', totalStudent: {$count: {}}} },
                 { $project: {
-                    _id: 0
+                    _id: 0,
+                    "classInfo": "$_id",
+                    "totalStudent": 1
                 }}
             ])
         
@@ -70,14 +73,14 @@ export const getDashboard = async (user) => {
                 { $match: { scheduledDate: { "$gte": new Date} } },
                 {
                     $lookup: {
-                        from: Subject.collection.name,
+                        from: "subjects",
                         localField: "subject",
                         foreignField: "_id",
                         as: "subject"
                     }
                 },
                 { $unwind: "$subject" },
-                { $match: { "subject.teacher": user._id } }
+                { $match: { "subject.teacher": Types.ObjectId(user._id) } }
             ])
             break;
         

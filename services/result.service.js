@@ -121,7 +121,6 @@ export const fetchResult = async (user, limit) => {
                 { $unwind: "$assessment"},
                 { $unwind: "$class"},
                 { $unwind: "$subject"},
-                { $limit: 5 }
             ]
             break;
     
