@@ -3,7 +3,6 @@ import Assessment from "../models/assessment.js"
 import AssessmentTaken from "../models/assessmentTaken.js"
 
 import Question from "../models/question.js"
-import Subject from "../models/subject.js";
 import * as userService from "./user.service.js";
 import * as subjectService from "./subject.service.js";
 
@@ -24,15 +23,24 @@ const myCustomLabels = {
 const activeAssessment = async (classId, assessmentType) => {
     const assessments = await Assessment.aggregate([
         {$lookup: {
-            from: Subject.collection.name,
+            from: "subjects",
             localField: "subject",
             foreignField: "_id",
             as: "subject"
-        }},  { $unwind: "$subject" }, {
+        }},  { $unwind: "$subject" }, 
+        {
             $match: {
                 "subject.class._id": classId,
                 status: true,
                 type: assessmentType
+            }
+        },
+        {
+            $lookup: {
+                from: "questions",
+                localField: "questions",
+                foreignField: "_id",
+                as: "questions"
             }
         }
     ])
@@ -50,15 +58,7 @@ export const startAssessment = async (studentId, assessmentType) => {
 
 
     // get the random Questions
-    const questions = await Question.aggregate( [
-        { $sample: {size: assessment.noOfQuestion || 50}},
-        { $match: { subjectId: assessment.subject._id } }
-    ])
-
-    // get the question Ids
-    const questionIds = !_.isEmpty(questions) ? [questions.forEach((q) => {
-        return q._id
-    })]:null
+    const questions = assessment.questions
 
     // Check if assessment has been taken by student
     const assessmentTaken = await AssessmentTaken.findOne({ assessment: assessment._id, student: studentId})
@@ -67,8 +67,8 @@ export const startAssessment = async (studentId, assessmentType) => {
         const newAssessmentTaken = new AssessmentTaken({
             assessment: assessment._id,
             student: student._id,
-            questionsSupplied: questionIds,
-            totalQuestionSupplied: questions.length
+            questionsSupplied: assessment.questions,
+            totalQuestionSupplied: assessment.questions.length
         })
 
         await newAssessmentTaken.save()
@@ -129,7 +129,6 @@ export const getAllBySubject = async (subjectId, pageFilter) => {
 
 export const createAssessment = async (req) => {
     const subject = await subjectService.getOneSubject({_id: req.body.subjectId})
-    if (req.user.role === 'staff' && subject.class.teacher !== req.user._id) throw {status: "error", code: 403, message: "Unauthorized"}
 
     const assessmentTitle = `${subject.title}-${subject.class.title}`
     const newAssessment = new Assessment ({
@@ -140,7 +139,8 @@ export const createAssessment = async (req) => {
         duration: req.body.duration,
         instruction: req.body.instruction,
         subject: req.body.subjectId,
-        noOfQuestion: req.body.noOfQuestion,
+        questions: req.body.questions,
+        // noOfQuestion: req.body.noOfQuestion,
         passMark: req.body.passMark
     })
     await newAssessment.save()
@@ -152,7 +152,6 @@ export const updateAssessment = async (assessment, req) => {
     if (req.body.subjectId) {
         subject = await subjectService.getOneSubject({_id: req.body.subjectId})
         assessmentTitle = `${subject.title}-${subject.class.title}`
-        if (req.user.role === 'staff' && subject.class.teacher !== req.user._id) throw {status: "error", code: 403, message: "Unauthorized"}
     } else {
         subject = await subjectService.getOneSubject({_id: assessment.subject})
     }
@@ -169,8 +168,9 @@ export const updateAssessment = async (assessment, req) => {
     assessment.duration = req.body.duration || assessment.duration
     assessment.subject = req.body.subjectId || assessment.subject
     assessment.instruction = req.body.instruction || assessment.instruction
-    assessment.noOfQuestion = req.body.noOfQuestion || assessment.noOfQuestion
-    assessment.passMark = req.body.passMark || assessment.noOfQuestion*0.4
+    // assessment.noOfQuestion = req.body.noOfQuestion || assessment.noOfQuestion
+    assessment.questions = req.body.questions || assessment.questions
+    assessment.passMark = req.body.passMark || assessment.questions.length * 0.4
     await assessment.save()
 
     return assessment

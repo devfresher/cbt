@@ -2,12 +2,12 @@ import _ from "lodash";
 import mongoose from "mongoose";
 import AssessmentTaken from "../models/assessmentTaken.js";
 
-export const fetchResult = async (user, query) => {
-    let resultAggregate
+export const fetchResult = async (user, limit) => {
+    let pipeline
     switch (_.toLower(user.role)) {
         
         case 'admin':
-            resultAggregate = await AssessmentTaken.aggregate([
+            pipeline = [
                 { $match: { completedAt: { $ne: null } } },
                 { $lookup: {
                     from: 'users',
@@ -46,12 +46,11 @@ export const fetchResult = async (user, query) => {
                 }},
                 { $unwind: "$assessment"},
                 { $unwind: "$class"},
-            ])
-                  
+            ]     
             break;
 
         case 'staff':
-            resultAggregate = await AssessmentTaken.aggregate([
+            pipeline = [
                 { $match: { completedAt: { $ne: null } } },
                 { $lookup: {
                     from: 'users',
@@ -90,12 +89,12 @@ export const fetchResult = async (user, query) => {
                     students: 1
                 }},
                 { $unwind: "$assessment"},
-                { $unwind: "$class"},
-            ])
+                { $unwind: "$class"}
+            ]
             break;
 
         case 'student':
-            resultAggregate = await AssessmentTaken.aggregate([
+            pipeline = [
                 { $match: { completedAt: { $ne: null } } },
                 { $match: { 'student': mongoose.Types.ObjectId(user._id)} },
                 { $lookup: {
@@ -122,28 +121,16 @@ export const fetchResult = async (user, query) => {
                 { $unwind: "$assessment"},
                 { $unwind: "$class"},
                 { $unwind: "$subject"},
-            ])
+                { $limit: 5 }
+            ]
             break;
     
         default:
-            resultAggregate = await AssessmentTaken.find({student: user._id})
+            pipeline = []
             break;
     }
 
-    const myCustomLabels = {
-        totalDocs: 'totalItems',
-        docs: 'items',
-        limit: 'perPage',
-        page: 'currentPage',
-        hasNextPage: false,
-        hasPrevPage: false,
-        nextPage: false,
-        prevPage: false,
-        totalPages: 'pageCount',
-        pagingCounter: false,
-        meta: 'paging',
-    };
-    query.customLabels = myCustomLabels
-    const result = AssessmentTaken.aggregatePaginate(resultAggregate, query)
-    return result 
+    if (limit) pipeline.push({$limit: limit})
+    const result = await AssessmentTaken.aggregate(pipeline)
+    return result
 }

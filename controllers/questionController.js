@@ -24,7 +24,9 @@ export const updateQuestion = async (req, res, next) => {
 }
 
 export const fetchAllBySubject = async (req, res, next) => {
-    const questions = await questionService.getAllBySubject(req.params.subjectId, req.query)
+    const subject = await subjectService.getOneSubject({_id: req.params.subjectId})
+
+    const questions = await questionService.getMany({"subjectId": subject._id}, req.query)
     next({status: "success", data: questions})
 }
 

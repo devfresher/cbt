@@ -1,7 +1,7 @@
 import _ from 'lodash'
 import jwt from 'jsonwebtoken'
 import config from 'config'
-import User, * as userModel from '../models/user.js'
+import User from '../models/user.js'
 
 export const requireLoggedInUser =  async function (req, res, next) {
     const authHeader = req.headers['authorization']

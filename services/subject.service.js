@@ -63,15 +63,6 @@ export const updateSubject = async (subjectId, updateData) => {
     return subject
 }
 
-export const getAllSubjectsByClass = async (classId, pageFilter) => {
-    const theClass = await classService.getOneClass({_id: classId})
-    const findFilter = {"class._id": theClass._id}
-    
-    pageFilter.customLabels = myCustomLabels
-
-    return Subject.paginate(findFilter, pageFilter)
-}
-
 export const getMany = async (filterQuery, pageFilter) => {
     pageFilter.customLabels = myCustomLabels
 
