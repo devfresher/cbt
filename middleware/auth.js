@@ -7,13 +7,13 @@ export const requireLoggedInUser =  async function (req, res, next) {
     const authHeader = req.headers['authorization']
     const token = authHeader && authHeader.replace(/^Bearer\s+/, "")
 
-    if( !token ) throw{status: "error", code: 401, message: "Access denied. No auth token provided"}
+    if( !token ) return res.status(401).json({status: "error", error: {code: 401, message: "Access denied. No auth token provided"}})
 
     try {
         const decodedToken = jwt.verify(token, config.get('jwtPrivateKey'))
 
         const user = User.findById(decodedToken._id)
-        if (!user) throw {status: "error", code: 400, message: "Invalid auth token"}
+        if (!user) return res.status(400).json({status: "error", error: {code: 400, message: "Invalid auth token"}})
 
         req.user = decodedToken
         next()

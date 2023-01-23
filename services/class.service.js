@@ -1,3 +1,4 @@
+import _ from "lodash"
 import Class from "../models/class.js"
 import * as userService from "../services/user.service.js"
 
@@ -23,8 +24,9 @@ export const getOneClass = async (filterQuery) => {
 }
 
 export const getMany = async (filterQuery, pageFilter) => {
-    pageFilter.customLabels = myCustomLabels
+    if(_.isEmpty(pageFilter)) return await Class.find(filterQuery)
 
+    pageFilter.customLabels = myCustomLabels
     return await Class.paginate(filterQuery, pageFilter)
 }
 
