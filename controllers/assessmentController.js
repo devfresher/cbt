@@ -23,12 +23,19 @@ export const updateAssessment = async (req, res, next) => {
 }
 
 export const fetchAllAssessment = async (req, res, next) => {
-    const assessment = await assessmentService.getMany({}, req.query);
+    const assessment = await assessmentService.getMany({}, req.query)
     next({ status: "success", data: assessment })
 }
 
+export const fetchAllAssessmentTaken = async (req, res, next) => {
+    const assessments = await assessmentService.getAllTaken()
+    next({ status : "success", data: assessments})
+}
+
 export const fetchAllBySubject = async (req, res, next) => {
-    const assessments = await assessmentService.getAllBySubject(req.params.subjectId, req.query)
+    const subject = await subjectService.getOneSubject({ _id: req.params.subjectId })
+
+    const assessments = await assessmentService.getMany({"subject": subject._id}, req.query)
     next({status: "success", data: assessments})
 }
 

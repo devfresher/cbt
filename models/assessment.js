@@ -48,6 +48,10 @@ export const assessmentSchema = new mongoose.Schema({
         default: function () {
             return (this.questions.length*0.4)
         }
+    },
+    resultReleased: {
+        type: Boolean,
+        default: false
     }
 })
 
@@ -88,7 +92,8 @@ export function validateUpdateReq(req) {
         subjectId: Joi.objectId(),
         // noOfQuestion: Joi.number(),
         questions: Joi.array(),
-        passMark: Joi.number()
+        passMark: Joi.number(),
+        releaseResult: Joi.boolean(),
     })
 
     return schema.validate(req);

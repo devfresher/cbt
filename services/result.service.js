@@ -21,6 +21,7 @@ export const fetchResult = async (user, limit) => {
                     foreignField: '_id',
                     as: 'assessment'
                 }},
+                { $match: {"assessment.resultReleased": true} },
                 { $lookup: {
                     from: 'subjects',
                     localField: 'assessment.subject',
@@ -64,6 +65,7 @@ export const fetchResult = async (user, limit) => {
                     foreignField: '_id',
                     as: 'assessment'
                 }},
+                { $match: {"assessment.resultReleased": true} },
                 { $lookup: {
                     from: 'subjects',
                     localField: 'assessment.subject',
@@ -103,6 +105,7 @@ export const fetchResult = async (user, limit) => {
                     foreignField: '_id',
                     as: 'assessment'
                 }},
+                { $match: {"assessment.resultReleased": true} },
                 { $lookup: {
                     from: 'subjects',
                     localField: 'assessment.subject',

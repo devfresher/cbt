@@ -114,17 +114,26 @@ export const getOneAssessment = async (filterQuery) => {
 }
 
 export const getMany = async (filterQuery, pageFilter) => {
+    if(!pageFilter) return await Assessment.find(filterQuery)
+
     pageFilter.customLabels = myCustomLabels
     return await Assessment.paginate(filterQuery, pageFilter)
 }
 
-export const getAllBySubject = async (subjectId, pageFilter) => {
-    const subject = await subjectService.getOneSubject({_id: subjectId})
-    const findFilter = {"subject": subject._id}
-    
-    pageFilter.customLabels = myCustomLabels
-
-    return Assessment.paginate(findFilter, pageFilter)
+export const getAllTaken = async () => {
+    const pipeline = [
+        { $group: {_id: "$assessment"} },
+        { $lookup: {
+            from: "assessments",
+            localField: "_id",
+            foreignField: "_id",
+            as: "assessmentInfo"
+        } },
+        { $unwind: "$assessmentInfo" },
+        { "$replaceRoot": {"newRoot": "$assessmentInfo"} }
+    ]
+    const assessmentTaken = await AssessmentTaken.aggregate(pipeline)
+    return assessmentTaken
 }
 
 export const createAssessment = async (req) => {
@@ -171,6 +180,7 @@ export const updateAssessment = async (assessment, req) => {
     // assessment.noOfQuestion = req.body.noOfQuestion || assessment.noOfQuestion
     assessment.questions = req.body.questions || assessment.questions
     assessment.passMark = req.body.passMark || assessment.questions.length * 0.4
+    assessment.resultReleased = req.body.releaseResult || assessment.resultReleased
     await assessment.save()
 
     return assessment
