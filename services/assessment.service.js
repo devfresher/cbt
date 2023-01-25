@@ -139,6 +139,7 @@ export const getAllTaken = async () => {
 export const createAssessment = async (req) => {
     const subject = await subjectService.getOneSubject({_id: req.body.subjectId})
 
+    // if(req.body.noOfQuestion)
     const assessmentTitle = `${subject.title}-${subject.class.title}`
     const newAssessment = new Assessment ({
         title: assessmentTitle,
@@ -149,7 +150,7 @@ export const createAssessment = async (req) => {
         instruction: req.body.instruction,
         subject: req.body.subjectId,
         questions: req.body.questions,
-        // noOfQuestion: req.body.noOfQuestion,
+        noOfQuestion: req.body.noOfQuestion,
         passMark: req.body.passMark
     })
     await newAssessment.save()
@@ -177,7 +178,7 @@ export const updateAssessment = async (assessment, req) => {
     assessment.duration = req.body.duration || assessment.duration
     assessment.subject = req.body.subjectId || assessment.subject
     assessment.instruction = req.body.instruction || assessment.instruction
-    // assessment.noOfQuestion = req.body.noOfQuestion || assessment.noOfQuestion
+    assessment.noOfQuestion = req.body.noOfQuestion || assessment.noOfQuestion
     assessment.questions = req.body.questions || assessment.questions
     assessment.passMark = req.body.passMark || assessment.questions.length * 0.4
     assessment.resultReleased = req.body.releaseResult || assessment.resultReleased

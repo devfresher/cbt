@@ -37,6 +37,10 @@ export const assessmentSchema = new mongoose.Schema({
         type: SchemaTypes.ObjectId,
         ref: "subject"
     },
+    noOfQuestion: {
+        type: Number,
+        required: true
+    },
     questions: [
         {
             type: mongoose.Schema.Types.ObjectId,
@@ -75,8 +79,8 @@ export function validateCreateReq(req) {
         scheduledDate: Joi.date().required(),
         instruction: Joi.string(),
         subjectId: Joi.objectId().required(),
-        // noOfQuestion: Joi.number(),
-        questions: Joi.array(),
+        noOfQuestion: Joi.number().required(),
+        questions: Joi.array().required(),
         passMark: Joi.number()
     })
 
@@ -90,7 +94,7 @@ export function validateUpdateReq(req) {
         scheduledDate: Joi.date(),
         instruction: Joi.string(),
         subjectId: Joi.objectId(),
-        // noOfQuestion: Joi.number(),
+        noOfQuestion: Joi.number(),
         questions: Joi.array(),
         passMark: Joi.number(),
         releaseResult: Joi.boolean(),
