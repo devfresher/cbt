@@ -13,6 +13,10 @@ export const createUser = async (req, res, next) => {
     next({status: "success", data: newUser})
 }
 
+export const batchCreateUser = async (req, res, next) => {
+    
+}
+
 export const fetchAllByRole = async function (req, res, next) {
     const users = await userService.getMany({role: _.capitalize(req.query.r)}, req.query)
     next({status: "success", data: users})

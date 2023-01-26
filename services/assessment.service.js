@@ -2,7 +2,6 @@ import _ from "lodash";
 import Assessment from "../models/assessment.js"
 import AssessmentTaken from "../models/assessmentTaken.js"
 
-import Question from "../models/question.js"
 import * as userService from "./user.service.js";
 import * as subjectService from "./subject.service.js";
 
@@ -49,7 +48,7 @@ const activeAssessment = async (classId, assessmentType) => {
 }
 
 export const startAssessment = async (studentId, assessmentType) => {
-    // get the Student
+    // Validate the student
     const student = await userService.getOneUser({ _id: studentId })
 
     // Get active assessment for the class
@@ -57,8 +56,11 @@ export const startAssessment = async (studentId, assessmentType) => {
     if (!assessment) throw { status: "error", code: 400, message: `No active assessment (${assessmentType}) available` }
 
 
-    // get the random Questions
-    const questions = assessment.questions
+    // Shuffle questions and get limited
+    const shuffledQuestions = _.shuffle(assessment.questions)
+    const questions = _.take(shuffledQuestions, assessment.noOfQuestion)
+
+    assessment = _.omit(assessment, 'questions')
 
     // Check if assessment has been taken by student
     const assessmentTaken = await AssessmentTaken.findOne({ assessment: assessment._id, student: studentId})
@@ -67,8 +69,8 @@ export const startAssessment = async (studentId, assessmentType) => {
         const newAssessmentTaken = new AssessmentTaken({
             assessment: assessment._id,
             student: student._id,
-            questionsSupplied: assessment.questions,
-            totalQuestionSupplied: assessment.questions.length
+            questionsSupplied: questions,
+            totalQuestionSupplied: questions.length
         })
 
         await newAssessmentTaken.save()
@@ -120,6 +122,7 @@ export const getMany = async (filterQuery, pageFilter) => {
     return await Assessment.paginate(filterQuery, pageFilter)
 }
 
+// Get all assessment that has had an attempt by students
 export const getAllTaken = async () => {
     const pipeline = [
         { $group: {_id: "$assessment"} },
@@ -139,7 +142,10 @@ export const getAllTaken = async () => {
 export const createAssessment = async (req) => {
     const subject = await subjectService.getOneSubject({_id: req.body.subjectId})
 
-    // if(req.body.noOfQuestion)
+    // Validate the number of questions in the assessment 
+    if(req.body.noOfQuestion > req.body.questions.length) 
+        throw { status: "error", code: 400, message: "Number of questions must be less or equal to the total questions supplied" }
+
     const assessmentTitle = `${subject.title}-${subject.class.title}`
     const newAssessment = new Assessment ({
         title: assessmentTitle,
@@ -159,6 +165,17 @@ export const createAssessment = async (req) => {
 
 export const updateAssessment = async (assessment, req) => {
     let assessmentTitle, subject
+
+    const error = { status: "error", 
+        code: 400, 
+        message: "Number of questions must be less or equal to the total questions supplied"
+    }
+    // Validate the number of questions in the assessment
+    const { noOfQuestion, questions } = req.body
+    if(noOfQuestion > (questions ? questions.length : assessment.questions.length)) {
+        throw error
+    }
+
     if (req.body.subjectId) {
         subject = await subjectService.getOneSubject({_id: req.body.subjectId})
         assessmentTitle = `${subject.title}-${subject.class.title}`
@@ -180,7 +197,7 @@ export const updateAssessment = async (assessment, req) => {
     assessment.instruction = req.body.instruction || assessment.instruction
     assessment.noOfQuestion = req.body.noOfQuestion || assessment.noOfQuestion
     assessment.questions = req.body.questions || assessment.questions
-    assessment.passMark = req.body.passMark || assessment.questions.length * 0.4
+    assessment.passMark = req.body.passMark || assessment.questions.length * 0.5
     assessment.resultReleased = req.body.releaseResult || assessment.resultReleased
     await assessment.save()
 

@@ -41,9 +41,15 @@ export const getMany = async (filterQuery, pageFilter) => {
     return await User.paginate(filterQuery, pageFilter)
 }
 
+const checkIfUserExists = async (field, value) => {
+    const userExists = await User.findOne({ field: value });
+    if (userExists) return {status: "error", code: 400, message: `${field} already exists`};
+    return null;
+}
+
 export const createUser = async (data, file) => {
-    const user = await User.findOne({ email: data.email })
-    if (user) throw {status: "error", code: 400, message: "Email already exit"}
+    const error = checkIfUserExists('email', data.email);
+    if (error) return error;
 
     let newUser = new User({
         fullName: data.fullName,
@@ -53,34 +59,31 @@ export const createUser = async (data, file) => {
     })
 
     if(data.role === 'Staff' || data.role === 'Admin') {
-        const phoneExists = await User.countDocuments({ phoneNumber: data.phoneNumber })
-        if (phoneExists > 0) throw {status: "error", code: 400, message: "Phone number already exit"}
-    
-        const regNumberExists = await User.countDocuments({ regNumber: data.regNumber })
-        if (regNumberExists > 0) throw {status: "error", code: 400, message: "Registration number already exit"}
-    
-        const oracleNumberExists = await User.countDocuments({ oracleNumber: data.oracleNumber })
-        if (oracleNumberExists > 0) throw {status: "error", code: 400, message: "Oracle number already exit"}
+        const fields = ['phoneNumber', 'regNumber', 'oracleNumber'];
+        const errors = fields.map(field => {
+            return checkIfUserExists(field, data[field]);
+        });
+        if (errors.filter(error => error).length > 0) return errors;
 
-        newUser.phoneNumber = data.phoneNumber
-        newUser.regNumber = data.regNumber
-        newUser.oracleNumber = data.oracleNumber
-        newUser.state = data.state
-        newUser.lga = data.lga
+        newUser.phoneNumber = data.phoneNumber;
+        newUser.regNumber = data.regNumber;
+        newUser.oracleNumber = data.oracleNumber;
+        newUser.state = data.state;
+        newUser.lga = data.lga;
     } else if (data.role === 'Student') {
-        const admissionNoExists = await User.countDocuments({ admissionNo: data.admissionNo })
-        if (admissionNoExists > 0) throw {status: "error", code: 400, message: "Admission number already exit"}
+        const error = checkIfUserExists('admissionNo', data.admissionNo);
+        if (error) return error;
 
-        let theClass
-        if (!_.isUndefined(data.classId)) theClass = await classService.getOneClass({_id: data.classId})
+        let theClass;
+        if (!_.isUndefined(data.classId)) theClass = await classService.getOneClass({_id: data.classId});
 
-        newUser.birthDate = data.birthDate
-        newUser.admissionNo = data.admissionNo
-        newUser.religion = data.religion
-        newUser.homeAddress = data.homeAddress
-        newUser.gender = data.gender
-        newUser.class = theClass ? theClass : null
-        newUser.classSection = theClass ? data.classSection : null
+        newUser.birthDate = data.birthDate;
+        newUser.admissionNo = data.admissionNo;
+        newUser.religion = data.religion;
+        newUser.homeAddress = data.homeAddress;
+        newUser.gender = data.gender;
+        newUser.class = theClass ? theClass : null;
+        newUser.classSection = theClass ? data.classSection : null;
         newUser.guardian = {
             name: data.guardianName,
             phoneNumber: data.guardianPhone,
@@ -89,9 +92,8 @@ export const createUser = async (data, file) => {
         }
     }
 
-    let profileImage
-    if (file) profileImage = await uploadToCloudinary(file)
-    newUser.profileImage = profileImage ? { url: profileImage.secure_url, imageId: profileImage.public_id } : undefined
+    let profileImage = file ? await uploadToCloudinary(file) : data.profileImage || {}
+    newUser.profileImage = { url: profileImage.secure_url, imageId: profileImage.public_id }
 
     await newUser.save()
     return newUser

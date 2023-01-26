@@ -50,7 +50,7 @@ export const assessmentSchema = new mongoose.Schema({
     passMark: {
         type: Number,
         default: function () {
-            return (this.questions.length*0.4)
+            return (this.questions.length*0.5)
         }
     },
     resultReleased: {

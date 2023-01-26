@@ -9,6 +9,7 @@ import { uploadSingle } from "../middleware/uploadFiles.js"
 
 
 router.post("/student", [requireRole(['Admin', 'Staff']), uploadSingle('profileImage')], userController.createUser)
+router.post("/batch-upload", [requireRole(['Admin', 'Staff']), uploadSingle('csvFile')], userController.batchCreateUser)
 router.post("/staff", [requireRole('Admin'), uploadSingle('profileImage')], userController.createUser)
 router.post("/admin", requireRole('Admin'), userController.createUser)
 
