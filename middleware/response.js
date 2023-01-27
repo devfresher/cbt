@@ -5,7 +5,8 @@ export default function (data, req, res, next) {
         case "success":
             return res.status(data.code || 200).json({
                 status: data.status,
-                data: data.data
+                data: data.data,
+                message: data.message
             })
             break;
 
@@ -20,14 +21,16 @@ export default function (data, req, res, next) {
             break;
     
         default:
-            winston.error(data.message, data);
-            return res.status(500).json({
+            const error = {
+                code: data.code || 500,
+                message: data.message || "Something unexpected went wrong",
+                originalError: data
+            }
+            winston.error(error.message, data);
+            return res.status(error.code).json({
                 status: "error",
-                error: {
-                    code: 500,
-                    message: "Something unexpected went wrong"
-                }
-            })
+                error
+            });
             break;
     }
 
