@@ -9,8 +9,21 @@ export const create = async (req, res, next) => {
     let { error } = questionModel.validateCreateReq(req.body);
     if (error) throw{ status: "error", code: 400, message: error.details[0].message}
 
-    const newQuestion = await questionService.createQuestion(req)
+    const newQuestion = await questionService.createQuestion(req.body, req.file)
     next({status: "success", data: newQuestion})
+}
+
+export const batchCreate = async (req, res, next) => {
+    if (!req.file) throw { status: "error", code: 400, message: "No csv file uploaded" }
+    const result = await questionService.batchCreateQuestion(req.file)
+
+    if (_.isEmpty(result.newQuestions)) {
+        throw { status: "error", code: 422, message: {content: "No question record was created", errors: result.errors} }
+    } else if (!_.isEmpty(result.errors) && !_.isEmpty(result.newQuestions)) {
+        next({ status: "success", data: { errors: result.errors, message: `${result.newQuestions.length} new questions created, and ${result.errors.length} questions failed to create` } })
+    } else {
+        next({ status: "success", data: { message: `${result.newQuestions.length} new questions created` } })
+    }
 }
 
 export const updateQuestion = async (req, res, next) => {

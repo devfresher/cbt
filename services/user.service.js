@@ -6,6 +6,7 @@ import User, * as userModel from "../models/user.js"
 
 import * as classService from "../services/class.service.js"
 import { deleteFromCloudinary, uploadToCloudinary } from "../startup/cloudinaryConfig.js"
+import { isValidObjectId } from "mongoose"
 
 const myCustomLabels = {
     totalDocs: 'totalItems',
@@ -82,7 +83,7 @@ export const createUser = (data, file) => {
             if (error) return reject(error)
 
             let theClass
-            if (!_.isUndefined(data.classId)) theClass = await classService.getOneClass({ _id: data.classId })
+            if (!_.isUndefined(data.classId) && isValidObjectId(data.classId)) theClass = await classService.getOneClass({ _id: data.classId })
 
             newUser.birthDate = data.birthDate
             newUser.admissionNo = data.admissionNo
@@ -125,6 +126,7 @@ export const batchCreateUsers = async (file) => {
                 address: data.guardianAddress,
                 relationship: data.guardianRelationship
             }
+            data.profileImage = data.profileImage ? { url: data.profileImage } : undefined
 
             users.push(_.omit(data, ['guardianName', 'guardianPhone', 'guardianAddress', 'guardianRelationship']))
         })

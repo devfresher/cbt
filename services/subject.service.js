@@ -17,10 +17,12 @@ const myCustomLabels = {
     meta: 'paging',
 };
 export const getOneSubject = async (filterQuery) => {
-    const subject = await Subject.findOne(filterQuery)
-    if (!subject) throw { status: "error", code: 404, message: "Subject not found" }
-
-    return subject
+    return new Promise(async (resolve, reject) => {
+        const subject = await Subject.findOne(filterQuery)
+        if (!subject) reject({ status: "error", code: 404, message: "Subject not found" })
+    
+        resolve(subject)
+    })
 }
 
 export const createSubject = async (data) => {

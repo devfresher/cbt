@@ -18,9 +18,9 @@ export const batchCreateUser = async (req, res, next) => {
     const result = await userService.batchCreateUsers(req.file)
 
     if (_.isEmpty(result.newUsers)) {
-        throw { status: "error", code: 422, message: "No users record was created" }
+        throw { status: "error", code: 422, message: {content: "No users record was created", errors: result.errors} }
     } else if (!_.isEmpty(result.errors) && !_.isEmpty(result.newUsers)) {
-        next({ status: "success", data: { message: `${result.newUsers.length} new users created, and ${result.errors.length} users failed to create` } })
+        next({ status: "success", data: { errors: result.errors, message: `${result.newUsers.length} new users created, and ${result.errors.length} users failed to create` } })
     } else {
         next({ status: "success", data: { message: `${result.newUsers.length} new users created` } })
     }

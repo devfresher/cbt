@@ -1,7 +1,11 @@
+import _ from "lodash"
+import csv from "fast-csv"
+import fs from "fs"
+
 import Question from "../models/question.js"
 import * as subjectService from "./subject.service.js"
 import { deleteFromCloudinary, uploadToCloudinary } from "../startup/cloudinaryConfig.js"
-import _ from "lodash";
+import { isValidObjectId } from "mongoose";
 
 const myCustomLabels = {
     totalDocs: 'totalItems',
@@ -24,21 +28,70 @@ export const getOneQuestion = async (filterQuery) => {
     return question
 }
 
-export const createQuestion = async (req) => {
-    let image
-    if (req.file) image = await uploadToCloudinary(req.file)
+export const createQuestion = (data, file) => {
+    return new Promise(async (resolve, reject) => {
+        let image, subject
+        if (file) {
+            image = await uploadToCloudinary(file)
+        } else if (data.imageUrl) {
+            image = {secure_url: data.imageUrl}
+        }
+        
+        if (!isValidObjectId(data.subjectId)) return reject({status: "error", code: 400, message: "Invalid Subject Id"})
+        try {
+            subject = await subjectService.getOneSubject({_id: data.subjectId})
+        } catch (error) {
+            return reject(error)
+        }
 
-    const subject = await subjectService.getOneSubject({_id: req.body.subjectId})
+        const newQuestion = new Question ({
+            question: data.question,
+            subjectId: subject._id,
+            options: {a: data.optionA, b: data.optionB, c: data.optionC, d: data.optionD},
+            correctAns: data.answer,
+            image: image ? {url: image.secure_url, imageId: image.public_id} : undefined,
+        })
 
-    const newQuestion = new Question ({
-        question: req.body.question,
-        subjectId: subject._id,
-        options: {a: req.body.optionA, b: req.body.optionB, c: req.body.optionC, d: req.body.optionD},
-        correctAns: req.body.answer,
-        image: image ? {url: image.secure_url, imageId: image.public_id} : undefined,
+        await newQuestion.save()
+        resolve(newQuestion)
     })
-    await newQuestion.save()
-    return newQuestion
+}
+
+export const batchCreateQuestion = (file) => {
+    return new Promise(async (resolve, reject) => {
+
+        const questions = []
+        const newQuestions = []
+        const errors =[]
+
+        
+        const readStream = fs.createReadStream(file.path)
+        const csvStream = csv.parse({headers: true})
+
+        csvStream.on("data", (data) => {
+            data = _.mapKeys(data, (value, key) => _.camelCase(key.replace(/ /g,'')))
+            questions.push(data)
+        })
+
+        csvStream.on("end", async () => {
+            let index = 0
+            for (const question of questions) {
+                try {
+                    const newQuestion = await createQuestion(question)
+                    newQuestions.push(newQuestion)
+                } catch (error) {
+                    error.message += ` for record ${index+1}`
+                    errors.push(error.message)
+                }
+
+                index++
+            }
+            resolve({newQuestions, errors})
+            fs.unlinkSync(file.path)
+        })
+
+        readStream.pipe(csvStream)
+    })
 }
 
 export const updateQuestion = async (question, req) => {

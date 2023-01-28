@@ -93,7 +93,7 @@ import _ from 'lodash'
 
 export const uploadSingleImage = (fieldName, destination = 'tempUploads') => {
     const imageFormat = ['.jpeg', '.jpg', '.png']
-    const maxFileSize = 60*1024*1024
+    const maxFileSize = 60 * 1024 * 1024
     const absDestination = path.resolve(process.cwd(), destination)
 
     return (req, res, next) => {
@@ -106,22 +106,23 @@ export const uploadSingleImage = (fieldName, destination = 'tempUploads') => {
         const upload = multer({
             storage: multer.diskStorage({
                 destination: (req, file, cb) => {
+                    console.log(333);
                     cb(null, destination)
                 },
                 filename: (req, file, cb) => {
+                    console.log(222);
                     cb(null, file.originalname)
                 },
-                fileFilter: (req, file, cb) => {
-                    // Check file type
-                    let ext = path.extname(file.originalname)
-                    if (!imageFormat.includes(ext)) {
-                        req.fileValidationError = `Unsupported image format. Expecting ${imageFormat} files only`
-                        cb(null, false)
-                    } else {
-                        cb(null, true)
-                    }
-                }
             }),
+            fileFilter: (req, file, cb) => {
+                let ext = path.extname(file.originalname)
+                if (!imageFormat.includes(ext)) {
+                    req.fileValidationError = `Unsupported image format. Expecting ${imageFormat} files only`
+                    cb(null, false)
+                } else {
+                    cb(null, true)
+                }
+            },
             limits: { fileSize: maxFileSize, files: 1 },
         }).single(fieldName)
 
@@ -140,9 +141,9 @@ export const uploadSingleImage = (fieldName, destination = 'tempUploads') => {
     }
 }
 
-export const uploadBatchUsersCsv = (fieldName, destination = 'tempUploads') => {
+export const uploadBatchCsv = (fieldName, destination = 'tempUploads') => {
     const imageFormat = ['.csv']
-    const maxFileSize = 60*1024*1024
+    const maxFileSize = 60 * 1024 * 1024
     const absDestination = path.resolve(process.cwd(), destination)
 
     return (req, res, next) => {
@@ -159,18 +160,17 @@ export const uploadBatchUsersCsv = (fieldName, destination = 'tempUploads') => {
                 },
                 filename: (req, file, cb) => {
                     cb(null, file.originalname)
-                },
-                fileFilter: (req, file, cb) => {
-                    // Check file type
-                    let ext = path.extname(file.originalname)
-                    if (!imageFormat.includes(ext)) {
-                        req.fileValidationError = `Unsupported file format. Expecting ${imageFormat} files only`
-                        cb(null, false)
-                    } else {
-                        cb(null, true)
-                    }
                 }
             }),
+            fileFilter: (req, file, cb) => {
+                let ext = path.extname(file.originalname)
+                if (!imageFormat.includes(ext)) {
+                    req.fileValidationError = `Unsupported file format. Expecting ${imageFormat} files only`
+                    cb(null, false)
+                } else {
+                    cb(null, true)
+                }
+            },
             limits: { fileSize: maxFileSize, files: 1 },
         }).single(fieldName)
 

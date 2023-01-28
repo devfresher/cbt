@@ -3,7 +3,7 @@ import express from "express"
 import * as questionController from '../controllers/questionController.js'
 import { requireRole } from "../middleware/auth.js"
 import { isSubjectTeacher } from "../middleware/subject.js"
-import { uploadSingleImage } from "../middleware/uploadFiles.js"
+import { uploadBatchCsv, uploadSingleImage } from "../middleware/uploadFiles.js"
 import { validateObjectIds } from "../middleware/validate.js"
 
 const router = express.Router()
@@ -16,6 +16,9 @@ router.post("/",
     ], 
     questionController.create
 )
+
+router.post("/batch-upload", [requireRole(['Admin']), uploadBatchCsv('csvFile')], questionController.batchCreate)
+
 
 router.get("/", 
     [ requireRole (['Admin']) ], 
