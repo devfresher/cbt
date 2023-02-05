@@ -27,7 +27,7 @@ export const oauth2Transporter = async () => {
     // return
     // const token = await oauth2Client.getToken(oauth2Config.auth_code)
     oauth2Client.setCredentials({refresh_token: oauth2Config.refresh_token})
-    const token = await oauth2Client.getAccesstill fixingsToken()
+    const token = await oauth2Client.getAccessToken()
     // throw(token);
 
     return nodemailer.createTransport({
