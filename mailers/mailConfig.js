@@ -23,7 +23,7 @@ export const oauth2Transporter = async () => {
         oauth2Config.redirect_uri
     )
 
-    console.log(await getAuthorizeUrl(oauth2Client));
+    throw({status: "error", code:401, message: await getAuthorizeUrl(oauth2Client)});
     return
     oauth2Client.setCredentials({refresh_token: oauth2Config.refresh_token})
     const token = await oauth2Client.getAccessToken()
