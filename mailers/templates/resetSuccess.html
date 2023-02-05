@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{appName}} Password Reset Completed</title>
+  </head>
+  <body>
+    <table cellpadding="0" cellspacing="0" style="width:100%; height:100%; border-top: 5px solid; border-color: #008b8b; background-color:#F2F4F6; padding:0 5px; color:#F2F4F6;">
+      <tr>
+        <td align="center">
+          <table cellpadding="0" cellspacing="0" style="background-color:#2b2a2a; box-shadow:0px 0px 10px 0px rgba(255, 255, 255, 0.8);">
+            <tr>
+              <td align="center" style="padding:40px 30px 20px;">
+                <img src="{{appLogoUrl}}" alt="{{appName}}" style="width:150px;">
+              </td>
+            </tr>
+            <tr>
+              <td align="center" style="padding:30px; font-family:Arial, sans-serif; font-size:14px; line-height:20px; color:#F2F4F6;">
+                <p>Hello {{user.fullName}},</p>
+                <p>This email is to confirm that your {{appName}} password has been successfully reset.</p>
+                <p>If you did not initiate this password reset, please contact support immediately.</p>
+                <p>Best regards.</p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

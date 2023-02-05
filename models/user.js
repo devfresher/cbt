@@ -84,7 +84,9 @@ const userSchema = new mongoose.Schema({
             url: String,
             imageId: String
         }
-    }
+    },
+    resetPasswordToken: String,
+    resetTokenExpiry: Date
 })
 
 userSchema.plugin(paginate)
@@ -183,6 +185,34 @@ export function validateLogin(req, type = 'others') {
 
     return schema.validate(req);
 }
+
+export function validateSendOtp(req) {
+    const schema = Joi.object({
+        email: Joi.string().email().required()
+    })
+
+    return schema.validate(req);
+}
+
+export function validateNewPass(req) {
+    const schema = Joi.object({
+        email: Joi.string().email().required(),
+        authCode: Joi.string().min(6).max(6).required(),
+        password: Joi.string().min(6).required(),
+    })
+
+    return schema.validate(req);
+}
+
+export function validateValidateOtp(req) {
+    const schema = Joi.object({
+        email: Joi.string().email().required(),
+        authCode: Joi.string().min(6).max(6).required(),
+    })
+
+    return schema.validate(req);
+}
+
 
 export async function hashPassword(password) {
     const salt = await bcrypt.genSalt(10)
