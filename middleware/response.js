@@ -38,5 +38,7 @@ export default function (data, req, res, next) {
 
 const isValidStatusCode = (code) => {
     code = Number(code)
-    return (code >= 100 && code <=599 )
+    if (code >= 100 && code <=599 ) return code
+    
+    return undefined
 }
