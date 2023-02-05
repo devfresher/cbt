@@ -6,7 +6,6 @@ const { name, host, port } =  config.get('app')
 
 export default async (app) => {
     try {
-        console.log(config.get('db.url'));
         await mongoose.connect(config.get('db.url'))
         winston.info(`${name} is connected to DB`)
 

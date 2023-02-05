@@ -33,6 +33,7 @@ export const sendOtp = async (email) => {
     const user = await userService.getOneUser({ email: email })
     const token = generateToken()
 
+    console.log(token);
     await userService.updateUser(user, { resetPasswordToken: token.token, resetTokenExpiry: token.expiry })
     await sendEmail(user, 'resetPassword')
     return
