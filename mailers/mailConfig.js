@@ -25,10 +25,10 @@ export const oauth2Transporter = async () => {
 
     // throw({status: "error", code:401, message: await getAuthorizeUrl(oauth2Client)});
     // return
-    const token = await oauth2Client.getToken(oauth2Config.auth_code)
-    // oauth2Client.setCredentials({refresh_token: oauth2Config.refresh_token})
-    // const token = await oauth2Client.getAccessToken()
-    throw(token);
+    // const token = await oauth2Client.getToken(oauth2Config.auth_code)
+    oauth2Client.setCredentials({refresh_token: oauth2Config.refresh_token})
+    const token = await oauth2Client.getAccesstill fixingsToken()
+    // throw(token);
 
     return nodemailer.createTransport({
         service: 'gmail',
