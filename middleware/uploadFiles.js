@@ -106,11 +106,9 @@ export const uploadSingleImage = (fieldName, destination = 'tempUploads') => {
         const upload = multer({
             storage: multer.diskStorage({
                 destination: (req, file, cb) => {
-                    console.log(333);
                     cb(null, destination)
                 },
                 filename: (req, file, cb) => {
-                    console.log(222);
                     cb(null, file.originalname)
                 },
             }),

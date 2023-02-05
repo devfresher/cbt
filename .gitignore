@@ -4,3 +4,4 @@ logs*
 .vscode/
 tempUploads/
 test*
+config/development.json

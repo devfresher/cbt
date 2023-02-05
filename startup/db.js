@@ -1,15 +1,16 @@
 import config from 'config'
 import mongoose from 'mongoose'
 import winston from 'winston'
-import { host, port } from './config.js'
+
+const { name, host, port } =  config.get('app')
 
 export default async (app) => {
     try {
-        await mongoose.connect(config.get('dbConfig.url'))
-        winston.info("Connected to DB")
+        await mongoose.connect(config.get('db.url'))
+        winston.info(`${name} is connected to DB`)
 
         app.listen(port, host, () => {
-            winston.info(`Server started at http://${host}:${port}`)
+            winston.info(`${name}'s Server started at http://${host}:${port}`)
         })
     } catch (error) {
         winston.error(error)

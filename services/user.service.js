@@ -92,19 +92,24 @@ export const createUser = (data, file) => {
             newUser.gender = data.gender
             newUser.class = theClass ? theClass : null
             newUser.classSection = theClass ? data.classSection : null
-            newUser.guardian = {
-                name: data.guardianName,
-                phoneNumber: data.guardianPhone,
-                address: data.guardianAddress,
-                relationship: data.guardianRelationship
-            }
+            // newUser.guardian = {
+            //     name: data.guardianName,
+            //     phoneNumber: data.guardianPhone,
+            //     address: data.guardianAddress,
+            //     relationship: data.guardianRelationship
+            // }
         }
 
         let profileImage = (file ? await uploadToCloudinary(file) : data.profileImage )|| {}
         newUser.profileImage = { url: profileImage.secure_url, imageId: profileImage.public_id }
+        
+        try {
+            await newUser.save()
+            resolve(newUser)
+        } catch (error) {
+            reject({status: "error", code: 500, message: error})
+        }
 
-        await newUser.save()
-        resolve(newUser)
     })
 }
 
@@ -159,6 +164,8 @@ export const updateUser = async (user, data, file) => {
 
     user.fullName = data.fullName || user.fullName
     user.profileImage = image ? { url: image.secure_url, imageId: image.public_id } : (user.profileImage || undefined)
+    user.resetPasswordToken = data.resetPasswordToken
+    user.resetTokenExpiry = data.resetTokenExpiry
 
     if (user.role === 'Staff') {
         user.phoneNumber = data.phoneNumber || user.phoneNumber

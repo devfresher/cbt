@@ -17,10 +17,12 @@ const myCustomLabels = {
 };
 
 export const getOneClass = async (filterQuery) => {
-    let theClass = await Class.findOne(filterQuery)
-    if (!theClass) throw { status: "error", code: 404, message: "Class not found" }
-
-    return theClass
+    return new Promise( async (resolve, reject) => {
+        let theClass = await Class.findOne(filterQuery)
+        if (!theClass) reject({ status: "error", code: 404, message: "Class not found" })
+    
+        resolve(theClass)  
+    })
 }
 
 export const getMany = async (filterQuery, pageFilter) => {
