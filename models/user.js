@@ -106,12 +106,17 @@ export function validateUpdateReq(req) {
             fullName: Joi.string().min(5).max(50),
             phoneNumber: Joi.string().min(11).max(13),
             role: Joi.string().valid(...roleList),
+            regNumber: Joi.string(),
+            oracleNumber: Joi.string(),
+            state: Joi.string(),
+            lga: Joi.string(),
         })
     } else if (req.role === 'Student') {
         schema = Joi.object({
             fullName: Joi.string().min(5).max(50),
             role: Joi.string().valid(...roleList),
             religion: Joi.string().valid(...religionList),
+            admissionNo: Joi.string(),
             homeAddress: Joi.string(),
             classId: Joi.objectId(),
             classSection: Joi.string(),
