@@ -37,5 +37,6 @@ export default function (data, req, res, next) {
 }
 
 const isValidStatusCode = (code) => {
+    code = Number(code)
     return (code >= 100 && code <=599 )
 }
