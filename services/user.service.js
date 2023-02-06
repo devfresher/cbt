@@ -47,7 +47,7 @@ export const getMany = async (filterQuery, pageFilter) => {
 
 const checkIfUserExists = async (field, value) => {
     const userExists = await User.findOne({ [field]: value })
-
+    console.log(userExists);
     if (userExists) return { status: "error", code: 400, message: `${field} already exists` }
     return null
 }
