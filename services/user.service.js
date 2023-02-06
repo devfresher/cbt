@@ -47,6 +47,7 @@ export const getMany = async (filterQuery, pageFilter) => {
 
 const checkIfUserExists = async (field, value) => {
     const userExists = await User.findOne({ [field]: value })
+
     if (userExists) return { status: "error", code: 400, message: `${field} already exists` }
     return null
 }
@@ -68,16 +69,18 @@ export const createUser = (data, file) => {
 
         if (data.role === 'Staff' || data.role === 'Admin') {
             const fields = ['phoneNumber', 'regNumber', 'oracleNumber']
-            const errors = fields.map(async field => {
+            const errors = await Promise.all(fields.map(async (field) => {
                 return await checkIfUserExists(field, data[field])
-            })
-            if (errors.filter(error => error).length > 0) return reject(errors)
+            }))
 
+            if (errors.filter(error => error).length > 0) return reject(errors)
+            
             newUser.phoneNumber = data.phoneNumber
             newUser.regNumber = data.regNumber
             newUser.oracleNumber = data.oracleNumber
             newUser.state = data.state
             newUser.lga = data.lga
+            console.log(newUser);
         } else if (data.role === 'Student') {
             const error = await checkIfUserExists('admissionNo', data.admissionNo)
             if (error) return reject(error)
