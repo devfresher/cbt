@@ -23,7 +23,7 @@ const Class = mongoose.model('class', classSchema)
 
 export function validateClass(theClass) {
     const schema = Joi.object({
-        title: Joi.string().min(5).max(50).required(),
+        title: Joi.string().min(3).max(50).required(),
         teacher: Joi.objectId(),
         description: Joi.string().max(255)
     })
@@ -33,7 +33,7 @@ export function validateClass(theClass) {
 
 export function validateUpdate(req) {
     const schema = Joi.object({
-        title: Joi.string().min(5).max(50),
+        title: Joi.string().min(3).max(50),
         teacher: Joi.objectId(),
         description: Joi.string().max(255)
     })
