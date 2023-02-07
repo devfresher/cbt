@@ -36,7 +36,8 @@ export const getAllStudentsByClass = async (classId, pageFilter) => {
 
     pageFilter.customLabels = myCustomLabels
 
-    return User.paginate(findFilter, pageFilter)
+    return await User.find(findFilter)
+    // return User.paginate(findFilter, pageFilter)
 }
 
 export const getMany = async (filterQuery, pageFilter) => {

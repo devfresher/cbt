@@ -119,7 +119,8 @@ export const getMany = async (filterQuery, pageFilter) => {
     if(!pageFilter) return await Assessment.find(filterQuery)
 
     pageFilter.customLabels = myCustomLabels
-    return await Assessment.paginate(filterQuery, pageFilter)
+    return await Assessment.find(filterQuery)
+    // return await Assessment.paginate(filterQuery, pageFilter)
 }
 
 // Get all assessment that has had an attempt by students

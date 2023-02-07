@@ -117,7 +117,8 @@ export const getMany = async (filterQuery, pageFilter) => {
     if(_.isEmpty(pageFilter)) return await Question.find(filterQuery)
 
     pageFilter.customLabels = myCustomLabels
-    return await Question.paginate(filterQuery, pageFilter)
+    return await Question.find(filterQuery)
+    // return await Question.paginate(filterQuery, pageFilter)
 }
 
 export const deleteQuestion = async (filterQuery) => {
