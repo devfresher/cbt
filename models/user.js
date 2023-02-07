@@ -63,6 +63,7 @@ const userSchema = new mongoose.Schema({
     },
     guardian: {
         type: {
+            _id: false,
             name: String,
             phoneNumber: String,
             address: String,
@@ -81,6 +82,7 @@ const userSchema = new mongoose.Schema({
     lga: String,
     profileImage: {
         type: {
+            _id: false,
             url: String,
             imageId: String
         }

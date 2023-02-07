@@ -136,8 +136,8 @@ export const batchCreateUsers = async (file) => {
                 address: data.guardianAddress,
                 relationship: data.guardianRelationship
             }
-            data.profileImage = data.profileImage ? { url: data.profileImage } : undefined
 
+            data.profileImage = data.profileImage ? { secure_url: data.profileImage } : undefined
             users.push(_.omit(data, ['guardianName', 'guardianPhone', 'guardianAddress', 'guardianRelationship']))
         })
 
