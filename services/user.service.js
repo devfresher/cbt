@@ -43,7 +43,8 @@ export const getAllStudentsByClass = async (classId, pageFilter) => {
 export const getMany = async (filterQuery, pageFilter) => {
     pageFilter.customLabels = myCustomLabels
 
-    return await User.paginate(filterQuery, pageFilter)
+    return await User.find(filterQuery)
+    // return await User.paginate(filterQuery, pageFilter)
 }
 
 const checkIfUserExists = async (field, value) => {
