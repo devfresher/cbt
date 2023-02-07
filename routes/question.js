@@ -17,7 +17,7 @@ router.post("/",
     questionController.create
 )
 
-router.post("/batch-upload", [requireRole(['Admin']), uploadBatchCsv('csvFile')], questionController.batchCreate)
+router.post("/batch-upload", [requireRole(['Admin, Staff']), uploadBatchCsv('csvFile')], questionController.batchCreate)
 
 
 router.get("/", 

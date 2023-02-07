@@ -16,12 +16,21 @@ const myCustomLabels = {
     meta: 'paging',
 };
 
+<<<<<<< HEAD
 export const getOneClass = (filterQuery) => {
     return new Promise(async (resolve, reject) => {
         let theClass = await Class.findOne(filterQuery)
         if (!theClass) reject({ status: "error", code: 404, message: "Class not found" })
     
         resolve(theClass)
+=======
+export const getOneClass = async (filterQuery) => {
+    return new Promise( async (resolve, reject) => {
+        let theClass = await Class.findOne(filterQuery)
+        if (!theClass) reject({ status: "error", code: 404, message: "Class not found" })
+    
+        resolve(theClass)  
+>>>>>>> 973376ed703da801e7c65a2f0368c8326a355091
     })
 }
 

@@ -1,11 +1,23 @@
 {
-    "jwtPrivateKey": "cbt_jwtPrivateKey",
-    "dbConfig": {
+    "db": {
         "url": "cbt_dbUrl"
     },
-    "cloudinaryConfig": {
-        "apiName": "cbt_cloudinaryName",
-        "apiKey": "cbt_cloudinaryKey",
-        "apiSecret": "cbt_cloudinarySecret"
-    }
+    "mail": {
+        "host": "MAIL_HOST",
+        "port": "MAIL_PORT",
+        "username": "MAIL_USERNAME",
+        "password": "MAIL_PASSWORD"
+    },
+    "oauth2": {
+        "client_id": "cbt_oauth2_clientId",
+        "client_secret": "cbt_oauth2_clientSecret",
+        "auth_code": "cbt_oauth2_authCode",
+        "refresh_token": "cbt_oauth2_refreshToken"
+    },
+    "cloudinary": {
+        "cloud_name": "cbt_cloudinaryName",
+        "api_key": "cbt_cloudinaryKey",
+        "api_secret": "cbt_cloudinarySecret"
+    },
+    "jwtPrivateKey": "cbt_jwtPrivateKey"
 }

@@ -22,7 +22,7 @@ export default function (data, req, res, next) {
     
         default:
             const error = {
-                code: data.code || 500,
+                code: isValidStatusCode(data.code) || 500,
                 message: data.message || "Something unexpected went wrong",
                 originalError: data
             }
@@ -34,4 +34,11 @@ export default function (data, req, res, next) {
             break;
     }
 
+}
+
+const isValidStatusCode = (code) => {
+    code = Number(code)
+    if (code >= 100 && code <=599 ) return code
+    
+    return undefined
 }

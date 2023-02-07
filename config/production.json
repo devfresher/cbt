@@ -1,3 +1,30 @@
 {
-    
+    "app": {
+        "name": "CBT App",
+        "host": "0.0.0.0",
+        "port": 8000
+    },
+    "db": {
+        "url": "${cbt_dbUrl}"
+    },
+    "mail": {
+        "host": "${MAIL_HOST}",
+        "port": "${MAIL_PORT}",
+        "username": "${MAIL_USERNAME}",
+        "password": "${MAIL_PASSWORD}"
+    },
+    "oauth2": {
+        "client_id": "${cbt_oauth2_clientId}",
+        "client_secret": "{cbt_oauth2_clientSecret}",
+        "redirect_uri": "https://lao-leathers.com",
+        "auth_code": "{cbt_oauth2_authCode}",
+        "refresh_token": "{cbt_oauth2_refreshToken}"
+    },
+    "cloudinary": {
+        "cloud_name": "${cbt_cloudinaryName}",
+        "api_key": "${cbt_cloudinaryKey}",
+        "api_secret": "${cbt_cloudinarySecret}",
+        "secure": true
+    },
+    "jwtPrivateKey": "${cbt_jwtPrivateKey}"
 }

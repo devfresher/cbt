@@ -47,6 +47,7 @@ export const getMany = async (filterQuery, pageFilter) => {
 
 const checkIfUserExists = async (field, value) => {
     const userExists = await User.findOne({ [field]: value })
+
     if (userExists) return { status: "error", code: 400, message: `${field} already exists` }
     return null
 }
@@ -68,16 +69,18 @@ export const createUser = (data, file) => {
 
         if (data.role === 'Staff' || data.role === 'Admin') {
             const fields = ['phoneNumber', 'regNumber', 'oracleNumber']
-            const errors = fields.map(async field => {
+            const errors = await Promise.all(fields.map(async (field) => {
                 return await checkIfUserExists(field, data[field])
-            })
-            if (errors.filter(error => error).length > 0) return reject(errors)
+            }))
 
+            if (errors.filter(error => error).length > 0) return reject(errors)
+            
             newUser.phoneNumber = data.phoneNumber
             newUser.regNumber = data.regNumber
             newUser.oracleNumber = data.oracleNumber
             newUser.state = data.state
             newUser.lga = data.lga
+            console.log(newUser);
         } else if (data.role === 'Student') {
             const error = await checkIfUserExists('admissionNo', data.admissionNo)
             if (error) return reject(error)
@@ -92,19 +95,24 @@ export const createUser = (data, file) => {
             newUser.gender = data.gender
             newUser.class = theClass ? theClass : null
             newUser.classSection = theClass ? data.classSection : null
-            newUser.guardian = {
-                name: data.guardianName,
-                phoneNumber: data.guardianPhone,
-                address: data.guardianAddress,
-                relationship: data.guardianRelationship
-            }
+            // newUser.guardian = {
+            //     name: data.guardianName,
+            //     phoneNumber: data.guardianPhone,
+            //     address: data.guardianAddress,
+            //     relationship: data.guardianRelationship
+            // }
         }
 
         let profileImage = (file ? await uploadToCloudinary(file) : data.profileImage )|| {}
         newUser.profileImage = { url: profileImage.secure_url, imageId: profileImage.public_id }
+        
+        try {
+            await newUser.save()
+            resolve(newUser)
+        } catch (error) {
+            reject({status: "error", code: 500, message: error})
+        }
 
-        await newUser.save()
-        resolve(newUser)
     })
 }
 
@@ -159,6 +167,8 @@ export const updateUser = async (user, data, file) => {
 
     user.fullName = data.fullName || user.fullName
     user.profileImage = image ? { url: image.secure_url, imageId: image.public_id } : (user.profileImage || undefined)
+    user.resetPasswordToken = data.resetPasswordToken
+    user.resetTokenExpiry = data.resetTokenExpiry
 
     if (user.role === 'Staff') {
         user.phoneNumber = data.phoneNumber || user.phoneNumber
@@ -184,7 +194,7 @@ export const updateUser = async (user, data, file) => {
 
 export const deleteUser = async (filterQuery) => {
     const user = await getOneUser(filterQuery)
-    if (user.profileImage) await deleteFromCloudinary(user.profileImage.imageId)
+    if (user.profileImage.imageId) await deleteFromCloudinary(user.profileImage.imageId)
 
     await User.deleteOne(filterQuery)
     return user
