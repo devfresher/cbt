@@ -47,7 +47,7 @@ export const getMany = async (filterQuery, pageFilter) => {
 
 const checkIfUserExists = async (field, value) => {
     const userExists = await User.findOne({ [field]: value })
-    console.log(userExists);
+
     if (userExists) return { status: "error", code: 400, message: `${field} already exists` }
     return null
 }
@@ -194,7 +194,7 @@ export const updateUser = async (user, data, file) => {
 
 export const deleteUser = async (filterQuery) => {
     const user = await getOneUser(filterQuery)
-    if (user.profileImage) await deleteFromCloudinary(user.profileImage.imageId)
+    if (user.profileImage.imageId) await deleteFromCloudinary(user.profileImage.imageId)
 
     await User.deleteOne(filterQuery)
     return user
