@@ -1,36 +1,65 @@
-import _ from 'lodash'
-import jwt from 'jsonwebtoken'
-import config from 'config'
-import User from '../models/user.js'
+import jwt from 'jsonwebtoken';
+import config from 'config';
+import User from '../models/user.js';
 
-export const requireLoggedInUser =  async function (req, res, next) {
-    const authHeader = req.headers['authorization']
-    const token = authHeader && authHeader.replace(/^Bearer\s+/, "")
-
-    if( !token ) return next({status: "error", code: 401, message: "Access denied. No auth token provided"})
-
+const requireLoggedInUser = async (req, res, next) => {
     try {
-        const decodedToken = jwt.verify(token, config.get('jwtPrivateKey'))
+        const authHeader = req.headers['authorization'];
+        const token = authHeader && authHeader.replace(/^Bearer\s+/, '');
+        if (!token) {
+            return next({
+                status: 'error',
+                code: 401,
+                message: 'Access denied. No auth token provided'
+            });
+        }
 
-        const user = User.findById(decodedToken._id)
-        if (!user) return next({status: "error", code: 400, message: "Invalid auth token"})
+        const decodedToken = jwt.verify(token, config.get('jwtPrivateKey'));
+        const user = await User.findById(decodedToken._id);
+        if (!user) {
+            return next({
+                status: 'error',
+                code: 400,
+                message: 'Invalid auth token'
+            });
+        }
 
-        req.user = decodedToken
-        next()
+        req.user = decodedToken;
+        next();
     } catch (err) {
-        if (err.name === "TokenExpiredError") return next({status: "error", code: 400, message: "Auth token expired"})
-        next({status: "error", code: 401, message: "Failed to authenticate token"})
-    }
-}
+        if (err.name === 'TokenExpiredError') {
+            return next({
+                status: 'error',
+                code: 400,
+                message: 'Auth token expired'
+            });
+        }
 
-export const requireRole  =  (roles) => {
-    return (req, res, next) => {
-        requireLoggedInUser(req, res, function(error) {
-            if (error) return next(error)
-            roles = Array.isArray(roles) ? roles:[roles]
-            if(!_.find(roles, (r) => r === req.user.role)) return next({status: "error", code: 403, message: "Token valid, but forbidden to take this action"})
-            
-            next()
-        })
+        return next({
+            status: 'error',
+            code: 401,
+            message: 'Failed to authenticate token'
+        });
     }
-}
+};
+
+const requireRole = roles => {
+    return async (req, res, next) => {
+        await requireLoggedInUser(req, res, error => {
+            if (error) return next(error);
+
+            roles = Array.isArray(roles) ? roles : [roles];
+            if (!roles.includes(req.user.role)) {
+                return next({
+                    status: 'error',
+                    code: 403,
+                    message: 'Token valid, but forbidden to take this action'
+                });
+            }
+
+            next();
+        });
+    };
+};
+
+export { requireLoggedInUser, requireRole };

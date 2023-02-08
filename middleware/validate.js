@@ -1,25 +1,24 @@
-import _ from 'lodash'
+import _ from 'lodash';
 import { isValidObjectId } from "mongoose";
-import * as subjectService from "../services/subject.service.js"
 
-export const validateRequest =  (validator) => {
+export const validateRequest = (validator) => {
     return (req, res, next) => {
-        const { error } = validator(req.body);
-        if(error) throw { status: 'error', code: 400, message: error.details[0].message }
-
-        next()
-    }
-}
+        const validationResult = validator(req.body);
+        if (validationResult.error) {
+            const errorMessage = validationResult.error.details[0].message;
+            return next({ status: 'error', code: 400, message: errorMessage });
+        }
+        next();
+    };
+};
 
 export const validateObjectIds = (idNames) => {
     return (req, res, next) => {
-        idNames = Array.isArray(idNames) ? idNames:[idNames]
-        _.find(idNames, 
-            (idName) => {
-                if(!isValidObjectId(req.params[idName])) throw {status: "error", code: 400, message: `Invalid ${idName} passed`}
-            }
-        )
-
-        next()
-    }
-}
+        idNames = Array.isArray(idNames) ? idNames : [idNames];
+        const invalidId = _.find(idNames, idName => !isValidObjectId(req.params[idName]));
+        if (invalidId) {
+            return next({ status: "error", code: 400, message: `Invalid ${ invalidId } passed` });
+        }
+        next();
+    };
+};
