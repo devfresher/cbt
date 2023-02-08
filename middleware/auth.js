@@ -7,27 +7,29 @@ export const requireLoggedInUser =  async function (req, res, next) {
     const authHeader = req.headers['authorization']
     const token = authHeader && authHeader.replace(/^Bearer\s+/, "")
 
-    if( !token ) return res.status(401).json({status: "error", error: {code: 401, message: "Access denied. No auth token provided"}})
+    if( !token ) return next({status: "error", code: 401, message: "Access denied. No auth token provided"})
 
     try {
         const decodedToken = jwt.verify(token, config.get('jwtPrivateKey'))
 
         const user = User.findById(decodedToken._id)
-        if (!user) return res.status(400).json({status: "error", error: {code: 400, message: "Invalid auth token"}})
+        if (!user) return next({status: "error", code: 400, message: "Invalid auth token"})
 
         req.user = decodedToken
         next()
     } catch (err) {
-        if (err.name === "TokenExpiredError") return res.status(400).json({status: "error", error: {code: 400, message: "Auth token expired"}})
-        res.status(401).json({status: "error", error: {code: 401, message: "Failed to authenticate token"}})
+        if (err.name === "TokenExpiredError") return next({status: "error", code: 400, message: "Auth token expired"})
+        next({status: "error", code: 401, message: "Failed to authenticate token"})
     }
 }
 
 export const requireRole  =  (roles) => {
     return (req, res, next) => {
-        requireLoggedInUser(req, res, function() {
+        requireLoggedInUser(req, res, function(error) {
+            if (error) return next(error)
             roles = Array.isArray(roles) ? roles:[roles]
-            if(!_.find(roles, (r) => r === req.user.role)) res.status(403).json({status: "error", error: {code: 403, message: "Token valid, but forbidden to take this action"}})
+            if(!_.find(roles, (r) => r === req.user.role)) return next({status: "error", code: 403, message: "Token valid, but forbidden to take this action"})
+            
             next()
         })
     }
