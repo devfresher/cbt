@@ -21,12 +21,14 @@ const myCustomLabels = {
 
 const activeAssessment = async (classId, assessmentType) => {
     const assessments = await Assessment.aggregate([
-        {$lookup: {
-            from: "subjects",
-            localField: "subject",
-            foreignField: "_id",
-            as: "subject"
-        }},  { $unwind: "$subject" }, 
+        {
+            $lookup: {
+                from: "subjects",
+                localField: "subject",
+                foreignField: "_id",
+                as: "subject"
+            }
+        }, { $unwind: "$subject" },
         {
             $match: {
                 "subject.class._id": classId,
@@ -63,8 +65,8 @@ export const startAssessment = async (studentId, assessmentType) => {
     assessment = _.omit(assessment, 'questions')
 
     // Check if assessment has been taken by student
-    const assessmentTaken = await AssessmentTaken.findOne({ assessment: assessment._id, student: studentId})
-    if(!assessmentTaken) {
+    const assessmentTaken = await AssessmentTaken.findOne({ assessment: assessment._id, student: studentId })
+    if (!assessmentTaken) {
         // new student, start fresh
         const newAssessmentTaken = new AssessmentTaken({
             assessment: assessment._id,
@@ -74,13 +76,13 @@ export const startAssessment = async (studentId, assessmentType) => {
         })
 
         await newAssessmentTaken.save()
-        return {assessment, questions, startedAt: Date.now()}
+        return { assessment, questions, startedAt: Date.now() }
 
-    }  else if (assessmentTaken.completedAt) {
-        throw {status: "error", code: 400, message: "Assessment already completed"}
-    } 
+    } else if (assessmentTaken.completedAt) {
+        throw { status: "error", code: 400, message: "Assessment already completed" }
+    }
 
-    return {assessment, questions, startedAt: assessmentTaken.startedAt}
+    return { assessment, questions, startedAt: assessmentTaken.startedAt }
 }
 
 export const completeAssessment = async (studentId, req) => {
@@ -88,20 +90,22 @@ export const completeAssessment = async (studentId, req) => {
     const student = await userService.getOneUser({ _id: studentId })
 
     // Check if assessment has been taken by student
-    const assessmentTaken = await AssessmentTaken.findOne({ 
-        assessment: req.assessmentId, 
+    const assessmentTaken = await AssessmentTaken.findOne({
+        assessment: req.assessmentId,
         student: student._id
     }).populate('assessment')
 
-    if(!assessmentTaken) throw { status: "error", code: 400, message: "No assessment to complete" }
-    else if (assessmentTaken.completedAt) throw { status: "error", code: 400,  message: "Assessment already completed"}
+    if (!assessmentTaken)
+        throw { status: "error", code: 400, message: "No assessment to complete" }
+    else if (assessmentTaken.completedAt)
+        throw { status: "error", code: 400, message: "Assessment already completed" }
 
     // if started, update for completion
     assessmentTaken.totalAttemptedQuestion = req.totalAttempted
     assessmentTaken.totalCorrectAnswer = req.totalCorrectAnswer
-    assessmentTaken.score = (req.totalCorrectAnswer/assessmentTaken.totalQuestionSupplied)*100
-    assessmentTaken.grade = assessmentTaken.score >= assessmentTaken.assessment.passMark ? "Pass":"Fail" 
-    assessmentTaken.totalWrongAnswer = req.totalWrongAnswer
+    assessmentTaken.percentageScore = (req.totalCorrectAnswer / assessmentTaken.totalQuestionSupplied) * 100
+    assessmentTaken.grade = assessmentTaken.totalCorrectAnswer >= assessmentTaken.assessment.passMark ? "Pass" : "Fail"
+    assessmentTaken.totalWrongAnswer = assessmentTaken.totalQuestionSupplied - assessmentTaken.totalCorrectAnswer
     assessmentTaken.completedAt = Date.now()
     await assessmentTaken.save()
 
@@ -116,7 +120,7 @@ export const getOneAssessment = async (filterQuery) => {
 }
 
 export const getMany = async (filterQuery, pageFilter) => {
-    if(!pageFilter) return await Assessment.find(filterQuery)
+    if (!pageFilter) return await Assessment.find(filterQuery)
 
     pageFilter.customLabels = myCustomLabels
     return await Assessment.find(filterQuery)
@@ -126,29 +130,34 @@ export const getMany = async (filterQuery, pageFilter) => {
 // Get all assessment that has had an attempt by students
 export const getAllTaken = async () => {
     const pipeline = [
-        { $group: {_id: "$assessment"} },
-        { $lookup: {
-            from: "assessments",
-            localField: "_id",
-            foreignField: "_id",
-            as: "assessmentInfo"
-        } },
+        { $group: { _id: "$assessment" } },
+        {
+            $lookup: {
+                from: "assessments",
+                localField: "_id",
+                foreignField: "_id",
+                as: "assessmentInfo"
+            }
+        },
         { $unwind: "$assessmentInfo" },
-        { "$replaceRoot": {"newRoot": "$assessmentInfo"} }
+        { "$replaceRoot": { "newRoot": "$assessmentInfo" } }
     ]
     const assessmentTaken = await AssessmentTaken.aggregate(pipeline)
     return assessmentTaken
 }
 
 export const createAssessment = async (req) => {
-    const subject = await subjectService.getOneSubject({_id: req.body.subjectId})
+    const subject = await subjectService.getOneSubject({ _id: req.body.subjectId })
 
     // Validate the number of questions in the assessment 
-    if(req.body.noOfQuestion > req.body.questions.length) 
+    if (req.body.noOfQuestion > req.body.questions.length)
         throw { status: "error", code: 400, message: "Number of questions must be less or equal to the total questions supplied" }
 
+    if (req.body.passMark > req.body.noOfQuestion)
+        throw { status: "error", code: 400, message: "Pass mark must be less or equal to Number of questions" }
+
     const assessmentTitle = `${subject.title}-${subject.class.title}`
-    const newAssessment = new Assessment ({
+    const newAssessment = new Assessment({
         title: assessmentTitle,
         type: req.body.type,
         status: req.body.status,
@@ -167,21 +176,22 @@ export const createAssessment = async (req) => {
 export const updateAssessment = async (assessment, req) => {
     let assessmentTitle, subject
 
-    const error = { status: "error", 
-        code: 400, 
+    const error = {
+        status: "error",
+        code: 400,
         message: "Number of questions must be less or equal to the total questions supplied"
     }
     // Validate the number of questions in the assessment
     const { noOfQuestion, questions } = req.body
-    if(noOfQuestion > (questions ? questions.length : assessment.questions.length)) {
+    if (noOfQuestion > (questions ? questions.length : assessment.questions.length)) {
         throw error
     }
 
     if (req.body.subjectId) {
-        subject = await subjectService.getOneSubject({_id: req.body.subjectId})
+        subject = await subjectService.getOneSubject({ _id: req.body.subjectId })
         assessmentTitle = `${subject.title}-${subject.class.title}`
     } else {
-        subject = await subjectService.getOneSubject({_id: assessment.subject})
+        subject = await subjectService.getOneSubject({ _id: assessment.subject })
     }
 
     if (req.body.status) {
