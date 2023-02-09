@@ -7,11 +7,11 @@ export const isSubjectTeacher = async (req, res, next) => {
 
     if (subjectId) {
         const subject = await getOneSubject({ _id: subjectId });
-        if (_.toLower(role) !== 'staff' || subject.teacher !== req.user._id) {
+        if (_.toLower(role) === 'staff' && subject.teacher !== req.user._id) {
             const error = {
                 status: "error",
-                code: 403,
-                message: "Unauthorized"
+                code: 401,
+                message: `You're not authorized to do that, because you're not the teacher of ${subject.title} ${subject.class.title}`
             };
             return next(error);
         }
