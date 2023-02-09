@@ -1,20 +1,13 @@
 import winston from "winston";
 
 export default function (data, req, res, next) {
-    const code = Number(data.code) || 500;
-    if (!isValidStatusCode(code)) {
-        winston.error(`Invalid status code: ${code}`);
-        return res.status(500).json({
-            status: "error",
-            error: {
-                code: 500,
-                message: "Invalid status code"
-            }
-        });
-    }
+    const defaultCode = 500;
+    const defaultMessage = "Something unexpected went wrong";
 
+    let code
     switch (data.status) {
         case "success":
+            code = isValidStatusCode(data.code) ? data.code : 200;
             return res.status(code).json({
                 status: data.status,
                 data: data.data,
@@ -22,18 +15,20 @@ export default function (data, req, res, next) {
             });
 
         case "error":
+            code = isValidStatusCode(data.code) ? data.code : defaultCode;
             return res.status(code).json({
                 status: data.status,
                 error: {
                     code,
-                    message: data.message
+                    message: data.message || defaultMessage
                 }
             });
 
         default:
+            code = isValidStatusCode(data.code) ? data.code : defaultCode;
             const error = {
                 code,
-                message: data.message || "Something unexpected went wrong",
+                message: data.message || defaultMessage,
                 originalError: data
             };
             winston.error(error.message, data);
