@@ -37,7 +37,7 @@ export const fetchResult = async (user, limit) => {
                 { $unwind: "$student" },
                 { $group: {
                     _id: { assessment_id: '$assessment', class_id: '$class' },
-                    students: { $push: {info: '$student', score: "$score", grade: "$grade"} }
+                    students: { $push: {info: '$student', score: "$totalCorrectAnswer", grade: "$grade"} }
                 }},
                 { $project: {
                     _id: 0,
@@ -72,7 +72,7 @@ export const fetchResult = async (user, limit) => {
                     foreignField: '_id',
                     as: 'subject'
                 }},
-                { $match: { 'subject.teacher': user._id} },
+                { $match: { 'subject.teacher': mongoose.Types.ObjectId(user._id)} },
                 { $lookup: {
                     from: 'classes',
                     localField: 'subject.class._id',
@@ -82,7 +82,7 @@ export const fetchResult = async (user, limit) => {
                 { $unwind: "$student" },
                 { $group: {
                     _id: { assessment_id: '$assessment', class_id: '$class' },
-                    students: { $push: {info: '$student', score: "$score", grade: "$grade"} }
+                    students: { $push: {info: '$student', score: "$totalCorrectAnswer", grade: "$grade"} }
                 }},
                 { $project: {
                     _id: 0,
