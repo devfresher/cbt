@@ -23,11 +23,12 @@ const myCustomLabels = {
 }
 
 export const getOneUser = async (filterQuery) => {
-    filterQuery.select = '-password'
-    const user = await User.findOne(filterQuery)
+    return new Promise(async (resolve, reject) => {
+        const user = await User.findOne(filterQuery)
 
-    if (!user) throw { status: "error", code: 404, message: `${_.capitalize(filterQuery.role) || 'User'} not found` }
-    return user
+        if (!user) reject({ status: "error", code: 404, message: `${_.capitalize(filterQuery.role) || 'User'} not found` })
+        resolve(user)
+    })
 }
 
 export const getAllStudentsByClass = async (classId, pageFilter) => {
@@ -88,7 +89,11 @@ export const createUser = (data, file) => {
             if (error) return reject(error)
 
             let theClass
-            if (!_.isUndefined(data.classId) && isValidObjectId(data.classId)) theClass = await classService.getOneClass({ _id: data.classId })
+            try {
+                if (!_.isUndefined(data.classId) && isValidObjectId(data.classId)) theClass = await classService.getOneClass({ _id: data.classId })
+            } catch (error) {
+                reject(error)
+            }
 
             newUser.birthDate = data.birthDate
             newUser.admissionNo = data.admissionNo
@@ -104,7 +109,6 @@ export const createUser = (data, file) => {
             //     relationship: data.guardianRelationship
             // }
         }
-
         let profileImage = (file ? await uploadToCloudinary(file) : data.profileImage )|| {}
         newUser.profileImage = { url: profileImage.secure_url, imageId: profileImage.public_id }
         
