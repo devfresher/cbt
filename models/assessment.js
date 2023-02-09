@@ -49,9 +49,7 @@ export const assessmentSchema = new mongoose.Schema({
     ],
     passMark: {
         type: Number,
-        default: function () {
-            return (this.questions.length*0.5)
-        }
+        required: true
     },
     resultReleased: {
         type: Boolean,
@@ -81,7 +79,7 @@ export function validateCreateReq(req) {
         subjectId: Joi.objectId().required(),
         noOfQuestion: Joi.number().required(),
         questions: Joi.array().required(),
-        passMark: Joi.number()
+        passMark: Joi.number().required()
     })
 
     return schema.validate(req);
