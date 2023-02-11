@@ -110,8 +110,10 @@ export const startAssessment = async (studentId, assessmentType) => {
     };
 };
 
-export const completeAssessment = async (studentId, { assessmentId, totalAttempted, totalCorrectAnswer }) => {
+export const completeAssessment = async (studentId, req) => {
     const student = await userService.getOneUser({ _id: studentId })
+    
+    const { assessmentId, totalAttempted, totalCorrectAnswer } = req
     const assessmentTaken = await AssessmentTaken.findOne({
         assessment: assessmentId,
         student: student._id,
@@ -131,11 +133,11 @@ export const completeAssessment = async (studentId, { assessmentId, totalAttempt
         }
     }
 
-    assessmentTaken.totalAttemptedQuestion = assessmentTaken.totalQuestionSupplied;
+    assessmentTaken.totalAttemptedQuestion = totalAttempted;
     assessmentTaken.totalCorrectAnswer = totalCorrectAnswer;
-    assessmentTaken.percentageScore = (totalCorrectAnswer / totalQuestionSupplied) * 100;
+    assessmentTaken.percentageScore = (totalCorrectAnswer / assessmentTaken.totalQuestionSupplied) * 100;
     assessmentTaken.grade = getGrade(assessmentTaken);
-    assessmentTaken.totalWrongAnswer = totalQuestionSupplied - totalCorrectAnswer;;
+    assessmentTaken.totalWrongAnswer = assessmentTaken.totalQuestionSupplied - totalCorrectAnswer;;
     assessmentTaken.completedAt = Date.now();
 
     await assessmentTaken.save()
