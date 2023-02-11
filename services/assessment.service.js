@@ -1,9 +1,9 @@
-import _ from "lodash";
+import _ from "lodash"
 import Assessment from "../models/assessment.js"
 import AssessmentTaken from "../models/assessmentTaken.js"
 
-import * as userService from "./user.service.js";
-import * as subjectService from "./subject.service.js";
+import * as userService from "./user.service.js"
+import * as subjectService from "./subject.service.js"
 
 const myCustomLabels = {
     totalDocs: 'totalItems',
@@ -17,7 +17,7 @@ const myCustomLabels = {
     totalPages: 'pageCount',
     pagingCounter: false,
     meta: 'paging',
-};
+}
 
 const activeAssessment = async (classId, assessmentType) => {
     const assessments = await Assessment.aggregate([
@@ -49,66 +49,96 @@ const activeAssessment = async (classId, assessmentType) => {
     return assessment
 }
 
-export const startAssessment = async (studentId, assessmentType) => {
-    // Validate the student
-    const student = await userService.getOneUser({ _id: studentId })
-
-    // Get active assessment for the class
-    let assessment = await activeAssessment(student.class._id, assessmentType)
-    if (!assessment) throw { status: "error", code: 400, message: `No active assessment (${assessmentType}) available` }
-
-
-    // Shuffle questions and get limited
-    const shuffledQuestions = _.shuffle(assessment.questions)
-    const questions = _.take(shuffledQuestions, assessment.noOfQuestion)
-
-    assessment = _.omit(assessment, 'questions')
-
-    // Check if assessment has been taken by student
-    const assessmentTaken = await AssessmentTaken.findOne({ assessment: assessment._id, student: studentId })
-    if (!assessmentTaken) {
-        // new student, start fresh
-        const newAssessmentTaken = new AssessmentTaken({
-            assessment: assessment._id,
-            student: student._id,
-            questionsSupplied: questions,
-            totalQuestionSupplied: questions.length
-        })
-
-        await newAssessmentTaken.save()
-        return { assessment, questions, startedAt: Date.now() }
-
-    } else if (assessmentTaken.completedAt) {
-        throw { status: "error", code: 400, message: "Assessment already completed" }
+const getGrade = (assessmentTaken) => {
+    const { passMark } = assessmentTaken.assessment
+    if (passMark === undefined) {
+        return "Done"
     }
 
-    return { assessment, questions, startedAt: assessmentTaken.startedAt }
+    return assessmentTaken.totalCorrectAnswer >= passMark ? "Pass" : "Fail"
 }
 
-export const completeAssessment = async (studentId, req) => {
-    // get the Student
-    const student = await userService.getOneUser({ _id: studentId })
+export const startAssessment = async (studentId, assessmentType) => {
+    const student = await userService.getOneUser({ _id: studentId });
+    const classId = student.class._id;
 
-    // Check if assessment has been taken by student
+    const assessment = await activeAssessment(classId, assessmentType);
+    if (!assessment) {
+        throw {
+            status: 'error',
+            code: 400,
+            message: `No active assessment (${assessmentType}) available`,
+        };
+    }
+
+    const shuffledQuestions = _.shuffle(assessment.questions);
+    const questions = _.take(shuffledQuestions, assessment.noOfQuestion);
+
+    const filteredAssessment = _.omit(assessment, 'questions');
+
     const assessmentTaken = await AssessmentTaken.findOne({
-        assessment: req.assessmentId,
-        student: student._id
+        assessment: filteredAssessment._id,
+        student: studentId,
+    });
+
+    if (!assessmentTaken) {
+        const newAssessmentTaken = new AssessmentTaken({
+            assessment: filteredAssessment._id,
+            student: student._id,
+            questionsSupplied: questions,
+            totalQuestionSupplied: questions.length,
+        });
+
+        await newAssessmentTaken.save();
+        return {
+            assessment: filteredAssessment,
+            questions,
+            startedAt: Date.now(),
+        };
+    } else if (assessmentTaken.completedAt) {
+        throw {
+            status: 'error',
+            code: 400,
+            message: 'Assessment already completed',
+        };
+    }
+
+    return {
+        assessment: filteredAssessment,
+        questions,
+        startedAt: assessmentTaken.startedAt,
+    };
+};
+
+export const completeAssessment = async (studentId, { assessmentId, totalAttempted, totalCorrectAnswer }) => {
+    const student = await userService.getOneUser({ _id: studentId })
+    const assessmentTaken = await AssessmentTaken.findOne({
+        assessment: assessmentId,
+        student: student._id,
     }).populate('assessment')
 
-    if (!assessmentTaken)
-        throw { status: "error", code: 400, message: "No assessment to complete" }
-    else if (assessmentTaken.completedAt)
-        throw { status: "error", code: 400, message: "Assessment already completed" }
+    if (!assessmentTaken) {
+        throw {
+            status: 'error',
+            code: 400,
+            message: 'No assessment to complete',
+        }
+    } else if (assessmentTaken.completedAt) {
+        throw {
+            status: 'error',
+            code: 400,
+            message: 'Assessment already completed',
+        }
+    }
 
-    // if started, update for completion
-    assessmentTaken.totalAttemptedQuestion = req.totalAttempted
-    assessmentTaken.totalCorrectAnswer = req.totalCorrectAnswer
-    assessmentTaken.percentageScore = (req.totalCorrectAnswer / assessmentTaken.totalQuestionSupplied) * 100
-    assessmentTaken.grade = assessmentTaken.totalCorrectAnswer >= assessmentTaken.assessment.passMark ? "Pass" : "Fail"
-    assessmentTaken.totalWrongAnswer = assessmentTaken.totalQuestionSupplied - assessmentTaken.totalCorrectAnswer
-    assessmentTaken.completedAt = Date.now()
+    assessmentTaken.totalAttemptedQuestion = assessmentTaken.totalQuestionSupplied;
+    assessmentTaken.totalCorrectAnswer = totalCorrectAnswer;
+    assessmentTaken.percentageScore = (totalCorrectAnswer / totalQuestionSupplied) * 100;
+    assessmentTaken.grade = getGrade(assessmentTaken);
+    assessmentTaken.totalWrongAnswer = totalQuestionSupplied - totalCorrectAnswer;;
+    assessmentTaken.completedAt = Date.now();
+
     await assessmentTaken.save()
-
     return assessmentTaken
 }
 
@@ -127,7 +157,7 @@ export const getMany = async (filterQuery, pageFilter) => {
     // return await Assessment.paginate(filterQuery, pageFilter)
 }
 
-// Get all assessment that has had an attempt by students
+// Get all assessments that have been attempted by students
 export const getAllTaken = async () => {
     const pipeline = [
         { $group: { _id: "$assessment" } },
@@ -149,26 +179,28 @@ export const getAllTaken = async () => {
 export const createAssessment = async (req) => {
     const subject = await subjectService.getOneSubject({ _id: req.body.subjectId })
 
+    const { noOfQuestion, questions, type, status, scheduledDate, duration, instruction } = req.body;
+    
     // Validate the number of questions in the assessment 
-    if (req.body.noOfQuestion > req.body.questions.length)
-        throw { status: "error", code: 400, message: "Number of questions must be less or equal to the total questions supplied" }
+    if (noOfQuestion > questions.length)
+        throw { status: "error",
+            code: 400, 
+            message: "Number of questions must be less or equal to the total questions supplied" 
+        }
 
-    if (req.body.passMark > req.body.noOfQuestion)
+    if (req.body.passMark && req.body.passMark > req.body.noOfQuestion)
         throw { status: "error", code: 400, message: "Pass mark must be less or equal to Number of questions" }
 
     const assessmentTitle = `${subject.title}-${subject.class.title}`
     const newAssessment = new Assessment({
         title: assessmentTitle,
-        type: req.body.type,
-        status: req.body.status,
-        scheduledDate: req.body.scheduledDate,
-        duration: req.body.duration,
-        instruction: req.body.instruction,
-        subject: req.body.subjectId,
-        questions: req.body.questions,
-        noOfQuestion: req.body.noOfQuestion,
+        type, status, scheduledDate,
+        duration, instruction,
+        subject: subject._id,
+        questions, noOfQuestion,
         passMark: req.body.passMark
     })
+
     await newAssessment.save()
     return newAssessment
 }
@@ -208,7 +240,7 @@ export const updateAssessment = async (assessment, req) => {
     assessment.instruction = req.body.instruction || assessment.instruction
     assessment.noOfQuestion = req.body.noOfQuestion || assessment.noOfQuestion
     assessment.questions = req.body.questions || assessment.questions
-    assessment.passMark = req.body.passMark || assessment.questions.length * 0.5
+    assessment.passMark = req.body.passMark || assessment.passMark
     assessment.resultReleased = req.body.releaseResult || assessment.resultReleased
     await assessment.save()
 
