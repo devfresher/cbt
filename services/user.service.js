@@ -200,7 +200,7 @@ export const updateUser = async (user, data, file) => {
 
 export const deleteUser = async (filterQuery) => {
     const user = await getOneUser(filterQuery)
-    if (user.profileImage.imageId) await deleteFromCloudinary(user.profileImage.imageId)
+    if (user.profileImage?.imageId) await deleteFromCloudinary(user.profileImage.imageId)
 
     await User.deleteOne(filterQuery)
     return user
