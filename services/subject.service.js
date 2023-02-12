@@ -66,8 +66,9 @@ export const updateSubject = async (subjectId, updateData) => {
 }
 
 export const getMany = async (filterQuery, pageFilter) => {
-    pageFilter.customLabels = myCustomLabels
+    if(!pageFilter) return await Subject.find(filterQuery)
 
+    pageFilter.customLabels = myCustomLabels
     return await Subject.find(filterQuery)
     // return await Subject.paginate(filterQuery, pageFilter)
 }

@@ -114,7 +114,7 @@ export const updateQuestion = async (question, req) => {
 }
 
 export const getMany = async (filterQuery, pageFilter) => {
-    if(_.isEmpty(pageFilter)) return await Question.find(filterQuery)
+    if(!pageFilter) return await Question.find(filterQuery)
 
     pageFilter.customLabels = myCustomLabels
     return await Question.find(filterQuery)

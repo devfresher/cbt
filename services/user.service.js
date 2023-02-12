@@ -35,6 +35,8 @@ export const getAllStudentsByClass = async (classId, pageFilter) => {
     const theClass = await classService.getOneClass({ _id: classId })
     const findFilter = { "class._id": theClass._id, role: "Student" }
 
+    if(!pageFilter) return await User.find(findFilter)
+
     pageFilter.customLabels = myCustomLabels
 
     return await User.find(findFilter)
@@ -42,8 +44,9 @@ export const getAllStudentsByClass = async (classId, pageFilter) => {
 }
 
 export const getMany = async (filterQuery, pageFilter) => {
-    pageFilter.customLabels = myCustomLabels
+    if (!pageFilter) return await User.find(filterQuery)
 
+    pageFilter.customLabels = myCustomLabels
     return await User.find(filterQuery)
     // return await User.paginate(filterQuery, pageFilter)
 }
@@ -204,4 +207,17 @@ export const deleteUser = async (filterQuery) => {
 
     await User.deleteOne(filterQuery)
     return user
+}
+
+export const deleteManyUsers = async (filterQuery) => {
+    const users = await getMany(filterQuery)
+    const deletedUsers = []
+
+    users.forEach(async user => {
+        if (user.profileImage?.imageId) await deleteFromCloudinary(user.profileImage.imageId)
+        await User.deleteOne(filterQuery)
+        deletedUsers.push(user)
+    });
+
+    return deletedUsers
 }

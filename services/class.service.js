@@ -78,7 +78,9 @@ export const updateClass = async (theClass, data) => {
 export const deleteClass = async(filterQuery) => {
     const theClass = await getOneClass(filterQuery)
 
-    await theClass.deleteOne(filterQuery)
+    await Class.deleteOne(filterQuery)
+    await userService.deleteManyUsers({"class._id": theClass._id})
+
     return theClass
 }
 

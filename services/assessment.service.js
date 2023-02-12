@@ -156,7 +156,7 @@ export const getMany = async (filterQuery, pageFilter) => {
 
     pageFilter.customLabels = myCustomLabels
     return await Assessment.find(filterQuery)
-    // return await Assessment.paginate(filterQuery, pageFilter)
+    // return await Assessment.paginate(filterQuerfilterQuendy, pageFilter)
 }
 
 // Get all assessments that have been attempted by students
