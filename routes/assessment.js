@@ -21,6 +21,4 @@ router.patch("/:assessmentId/release-result", [requireRole (['Admin']), validate
 router.put("/:assessmentId", [requireRole (['Admin', 'Staff']), validateObjectIds('assessmentId'), isSubjectTeacher], assessmentController.updateAssessment)
 router.delete("/:assessmentId", [requireRole (['Admin', 'Staff']), validateObjectIds('assessmentId'), isSubjectTeacher], assessmentController.deleteAssessment)
 
-
-
 export default router

@@ -178,6 +178,14 @@ export const getAllTaken = async () => {
     return assessmentTaken
 }
 
+export const getOneTaken = async (filterQuery) => {
+    
+    return await AssessmentTaken.findOne(filterQuery)
+        .populate('questionsSupplied')
+        .populate('student')
+        .populate('assessment')
+}
+
 export const createAssessment = async (req) => {
     const subject = await subjectService.getOneSubject({ _id: req.body.subjectId })
 
