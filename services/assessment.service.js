@@ -76,24 +76,26 @@ export const startAssessment = async (studentId, assessmentType) => {
 
     const filteredAssessment = _.omit(assessment, 'questions');
 
-    const assessmentTaken = await AssessmentTaken.findOne({
+    const assessmentTaken = await getOneTaken({
         assessment: filteredAssessment._id,
         student: studentId,
     });
 
     if (!assessmentTaken) {
+        const startDate = Date.now()
         const newAssessmentTaken = new AssessmentTaken({
             assessment: filteredAssessment._id,
             student: student._id,
             questionsSupplied: questions,
             totalQuestionSupplied: questions.length,
+            startedAt: startDate,
         });
 
         await newAssessmentTaken.save();
         return {
             assessment: filteredAssessment,
             questions,
-            startedAt: Date.now(),
+            startedAt: startDate,
         };
     } else if (assessmentTaken.completedAt) {
         throw {
@@ -114,10 +116,10 @@ export const completeAssessment = async (studentId, req) => {
     const student = await userService.getOneUser({ _id: studentId })
     
     const { assessmentId, totalAttempted, totalCorrectAnswer } = req
-    const assessmentTaken = await AssessmentTaken.findOne({
+    const assessmentTaken = await getOneTaken({
         assessment: assessmentId,
         student: student._id,
-    }).populate('assessment')
+    })
 
     if (!assessmentTaken) {
         throw {
