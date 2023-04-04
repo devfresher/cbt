@@ -1,6 +1,7 @@
 import _ from "lodash"
 import mongoose from "mongoose"
 import AssessmentTaken from "../models/assessmentTaken.js"
+import * as assessmentService from "./assessment.service.js"
 
 export const fetchResult = async (user, limit) => {
 	let pipeline
@@ -178,4 +179,11 @@ export const fetchResult = async (user, limit) => {
 	if (limit) pipeline.push({ $limit: limit })
 	const result = await AssessmentTaken.aggregate(pipeline)
 	return result
+}
+
+export const deleteAssessmentTaken = async (filterQuery) => {
+	const assessmentTaken = await assessmentService.getOneTaken(filterQuery)
+
+	if (!assessmentTaken) throw { status: "error", code: 404, message: "Nothing to reset" }
+	const deleted = await AssessmentTaken.deleteOne(filterQuery)
 }

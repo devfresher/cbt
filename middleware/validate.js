@@ -22,3 +22,14 @@ export const validateObjectIds = (idNames) => {
 		next()
 	}
 }
+
+export const validateQueryObjectIds = (idNames) => {
+	return (req, res, next) => {
+		idNames = Array.isArray(idNames) ? idNames : [idNames]
+		const invalidId = _.find(idNames, (idName) => !isValidObjectId(req.query[idName]))
+		if (invalidId) {
+			return next({ status: "error", code: 400, message: `Invalid ${invalidId} passed` })
+		}
+		next()
+	}
+}

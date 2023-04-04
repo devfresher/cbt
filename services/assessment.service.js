@@ -64,24 +64,26 @@ export const startAssessment = async (studentId, assessmentType) => {
 
 	const filteredAssessment = _.omit(assessment, "questions")
 
-	const assessmentTaken = await AssessmentTaken.findOne({
+	const assessmentTaken = await getOneTaken({
 		assessment: filteredAssessment._id,
 		student: studentId,
 	})
 
 	if (!assessmentTaken) {
+		const startDate = Date.now()
 		const newAssessmentTaken = new AssessmentTaken({
 			assessment: filteredAssessment._id,
 			student: student._id,
 			questionsSupplied: questions,
 			totalQuestionSupplied: questions.length,
+			startedAt: startDate,
 		})
 
 		await newAssessmentTaken.save()
 		return {
 			assessment: filteredAssessment,
 			questions,
-			startedAt: Date.now(),
+			startedAt: startDate,
 		}
 	} else if (assessmentTaken.completedAt) {
 		throw {
@@ -165,6 +167,13 @@ export const getAllTaken = async () => {
 	]
 	const assessmentTaken = await AssessmentTaken.aggregate(pipeline)
 	return assessmentTaken
+}
+
+export const getOneTaken = async (filterQuery) => {
+	return await AssessmentTaken.findOne(filterQuery)
+		.populate("questionsSupplied")
+		.populate("student")
+		.populate("assessment")
 }
 
 export const createAssessment = async (req) => {
