@@ -43,7 +43,7 @@ export const updateSubject = async (subjectId, updateData) => {
 	if (updateData.classId) theClass = await classService.getOneClass({ _id: updateData.classId })
 
 	let teacher
-	if (updateData.teacherId)
+	if (updateData.teachersId)
 		teacher = await userService.getOneUser({ _id: updateData.teacherId, role: "Staff" })
 
 	subject.title = updateData.title || subject.title

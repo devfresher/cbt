@@ -1,5 +1,5 @@
-import express from 'express'
-import bootstrap from './bootstrap.js'
+import express from "express"
+import bootstrap from "./bootstrap.js"
 const app = express()
 
 bootstrap(app)

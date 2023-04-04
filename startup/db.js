@@ -1,19 +1,21 @@
-import config from 'config'
-import mongoose from 'mongoose'
-import winston from 'winston'
-
-const { name, host, port } =  config.get('app')
+import mongoose from "mongoose"
+import winston from "winston"
+import { config } from "../utils/config.js"
 
 export default async (app) => {
-    try {
-        mongoose.set('strictQuery', false)
-        await mongoose.connect(config.get('db.url'))
-        winston.info(`${name} is connected to DB`)
+	const name = config.APP_NAME
+	const host = config.HOST || "0.0.0.0"
+	const port = config.PORT || 5000
 
-        app.listen(port, host, () => {
-            winston.info(`${name}'s Server started at http://${host}:${port}`)
-        })
-    } catch (error) {
-        winston.error(error)
-    }
+	try {
+		mongoose.set("strictQuery", false)
+		mongoose.connect(config.DB_URL)
+		winston.info(`${name} is connected to DB`)
+
+		app.listen(port, host, () => {
+			winston.info(`${name}'s Server started at http://${host}:${port}`)
+		})
+	} catch (error) {
+		winston.error(error)
+	}
 }

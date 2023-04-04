@@ -82,7 +82,6 @@ export const createUser = (data, file) => {
 			newUser.oracleNumber = data.oracleNumber
 			newUser.state = data.state
 			newUser.lga = data.lga
-			console.log(newUser)
 		} else if (data.role === "Student") {
 			const error = await checkIfUserExists("admissionNo", data.admissionNo)
 			if (error) return reject(error)
