@@ -14,8 +14,8 @@ import responseMiddleWare from "../middleware/response.js"
 
 const routeApp = function (app) {
 	app.use(bodyParser.json())
+	app.use(cors())
 	app.use(helmet())
-	app.use(cors({ origin: "*" }))
 
 	app.use("/api/auth/", authRouter)
 	app.use("/api/class/", classRouter)
