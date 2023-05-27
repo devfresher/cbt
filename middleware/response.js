@@ -1,6 +1,8 @@
 import winston from "winston"
 
 export default function (data, req, res, next) {
+	res.setHeader("Access-Control-Allow-Origin", "https://cbt-student.netlify.app")
+
 	const defaultCode = 500
 	const defaultMessage = "Something unexpected went wrong"
 
