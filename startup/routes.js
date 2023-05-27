@@ -25,6 +25,14 @@ const routeApp = function (app) {
 	app.use("/api/question/", questionRouter)
 	app.use("/api/result/", resultRouter)
 	app.use("/api/dashboard/", dashboardRouter)
+
+	app.all("*", (req, res, next) => {
+		next({
+			status: "error",
+			code: 404,
+			message: `You missed the road. Can not ${req.method} ${req.originalUrl} on this server `,
+		})
+	})
 	app.use(responseMiddleWare)
 }
 
