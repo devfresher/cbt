@@ -4,7 +4,7 @@ services:
       name: OACSS CBT - BE
       runtime: node
       repo: https://github.com/devfresher/cbt
-      plan: starter
+      plan: free
       envVars:
           - key: .env
             sync: false
