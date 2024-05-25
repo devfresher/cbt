@@ -53,7 +53,7 @@ class MailUtil {
 		const { to, from, subject, replacements } = options;
 
 		const mailData = {
-			from: `${from ? from : config.MAIL_USERNAME} <${googleConfig.GOOGLE_EMAIL_USER}>`,
+			from: `${from ? from : config.MAIL_USERNAME} <${config.GOOGLE_EMAIL_USER}>`,
 			to,
 			subject,
 		};
