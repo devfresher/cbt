@@ -43,7 +43,7 @@ export const sendOtp = async (email) => {
 	// send email
 	await mailUtil.sendMail({
 		to: user.email,
-		subject: 'forgotPassword',
+		templateName: 'forgotPassword',
 		replacements: {
 			user,
 			resetCode: token.token,
@@ -72,7 +72,7 @@ export const handleResetPassword = async (user, newPassword) => {
 	// send email
 	await mailUtil.sendMail({
 		to: user.email,
-		subject: 'passwordResetCompleted',
+		templateName: 'passwordResetCompleted',
 		replacements: {
 			user,
 		},
