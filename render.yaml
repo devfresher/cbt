@@ -1,0 +1,14 @@
+# Exported from Render on 2024-05-25T05:56:02Z
+services:
+    - type: web
+      name: OACSS CBT - BE
+      runtime: node
+      repo: https://github.com/devfresher/cbt
+      plan: starter
+      envVars:
+          - key: .env
+            sync: false
+      region: oregon
+      buildCommand: npm install
+      startCommand: npm run deploy
+version: '1'
